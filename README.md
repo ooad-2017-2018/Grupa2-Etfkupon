@@ -28,10 +28,10 @@ Administrator æe moæi sve kontrolisati i on æe biti root user.
 - pregled profila (i za korisnika i za firmu) te editovanje profila
 - dodavanje novih artikala (firme)
 - kupovina artikala (korisnici)
-- popunjavanje ankete na kraju svakog mjeseca (korisnici) kako bi firme mogle vidjeti gdje korisnici zele vidjeti neko snizenje
+- popunjavanje ankete na kraju svakog mjeseca (korisnici) kako bi firme mogle vidjeti gdje korisnici žele vidjeti neko sniženje
 
 ## Akteri
-*korisnik* - klasicni kupac, korisnik sistema kojeg zanima e-kupovina
-*radnik/firma* - onaj koji daje mogucnost kupovine, azurira svoje artikle te popuste 
-*admin* - onaj koji regulise rad sistema te ima mogucnosti koje ima i korisnik i radnik
+- *korisnik* - klasièni kupac, korisnik sistema kojeg zanima e-kupovina
+- *radnik/firma* - onaj koji daje moguænost kupovine, ažurira svoje artikle te popuste 
+- *admin* - onaj koji reguliše rad sistema te ima moguænosti koje ima i korisnik i radnik
 
