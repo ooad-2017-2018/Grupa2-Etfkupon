@@ -1,5 +1,8 @@
 # Grupa2-Etfkupon
 
+
+![Alt text](LogoEKupovina.jpg?raw=true)
+
 1. Adnan Brðanin
 2. Naða Dardagan
 3. Armin Bilal
