@@ -26,11 +26,11 @@ Radnik (firma) æe imati svoj dio u sistemu kako bi mogli dodavati nove artikle t
 Takoðer, firme æe biti u moguænosti da provjere stanje artikala kako bi mogli ažurirati.
 Administrator æe moæi sve kontrolisati i on æe biti root user. 
 
-- Registracija korisnika
+- *Registracija korisnika*:
 Korisniku æe biti omoguæeno da se registruje na sistem, unese svoje liène podatke, odabere interese te konaèno pošalje zahtjev adminstratoru 
 za odobrenje otvaranja raèuna. U svakom trenutku æe se naravno moæi logovati jer æe se èuvati podaci interno. Takoðer ako se korisniku nešto 
 na profilu ne sviða, profil može urediti ali isto tako i poslati zahtjev za zatvaranje profila ako želi da prestane koristiti sistem. 
-- Registracija firme
+- *Registracija firme*:
 Firma æe takoðer poslati zahtjev za kreiranje raèuna, te æe nakon što firma otvori account, imati moguænost pregleda raèuna što ukljuèuje: 
 ažuriranje ponuda, podatke o ponudama te trenutnu statistiku prodavanja. U ažuriranju se podrazumijevaju opcije poput izmjena trenutne ponude, 
 brisanje ponude te stvaranje nove ponude. 
