@@ -26,5 +26,15 @@ namespace ETFKupon.Interface
         {
             this.InitializeComponent();
         }
+
+        private void textBoxIme_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void buttonRegistracijaK_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(PocetnaKupca));
+        }
     }
 }

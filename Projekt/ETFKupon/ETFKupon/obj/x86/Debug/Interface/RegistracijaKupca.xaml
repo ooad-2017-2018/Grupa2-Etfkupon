@@ -8,56 +8,56 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="buttonSlika" 
+        <Button x:ConnectionId='1' x:Name="buttonSlika" 
             Content="Nadji sliku" 
             HorizontalAlignment="Left"
             Margin="450,348,0,0" 
             VerticalAlignment="Top" Width="125"/>
-        <TextBox x:Name="textBoxIme" 
+        <TextBox x:ConnectionId='2' x:Name="textBoxIme" 
             HorizontalAlignment="Left" 
             Margin="400,397,0,0" 
             Text="Ime" 
             VerticalAlignment="Top" 
             Height="38"
             Width="230"
-            TextChanged="textBoxIme_TextChanged"/>
-        <TextBox x:Name="textBoxPrezime"
+                                                />
+        <TextBox x:ConnectionId='3' x:Name="textBoxPrezime"
             HorizontalAlignment="Left" 
             Margin="400,449,0,0" 
             Text="Prezime" 
             VerticalAlignment="Top" 
             Height="38" Width="230"/>
-        <TextBox x:Name="textBoxAdresa" 
+        <TextBox x:ConnectionId='4' x:Name="textBoxAdresa" 
             HorizontalAlignment="Left" 
             Margin="400,505,0,0" 
             Text="Adresa" 
             VerticalAlignment="Top" 
             Height="38" Width="230"/>
-        <TextBox x:Name="textBoxUsernameK" 
+        <TextBox x:ConnectionId='5' x:Name="textBoxUsernameK" 
             HorizontalAlignment="Left"
             Margin="686,157,0,0" 
             Text="Username" 
             VerticalAlignment="Top" 
             Height="38" Width="250"/>
-        <TextBox x:Name="textBoxPasswordK" 
+        <TextBox x:ConnectionId='6' x:Name="textBoxPasswordK" 
             HorizontalAlignment="Left"
             Margin="686,216,0,0" 
             Text="Password" 
             VerticalAlignment="Top" 
             Height="38" Width="250"/>
-        <TextBox x:Name="textBoxPonoviPasswordK" 
+        <TextBox x:ConnectionId='7' x:Name="textBoxPonoviPasswordK" 
             HorizontalAlignment="Left"
             Margin="686,273,0,0" 
             Text="Ponovi Password" 
             VerticalAlignment="Top" 
             Height="38" Width="250"/>
-        <TextBox x:Name="textBoxEmail" 
+        <TextBox x:ConnectionId='8' x:Name="textBoxEmail" 
             HorizontalAlignment="Left"
             Margin="686,328,0,0" 
             Text="Email" 
             VerticalAlignment="Top" 
             Height="38" Width="250"/>
-        <TextBox x:Name="textBoxBrKartice"
+        <TextBox x:ConnectionId='9' x:Name="textBoxBrKartice"
             HorizontalAlignment="Left"
             Margin="686,383,0,0" 
             Text="Broj Kartice" 
@@ -66,8 +66,9 @@
         <Border BorderBrush="Black"
             BorderThickness="1"
             Margin="400,100,750,393">
-            <Image x:Name="imageSlika"/>
+            <Image x:ConnectionId='11' x:Name="imageSlika"/>
         </Border>
-        <Button x:Name="buttonRegistracijaK" Content="Registracija" HorizontalAlignment="Left" Margin="551,611,0,0" VerticalAlignment="Top" Height="35" Width="225" Click="buttonRegistracijaK_Click"/>
+        <Button x:ConnectionId='10' x:Name="buttonRegistracijaK" Content="Registracija" HorizontalAlignment="Left" Margin="551,611,0,0" VerticalAlignment="Top" Height="35" Width="225"                                  />
     </Grid>
 </Page>
+

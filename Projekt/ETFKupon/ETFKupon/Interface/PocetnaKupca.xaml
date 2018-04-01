@@ -1,0 +1,66 @@
+﻿<Page
+    x:Class="ETFKupon.Interface.PocetnaKupca"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ETFKupon.Interface"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Border BorderBrush="Black"
+                BorderThickness="1"
+                Margin="50,202,1110,91">
+            <ListView x:Name="listViewInterface" Height="425" VerticalAlignment="Bottom" Margin="0,0,23,0"/>
+        </Border>
+        <Border BorderBrush="Black"
+                BorderThickness="1"
+                Margin="286,201,27,27">
+            <GridView x:Name="gridViewArtikli" Margin="3,0,0,3"/>
+        </Border>
+        <Button x:Name="buttonInteresi"
+                HorizontalAlignment="Left" 
+                Margin="65,635,0,0" 
+                VerticalAlignment="Top" 
+                Height="36" Width="176" Content="Dodaj novi interes" Click="buttonInterface_Click"/>
+        <Button x:Name="buttonLogout"
+                Content="Log out " 
+                HorizontalAlignment="Left" 
+                Margin="1230,25,0,0" 
+                VerticalAlignment="Top" 
+                Height="36" Width="90" Click="buttonLogout_Click"/>
+        <Button x:Name="buttonPretraga" 
+                Content="Pretrazi artikle" 
+                HorizontalAlignment="Left" 
+                Margin="995,138,0,0" 
+                VerticalAlignment="Top" 
+                Width="141"/>
+        <TextBox x:Name="textBoxPretraga" 
+                 HorizontalAlignment="Left"
+                 Margin="359,138,0,0" 
+                 Text="Pretraga" 
+                 VerticalAlignment="Top" 
+                 Height="36" Width="603"
+                 RenderTransformOrigin="0.5,0.5"/>
+        <Button x:Name="buttonAzuriraj"
+                Content="Azuriraj profil" 
+                HorizontalAlignment="Left" 
+                Margin="49,25,0,0" 
+                VerticalAlignment="Top" 
+                Width="100"/>
+        <Button x:Name="buttonObrisi"
+                Content="Obrisi profil" 
+                HorizontalAlignment="Left" 
+                Margin="49,70,0,0" 
+                VerticalAlignment="Top" 
+                Width="100"/>
+        <TextBox x:Name="textViewWellcome" 
+                 HorizontalAlignment="Left" 
+                 Margin="578,25,0,0" 
+                 Text="Dobro dosli korisnice " 
+                 VerticalAlignment="Top" 
+                 Width="181" Height="23"
+                 IsReadOnly="True" />
+
+    </Grid>
+</Page>

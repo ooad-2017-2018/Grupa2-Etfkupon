@@ -95,11 +95,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Interface\DodavanjeInteresa.xaml.cs">
+      <DependentUpon>DodavanjeInteresa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interface\DodavanjeKupona.xaml.cs">
       <DependentUpon>DodavanjeKupona.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\PocetnaFirme.xaml.cs">
       <DependentUpon>PocetnaFirme.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Interface\PocetnaKupca.xaml.cs">
+      <DependentUpon>PocetnaKupca.xaml</DependentUpon>
     </Compile>
     <Compile Include="Interface\RegistracijaFirme.xaml.cs">
       <DependentUpon>RegistracijaFirme.xaml</DependentUpon>
@@ -133,11 +139,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Interface\DodavanjeInteresa.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Interface\DodavanjeKupona.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Interface\PocetnaFirme.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Interface\PocetnaKupca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
