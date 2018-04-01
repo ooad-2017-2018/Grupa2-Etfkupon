@@ -1,1 +1,1 @@
-C:\Users\NadjaD\Desktop\OOAD projekat\Projekt\ETFKupon\ETFKupon\ETFKupon.csproj;x86
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\ETFKupon.csproj;x86

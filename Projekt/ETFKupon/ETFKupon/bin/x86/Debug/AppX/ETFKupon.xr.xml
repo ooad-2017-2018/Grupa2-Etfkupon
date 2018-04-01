@@ -12,7 +12,15 @@
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+<<<<<<< HEAD
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+=======
+    <RootType FullName="ETFKupon.Interface.DodavanjeKupona" />
+    <RootType FullName="ETFKupon.Interface.PocetnaFirme" />
+    <RootType FullName="ETFKupon.Interface.RegistracijaFirme" />
+    <RootType FullName="ETFKupon.Interface.RegistracijaKupca" />
+    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+>>>>>>> 4357142d189bafcca743250d4d9b5408b8f8177d
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
