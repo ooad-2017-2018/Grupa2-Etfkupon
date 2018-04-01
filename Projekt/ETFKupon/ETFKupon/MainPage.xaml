@@ -8,9 +8,51 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox x:Name="textBoxUsername" HorizontalAlignment="Left" Margin="442,251,0,0" Text="" VerticalAlignment="Top" Height="28" Width="385"/>
-        <TextBox x:Name="textBoxPassword" HorizontalAlignment="Left" Margin="442,325,0,0" Text="" VerticalAlignment="Top" Height="28" Width="385"/>
-        <Button x:Name="buttonPrijava" Content="Button" HorizontalAlignment="Left" Margin="568,400,0,0" VerticalAlignment="Top" Height="25" Width="122"/>
-
+        <TextBox x:Name="textBoxUsername" 
+                 HorizontalAlignment="Left" 
+                 Margin="478,270,0,0" 
+                 Text="Username" 
+                 VerticalAlignment="Top" 
+                 Height="28" 
+                 Width="385"/>
+        <TextBox x:Name="textBoxPassword" 
+                 HorizontalAlignment="Left" 
+                 Margin="478,325,0,0" 
+                 Text="Password" 
+                 VerticalAlignment="Top"
+                 Height="28" 
+                 Width="385"/>
+        <Button x:Name="buttonPrijava" 
+                Content="PRIJAVA" 
+                HorizontalAlignment="Left" 
+                Margin="600,400,0,0" 
+                VerticalAlignment="Top" 
+                Height="32" 
+                Width="122"/>
+        <Button x:Name="buttonRegistracijaKupca" 
+                Content="Registruj se kao kupac" 
+                HorizontalAlignment="Left" 
+                Margin="580,585,0,0" 
+                VerticalAlignment="Top" 
+                Height="35" 
+                Width="171"/>
+        <Button x:Name="buttonRegistracijaFirme" 
+                Content="Registruj se kao firma" 
+                HorizontalAlignment="Left" 
+                Margin="580,630,0,0" 
+                VerticalAlignment="Top" 
+                Height="35" Width="171"/>
+        <TextBox x:Name="textBoxRegistacija1" 
+                 HorizontalAlignment="Left" 
+                 Margin="565,520,0,0" 
+                 Text="Novi ste na našoj stranici?" 
+                 VerticalAlignment="Top" 
+                 IsReadOnly="True" BorderBrush="#66FFFFFF"/>
+        <TextBox x:Name="textBoxRegistacija2" 
+                 HorizontalAlignment="Left" 
+                 Margin="587,545,0,0" 
+                 Text="Registrujte se ovdje" 
+                 VerticalAlignment="Top" 
+                 IsReadOnly="True" BorderBrush="#66FFFFFF"/>
     </Grid>
 </Page>
