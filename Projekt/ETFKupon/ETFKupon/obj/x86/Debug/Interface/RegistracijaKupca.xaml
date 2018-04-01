@@ -14,55 +14,55 @@
             Margin="450,348,0,0" 
             VerticalAlignment="Top" Width="125"/>
         <TextBox x:ConnectionId='2' x:Name="textBoxIme" 
+            PlaceholderText="Ime"
             HorizontalAlignment="Left" 
-            Margin="400,397,0,0" 
-            Text="Ime" 
+            Margin="400,397,0,0"
             VerticalAlignment="Top" 
             Height="38"
             Width="230"
                                                 />
         <TextBox x:ConnectionId='3' x:Name="textBoxPrezime"
+            PlaceholderText="Prezime"
             HorizontalAlignment="Left" 
             Margin="400,449,0,0" 
-            Text="Prezime" 
             VerticalAlignment="Top" 
             Height="38" Width="230"/>
         <TextBox x:ConnectionId='4' x:Name="textBoxAdresa" 
+            PlaceholderText="Adresa"
             HorizontalAlignment="Left" 
             Margin="400,505,0,0" 
-            Text="Adresa" 
             VerticalAlignment="Top" 
             Height="38" Width="230"/>
         <TextBox x:ConnectionId='5' x:Name="textBoxUsernameK" 
             HorizontalAlignment="Left"
             Margin="686,157,0,0" 
-            Text="Username" 
+            Text="" 
             VerticalAlignment="Top" 
-            Height="38" Width="250"/>
+            Height="38" Width="250" PlaceholderText="Username"/>
         <TextBox x:ConnectionId='6' x:Name="textBoxPasswordK" 
             HorizontalAlignment="Left"
             Margin="686,216,0,0" 
-            Text="Password" 
+            Text="" 
             VerticalAlignment="Top" 
-            Height="38" Width="250"/>
+            Height="38" Width="250" PlaceholderText="Password"/>
         <TextBox x:ConnectionId='7' x:Name="textBoxPonoviPasswordK" 
             HorizontalAlignment="Left"
             Margin="686,273,0,0" 
-            Text="Ponovi Password" 
+            Text="" 
             VerticalAlignment="Top" 
-            Height="38" Width="250"/>
+            Height="38" Width="250" PlaceholderText="Ponovi Password"/>
         <TextBox x:ConnectionId='8' x:Name="textBoxEmail" 
             HorizontalAlignment="Left"
             Margin="686,328,0,0" 
-            Text="Email" 
+            Text="" 
             VerticalAlignment="Top" 
-            Height="38" Width="250"/>
+            Height="38" Width="250" PlaceholderText="Email"/>
         <TextBox x:ConnectionId='9' x:Name="textBoxBrKartice"
             HorizontalAlignment="Left"
             Margin="686,383,0,0" 
-            Text="Broj Kartice" 
+            Text="" 
             VerticalAlignment="Top"
-            Height="38" Width="250"/>
+            Height="38" Width="250" PlaceholderText="Broj Kartice"/>
         <Border BorderBrush="Black"
             BorderThickness="1"
             Margin="400,100,750,393">

@@ -95,6 +95,9 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Interface\AzuriranjeProfila.xaml.cs">
+      <DependentUpon>AzuriranjeProfila.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Interface\DodavanjeInteresa.xaml.cs">
       <DependentUpon>DodavanjeInteresa.xaml</DependentUpon>
     </Compile>
@@ -139,6 +142,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Interface\AzuriranjeProfila.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Interface\DodavanjeInteresa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

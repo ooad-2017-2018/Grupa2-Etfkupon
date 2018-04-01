@@ -477,3 +477,19 @@ C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\o
 C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\ProjectArchitectures.txt
 >>>>>>> 4357142d189bafcca743250d4d9b5408b8f8177d
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\ETFKupon.csprojResolveAssemblyReference.cache
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\Interface\DodavanjeInteresa.g.i.cs
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\Interface\DodavanjeInteresa.g.cs
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\Interface\PocetnaKupca.g.i.cs
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\Interface\PocetnaKupca.g.cs
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\Interface\DodavanjeInteresa.xaml
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\Interface\PocetnaKupca.xaml
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\Interface\DodavanjeInteresa.xbf
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\Interface\PocetnaKupca.xbf
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\bin\x86\Debug\Interface\DodavanjeInteresa.xbf
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\bin\x86\Debug\Interface\PocetnaKupca.xbf
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\Interface\AzuriranjeProfila.g.i.cs
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\Interface\AzuriranjeProfila.g.cs
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\Interface\AzuriranjeProfila.xaml
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\obj\x86\Debug\Interface\AzuriranjeProfila.xbf
+C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\bin\x86\Debug\Interface\AzuriranjeProfila.xbf

@@ -11,17 +11,17 @@
         <TextBox x:ConnectionId='1' x:Name="textBoxUsername" 
                  HorizontalAlignment="Left" 
                  Margin="478,270,0,0" 
-                 Text="Username" 
+                 Text="" 
                  VerticalAlignment="Top" 
                  Height="28" 
-                 Width="385"/>
+                 Width="385" PlaceholderText="Username"/>
         <TextBox x:ConnectionId='2' x:Name="textBoxPassword" 
                  HorizontalAlignment="Left" 
                  Margin="478,325,0,0" 
-                 Text="Password" 
+                 Text="" 
                  VerticalAlignment="Top"
                  Height="28" 
-                 Width="385"/>
+                 Width="385" PlaceholderText="Password"/>
         <Button x:ConnectionId='3' x:Name="buttonPrijava" 
                 Content="PRIJAVA" 
                 HorizontalAlignment="Left" 

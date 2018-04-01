@@ -20,26 +20,21 @@ namespace ETFKupon.Interface
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class PocetnaKupca : Page
+    public sealed partial class AzuriranjeProfila : Page
     {
-        public PocetnaKupca()
+        public AzuriranjeProfila()
         {
             this.InitializeComponent();
         }
 
-        private void buttonInterface_Click(object sender, RoutedEventArgs e)
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
-            this.Frame.Navigate(typeof(DodavanjeInteresa));
+
         }
 
-        private void buttonLogout_Click(object sender, RoutedEventArgs e)
+        private void azurirajBack_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(MainPage));
-        }
-
-        private void buttonAzuriraj_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(AzuriranjeProfila));
+            this.Frame.Navigate(typeof(PocetnaKupca));
         }
     }
 }

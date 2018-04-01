@@ -12,22 +12,6 @@
       <RootProperty Name="Children" />
     </RootType>
     <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
-<<<<<<< HEAD
-    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
-=======
-    <RootType FullName="ETFKupon.Interface.DodavanjeKupona" />
-    <RootType FullName="ETFKupon.Interface.PocetnaFirme" />
-    <RootType FullName="ETFKupon.Interface.RegistracijaFirme" />
-    <RootType FullName="ETFKupon.Interface.RegistracijaKupca" />
-    <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
->>>>>>> 4357142d189bafcca743250d4d9b5408b8f8177d
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Items" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
@@ -35,18 +19,11 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="RenderTransformOrigin" />
       <RootEvent Name="Click" />
     </RootType>
-    <RootType FullName="ETFKupon.Interface.DodavanjeInteresa" />
-    <RootType FullName="ETFKupon.Interface.DodavanjeKupona" />
-    <RootType FullName="ETFKupon.Interface.PocetnaFirme" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Border">
-      <RootProperty Name="BorderBrush" />
-      <RootProperty Name="BorderThickness" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Child" />
-    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="PlaceholderText" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
       <RootProperty Name="Text" />
@@ -58,6 +35,32 @@
       <RootProperty Name="BorderBrush" />
       <RootEvent Name="TextChanged" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Border">
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="BorderThickness" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="Child" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.Image">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="ETFKupon.Interface.AzuriranjeProfila" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Items" />
+    </RootType>
+    <RootType FullName="ETFKupon.Interface.DodavanjeInteresa" />
+    <RootType FullName="ETFKupon.Interface.DodavanjeKupona" />
+    <RootType FullName="ETFKupon.Interface.PocetnaFirme" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="Margin" />
     </RootType>
@@ -68,7 +71,6 @@
     </RootType>
     <RootType FullName="ETFKupon.Interface.PocetnaKupca" />
     <RootType FullName="ETFKupon.Interface.RegistracijaFirme" />
-    <RootType FullName="Windows.UI.Xaml.Controls.Image" />
     <RootType FullName="ETFKupon.Interface.RegistracijaKupca" />
     <RootType FullName="ETFKupon.MainPage" />
   </Roots.RootTypes>

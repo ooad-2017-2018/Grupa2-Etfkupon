@@ -1,13 +1,9 @@
 App.xbf
-<<<<<<< HEAD
+Interface\AzuriranjeProfila.xbf
 Interface\DodavanjeInteresa.xbf
 Interface\DodavanjeKupona.xbf
 Interface\PocetnaFirme.xbf
 Interface\PocetnaKupca.xbf
-=======
-Interface\DodavanjeKupona.xbf
-Interface\PocetnaFirme.xbf
->>>>>>> 4357142d189bafcca743250d4d9b5408b8f8177d
 Interface\RegistracijaFirme.xbf
 Interface\RegistracijaKupca.xbf
 MainPage.xbf

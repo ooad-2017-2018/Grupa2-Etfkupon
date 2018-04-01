@@ -26,7 +26,7 @@
         <Button x:ConnectionId='2' x:Name="buttonLogout"
                 Content="Log out " 
                 HorizontalAlignment="Left" 
-                Margin="1250,25,0,0" 
+                Margin="1230,25,0,0" 
                 VerticalAlignment="Top" 
                 Height="36" Width="90"                           />
         <Button x:ConnectionId='3' x:Name="buttonPretraga" 
@@ -38,16 +38,16 @@
         <TextBox x:ConnectionId='4' x:Name="textBoxPretraga" 
                  HorizontalAlignment="Left"
                  Margin="359,138,0,0" 
-                 Text="Pretraga" 
+                 Text="" 
                  VerticalAlignment="Top" 
                  Height="36" Width="603"
-                 RenderTransformOrigin="0.5,0.5"/>
+                 RenderTransformOrigin="0.5,0.5" PlaceholderText="Pretraga"/>
         <Button x:ConnectionId='5' x:Name="buttonAzuriraj"
                 Content="Azuriraj profil" 
                 HorizontalAlignment="Left" 
                 Margin="49,25,0,0" 
                 VerticalAlignment="Top" 
-                Width="100"/>
+                Width="100"                             />
         <Button x:ConnectionId='6' x:Name="buttonObrisi"
                 Content="Obrisi profil" 
                 HorizontalAlignment="Left" 
@@ -57,10 +57,10 @@
         <TextBox x:ConnectionId='7' x:Name="textViewWellcome" 
                  HorizontalAlignment="Left" 
                  Margin="578,25,0,0" 
-                 Text="Dobro dosli korisnice " 
+                 Text="" 
                  VerticalAlignment="Top" 
                  Width="181" Height="23"
-                 IsReadOnly="True" />
+                 IsReadOnly="True" PlaceholderText="Dobro dosli korisnice " />
 
     </Grid>
 </Page>
