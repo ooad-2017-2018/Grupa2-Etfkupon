@@ -7,8 +7,34 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,3">
+        <Button x:ConnectionId='1' x:Name="ButtonLogout" Content="Log out" HorizontalAlignment="Left" Margin="1121,38,0,0" VerticalAlignment="Top" Height="41" Width="74"                           />
+        <TextBox x:ConnectionId='2' x:Name="TextBoxNazivArtikla" HorizontalAlignment="Left" Margin="159,104,0,0" Text="" VerticalAlignment="Top" Width="215" Height="45"/>
+        <Button x:ConnectionId='3' x:Name="ButtonDodavanjeKupona" Content="Dodavanje kupona" HorizontalAlignment="Left" Margin="1032,129,0,0" VerticalAlignment="Top" FontSize="16" Height="43" Width="167"                                    />
+        <TextBlock HorizontalAlignment="Left" Margin="453,49,0,0" Text="Dobrodosli!" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="82" Width="270"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,108,0,0" Text="Naziv artikla:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="30" Width="98"/>
+        <TextBox x:ConnectionId='4' x:Name="TextBoxKolicina" HorizontalAlignment="Left" Margin="159,184,0,0" Text="0" VerticalAlignment="Top" Width="73" Height="45" IsReadOnly="True" RenderTransformOrigin="0.521,0.488"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,189,0,0" Text="Kolicina:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="29" Width="63"></TextBlock>
+        <Button x:ConnectionId='5' x:Name="ButtonUp" Content="Up" HorizontalAlignment="Left" Margin="242,188,0,0" VerticalAlignment="Top" Height="44" Width="43"/>
+        <Button x:ConnectionId='6' x:Name="ButtonDown" Content="Down" HorizontalAlignment="Left" Margin="297,189,0,0" VerticalAlignment="Top" Width="82" Height="44"/>
+        <TextBlock HorizontalAlignment="Left" Margin="43,240,0,0" Text="Slika:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="29" Width="39"/>
+        <ListBox x:ConnectionId='7' x:Name="ListBoxInteresi" HorizontalAlignment="Left" Height="139" Margin="19,469,0,0" VerticalAlignment="Top" Width="357" Background="#FFF3B3B3" />
+        <Button x:ConnectionId='8' x:Name="ButtonDodajSliku" Content="Dodaj sliku:" HorizontalAlignment="Left" Margin="42,319,0,0" VerticalAlignment="Top" Height="45" Width="106"/>
+        <Image HorizontalAlignment="Left" Height="85" Margin="263,413,0,0" VerticalAlignment="Top" Width="144"/>
+        <Button x:ConnectionId='9' x:Name="ButtonDodajArtikal" Content="Dodaj novi artikal:" HorizontalAlignment="Left" Margin="19,622,0,0" VerticalAlignment="Top" FontSize="18" Width="280" Height="50"/>
+        <TextBlock HorizontalAlignment="Left" Margin="16,440,0,0" Text="Odaberite u kojoj interesantrnoj skupini se nalazi artikal:" TextWrapping="Wrap" VerticalAlignment="Top" Width="406" Height="28"/>
+        <Border BorderBrush="Black"
+            BorderThickness="1"
+            Margin="520,319,0,0">
+            <GridView x:ConnectionId='11' x:Name="GridViewArtikli" HorizontalAlignment="Left" Height="396" Margin="2,-1,0,0" VerticalAlignment="Top" Width="756"                                                      
+        />
+        </Border>
+        <TextBlock HorizontalAlignment="Left" Margin="523,274,0,0" Text="Moji artikli:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="20" Height="41" Width="190"/>
+        <Border BorderBrush="Black"
+            BorderThickness="1"
+            Margin="158,257,828,285">
+            <Image x:ConnectionId='10' x:Name="imageSlika"/>
+        </Border>
     </Grid>
 </Page>
 

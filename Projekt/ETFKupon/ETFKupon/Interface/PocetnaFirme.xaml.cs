@@ -26,5 +26,25 @@ namespace ETFKupon.Interface
         {
             this.InitializeComponent();
         }
+
+        private void gridViewArtikli_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void GridViewArtikli_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ButtonDodavanjeKupona_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(DodavanjeKupona));
+        }
+
+        private void ButtonLogout_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+        }
     }
 }

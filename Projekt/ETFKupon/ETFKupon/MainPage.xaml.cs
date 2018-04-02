@@ -32,5 +32,10 @@ namespace ETFKupon
         {
             this.Frame.Navigate(typeof(RegistracijaKupca));
         }
+
+        private void buttonRegistracijaFirme_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(RegistracijaFirme));
+        }
     }
 }

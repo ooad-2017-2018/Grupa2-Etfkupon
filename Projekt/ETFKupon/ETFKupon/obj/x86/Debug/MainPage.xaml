@@ -41,7 +41,7 @@
                 HorizontalAlignment="Left" 
                 Margin="580,630,0,0" 
                 VerticalAlignment="Top" 
-                Height="35" Width="171"/>
+                Height="35" Width="171"                                      />
         <TextBox x:ConnectionId='6' x:Name="textBoxRegistacija1" 
                  HorizontalAlignment="Left" 
                  Margin="565,520,0,0" 

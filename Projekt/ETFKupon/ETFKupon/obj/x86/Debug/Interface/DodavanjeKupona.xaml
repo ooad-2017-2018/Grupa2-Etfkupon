@@ -8,6 +8,20 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <ListBox Height="135" Margin="337,158,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="522" Background="#FFD1CBCB"/>
+        <TextBlock HorizontalAlignment="Left" Margin="343,118,0,0" Text="Dodavanje kupona" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22"/>
+        <TextBlock HorizontalAlignment="Left" Margin="339,306,0,0" Text="Popust na cijenu:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="581,309,0,0" Text="%" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox HorizontalAlignment="Left" Margin="457,302,0,0" Text="" VerticalAlignment="Top" Width="118" RenderTransformOrigin="-0.965,0.43" Height="19" FontSize="11"/>
+        <TextBlock HorizontalAlignment="Left" Margin="339,342,0,0" Text="Broj kupona:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBox x:ConnectionId='1' x:Name="numbertextBox" HorizontalAlignment="Left" Margin="457,337,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="147" IsReadOnly="True"/>
+        <Button x:ConnectionId='2' x:Name="ButtonUp" Content="Up" HorizontalAlignment="Left" Margin="609,337,0,0" VerticalAlignment="Top" Height="32" />
+        <Button x:ConnectionId='3' x:Name="ButtonDown" Content="Down" HorizontalAlignment="Left" Margin="664,338,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="339,378,0,0" Text="Vrijedi od:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="339,418,0,0" Text="Vrijedi do:" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <DatePicker x:ConnectionId='4' x:Name="DatePickerVrijediOd" HorizontalAlignment="Left" Margin="423,375,0,0" VerticalAlignment="Top"/>
+        <DatePicker x:ConnectionId='5' x:Name="DatePickerVrijediDo" HorizontalAlignment="Left" Margin="423,412,0,0" VerticalAlignment="Top"/>
+        <Button x:ConnectionId='6' x:Name="ButtonDodajKupon" Content="Dodaj kupon" HorizontalAlignment="Left" Margin="354,498,0,0" VerticalAlignment="Top" Width="377"/>
 
     </Grid>
 </Page>
