@@ -7,53 +7,105 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <TextBox x:ConnectionId='1' x:Name="textBoxUsername" 
-                 HorizontalAlignment="Left" 
-                 Margin="478,270,0,0" 
+    <Grid x:ConnectionId='1' Name="LoginPage" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:ConnectionId='2' x:Name="VisualStateGroup">
+                <VisualState x:ConnectionId='3' x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowHeight="800"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="First.(Grid.Row)" Value="0"/>
+                        <Setter Target="First.(Grid.Column)" Value="0"/>
+                        <Setter Target="Second.(Grid.Row)" Value="1"/>
+                        <Setter Target="Second.(Grid.Column)" Value="0"/>
+                        <Setter Target="Third.(Grid.Row)" Value="2"/>
+                        <Setter Target="Third.(Grid.Column)" Value="0"/>
+
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:ConnectionId='4' x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="First.(Grid.Row)" Value="0"/>
+                        <Setter Target="First.(Grid.Column)" Value="0"/>
+                        <Setter Target="Second.(Grid.Row)" Value="1"/>
+                        <Setter Target="Second.(Grid.Column)" Value="0"/>
+                        <Setter Target="Third.(Grid.Row)" Value="2"/>
+                        <Setter Target="Third.(Grid.Column)" Value="0"/>
+
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="Third.(Grid.ColumnSpan)" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel x:ConnectionId='5' Name="Second" Margin="20,20,20,20" Grid.Row="1">
+            <TextBox x:ConnectionId='11' x:Name="textBoxUsername" 
+                 HorizontalAlignment="Stretch"  
                  Text="" 
                  VerticalAlignment="Top" 
                  Height="28" 
-                 Width="385" PlaceholderText="Username"/>
-        <TextBox x:ConnectionId='2' x:Name="textBoxPassword" 
-                 HorizontalAlignment="Left" 
-                 Margin="478,325,0,0" 
+                 Width="300" PlaceholderText="Username"/>
+
+            <TextBox x:ConnectionId='12' x:Name="textBoxPassword" 
+                 HorizontalAlignment="Stretch" 
+                 Margin="0,20,0,0" 
                  Text="" 
                  VerticalAlignment="Top"
                  Height="28" 
-                 Width="385" PlaceholderText="Password"/>
-        <Button x:ConnectionId='3' x:Name="buttonPrijava" 
-                Content="PRIJAVA" 
-                HorizontalAlignment="Left" 
-                Margin="600,400,0,0" 
-                VerticalAlignment="Top" 
-                Height="32" 
-                Width="122"/>
-        <Button x:ConnectionId='4' x:Name="buttonRegistracijaKupca" 
+                 Width="300" PlaceholderText="Password"/>
+                <Button x:ConnectionId='13' x:Name="buttonPrijava" 
+                        Content="PRIJAVA"  
+                        Margin="0,20,0,0" 
+                        VerticalAlignment="Top" 
+                        HorizontalAlignment="Center"
+                        Height="32" 
+                        Width="122"/>
+        </StackPanel>
+        <StackPanel x:ConnectionId='6' Name="Third" Margin="20,20,20,20" Grid.Row="2">
+
+            <TextBlock x:ConnectionId='7' x:Name="textBoxRegistacija1" 
+                 HorizontalAlignment="Center" 
+                 Margin="0,0,0,0" 
+                 Text="Novi ste na našoj stranici?" 
+                 VerticalAlignment="Top"/>
+
+            <TextBlock x:ConnectionId='8' x:Name="textBoxRegistacija2" 
+                 HorizontalAlignment="Center" 
+                 Margin="0,0,0,0" 
+                 Text="Registrujte se ovdje" 
+                 VerticalAlignment="Top"/>
+            
+            <Button x:ConnectionId='9' x:Name="buttonRegistracijaKupca" 
                 Content="Registruj se kao kupac" 
-                HorizontalAlignment="Left" 
-                Margin="580,585,0,0" 
+                HorizontalAlignment="Center" 
+                Margin="0,10,0,0" 
                 VerticalAlignment="Top" 
                 Height="35" 
                 Width="171"                                      />
-        <Button x:ConnectionId='5' x:Name="buttonRegistracijaFirme" 
+
+            <Button x:ConnectionId='10' x:Name="buttonRegistracijaFirme" 
                 Content="Registruj se kao firma" 
-                HorizontalAlignment="Left" 
-                Margin="580,630,0,0" 
+                HorizontalAlignment="Center" 
+                Margin="0,10,0,0" 
                 VerticalAlignment="Top" 
                 Height="35" Width="171"                                      />
-        <TextBox x:ConnectionId='6' x:Name="textBoxRegistacija1" 
-                 HorizontalAlignment="Left" 
-                 Margin="565,520,0,0" 
-                 Text="Novi ste na našoj stranici?" 
-                 VerticalAlignment="Top" 
-                 IsReadOnly="True" BorderBrush="#66FFFFFF"/>
-        <TextBox x:ConnectionId='7' x:Name="textBoxRegistacija2" 
-                 HorizontalAlignment="Left" 
-                 Margin="587,545,0,0" 
-                 Text="Registrujte se ovdje" 
-                 VerticalAlignment="Top" 
-                 IsReadOnly="True" BorderBrush="#66FFFFFF"/>
+        </StackPanel>
+
     </Grid>
 </Page>
 

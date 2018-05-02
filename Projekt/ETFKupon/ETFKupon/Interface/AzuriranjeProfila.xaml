@@ -7,18 +7,84 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:Name="azurirajProfilDugme" Content="Azuriraj profil" HorizontalAlignment="Left" Margin="534,564,0,0" VerticalAlignment="Top" Height="50" Width="234" RenderTransformOrigin="0.5,0.486"/>
-        <TextBox x:Name="imeAzurirano" PlaceholderText="Unesite ime" HorizontalAlignment="Left" Margin="534,274,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
-        <TextBox x:Name="prezimeAzurirano" PlaceholderText="Unesite prezime" HorizontalAlignment="Left" Margin="534,328,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
-        <TextBox x:Name="usernameAzurirano" PlaceholderText="Unesite username" HorizontalAlignment="Left" Margin="534,386,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
-        <TextBox x:Name="passwordAzurirano" PlaceholderText="Unesite password" HorizontalAlignment="Left" Margin="534,440,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
-        <TextBox x:Name="emailAzurirano" PlaceholderText="Unesite email" HorizontalAlignment="Left" Margin="534,496,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
-        <Border BorderBrush="Black" BorderThickness="1" Margin="305,326,1023,506" RenderTransformOrigin="0.559,0.452">
-            <Image HorizontalAlignment="Left" Height="168" Margin="9,-1,0,-1" VerticalAlignment="Top" Width="152"/>
-        </Border>
-        <Button x:Name="azuriranjeSlike" Content="Nadji sliku" HorizontalAlignment="Left" Margin="319,496,0,0" VerticalAlignment="Top" Width="152"/>
-        <Button x:Name="azurirajBack" Content="Nazad na profil" HorizontalAlignment="Left" Margin="878,564,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.562,0.563" Height="50" Width="234" Click="azurirajBack_Click"/>
+    <Grid Name="ProfileUpdate" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                
+                <VisualState x:Name="Wide">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="800"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="First.(Grid.Row)" Value="1"/>
+                        <Setter Target="First.(Grid.Column)" Value="0"/>
+                        <Setter Target="Second.(Grid.Row)" Value="1"/>
+                        <Setter Target="Second.(Grid.Column)" Value="1"/>
+                        <Setter Target="Third.(Grid.Row)" Value="1"/>
+                        <Setter Target="Third.(Grid.Column)" Value="2"/>
 
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="1"/>
+                        <Setter Target="Third.(Grid.ColumnSpan)" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+
+                <VisualState x:Name="Narrow">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="First.(Grid.Row)" Value="0"/>
+                        <Setter Target="First.(Grid.Column)" Value="0"/>
+                        <Setter Target="Second.(Grid.Row)" Value="1"/>
+                        <Setter Target="Second.(Grid.Column)" Value="0"/>
+                        <Setter Target="Third.(Grid.Row)" Value="2"/>
+                        <Setter Target="Third.(Grid.Column)" Value="0"/>
+
+                        <Setter Target="First.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Second.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Third.(Grid.ColumnSpan)" Value="3"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ScrollViewer Grid.Row="1">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+
+                <StackPanel Name="First" Margin="20,20,20,20">
+                    <TextBox x:Name="imeAzurirano" PlaceholderText="Unesite ime" HorizontalAlignment="Center" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
+                    <TextBox x:Name="prezimeAzurirano" PlaceholderText="Unesite prezime" HorizontalAlignment="Center"  Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
+                    <TextBox x:Name="usernameAzurirano" PlaceholderText="Unesite username" HorizontalAlignment="Center"  Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
+                    <TextBox x:Name="passwordAzurirano" PlaceholderText="Unesite password" HorizontalAlignment="Center" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
+                    <TextBox x:Name="emailAzurirano" PlaceholderText="Unesite email" HorizontalAlignment="Center"  Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
+                    <Button x:Name="azurirajProfilDugme" Content="Azuriraj profil" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="35" Width="234" RenderTransformOrigin="0.5,0.486"/>
+                </StackPanel>
+                <StackPanel Name="Second" Margin="20,20,20,20" Grid.Row="1">
+                    <Border BorderBrush="Black" BorderThickness="1" Margin="100,0,100,0" Height="130">
+                        <Image HorizontalAlignment="Center" Height="170" Margin="0,0,0,20" VerticalAlignment="Top" Width="100"/>
+                    </Border>
+                    <Button x:Name="azuriranjeSlike" Content="Nadji sliku" HorizontalAlignment="Center" Margin="0,5,0,0" VerticalAlignment="Bottom" Width="152"/>
+                </StackPanel>
+
+
+                <StackPanel Name="Third"  Margin="20,20,20,20" Grid.Row="2">
+                    <Button x:Name="azurirajBack" Content="Nazad na profil" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,100,0,0"  Height="35" Width="234" Click="azurirajBack_Click"/>
+                </StackPanel>
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>
