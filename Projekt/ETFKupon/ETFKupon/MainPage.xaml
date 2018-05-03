@@ -6,9 +6,10 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
-    <Grid Name="LoginPage" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <VisualStateManager.VisualStateGroups>
+    
+    <ScrollViewer HorizontalScrollMode="Auto" VerticalScrollMode="Auto">
+        <Grid Name="LoginPage">
+            <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
                 <VisualState x:Name="Wide">
                     <VisualState.StateTriggers>
@@ -107,4 +108,5 @@
         </StackPanel>
 
     </Grid>
+    </ScrollViewer>
 </Page>

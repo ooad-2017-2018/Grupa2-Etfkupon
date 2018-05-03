@@ -7,12 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <ScrollViewer>
-    <Grid x:ConnectionId='1' Name="InteresLayout" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <StackPanel Margin="20,20,20,20">
+    <Grid x:ConnectionId='1' Name="InteresLayout" >
+            <StackPanel Margin="20,300,20,20">
                 <ComboBox x:ConnectionId='2' x:Name="comboBoxInteresi" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Height="384" Width="372">
                     <ComboBox/>
                 </ComboBox>
                 <Button x:ConnectionId='3' x:Name="buttonDodajInterese" Content="Dodaj oznacene interese " HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Height="52" Width="195"/>
+                <Button x:ConnectionId='4' x:Name="buttonPocetnaKupcaInteresi" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="50" Width="50"                                         >
+                    <Image Source="/Assets/Icons/exit-2.png" Stretch="Fill"/>
+                </Button>
             </StackPanel>
         </Grid>
     </ScrollViewer>

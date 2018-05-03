@@ -7,7 +7,10 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
     <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto">
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/LogoEKupovinaPlain.jpg"/>
+            </Grid.Background>
         <VisualStateManager.VisualStateGroups>
         <VisualStateGroup x:ConnectionId='1' x:Name="VisualStateGroup">
 
@@ -59,33 +62,48 @@
                 Margin="0,25,0,0" 
                 VerticalAlignment="Top" 
                 Width="150"                             />
-            <Button x:ConnectionId='12' x:Name="buttonObrisi"
-                Content="Obrisi profil" 
-                HorizontalAlignment="Left" 
-                Margin="0,20,0,0" 
-                VerticalAlignment="Top" 
-                Width="150"/>
-            <Border BorderBrush="Black"
+                
+                <RelativePanel Margin="0,0,0,0">
+                    <Button x:ConnectionId='14' x:Name="buttonObrisi"
+                    HorizontalAlignment="Left" 
+                    Margin="0,20,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="70"
+                    Height="60">
+                        <Image Source="/Assets/Icons/garbage-2.png" Stretch="Fill"/>
+                    </Button>
+                    <Button x:ConnectionId='15' x:Name="buttonKorpa"
+                    HorizontalAlignment="Left" 
+                    Margin="80,20,0,0" 
+                    VerticalAlignment="Top" 
+                    Width="70"
+                    Height="60">
+                        <Image Source="/Assets/Icons/shopping-cart.png" Stretch="Fill"/>
+                    </Button>
+                </RelativePanel>
+            
+                <Border BorderBrush="Black"
                 BorderThickness="1"
                 Margin="0,75,0,0">
-                <ListView x:ConnectionId='14' x:Name="listViewInterface" Height="500" VerticalAlignment="Bottom" Margin="0,0,23,0"/>
+                <ListView x:ConnectionId='13' x:Name="listViewInterface" Height="500" VerticalAlignment="Bottom" Margin="0,0,23,0"/>
             </Border>
-            <Button x:ConnectionId='13' x:Name="buttonInteresi"
+            <Button x:ConnectionId='12' x:Name="buttonInteresi"
                 HorizontalAlignment="Center" 
-                Margin="0,50,0,0" 
+                Margin="0,25,0,0" 
                 VerticalAlignment="Top" 
                 Height="36" Width="176" Content="Dodaj novi interes"                              />
         </StackPanel>
 
         <StackPanel x:ConnectionId='5' Name="Second" Margin="20,20,20,20" Grid.Column="1">
-            <Button x:ConnectionId='6' x:Name="buttonLogout"
-                Content="Log out " 
+                <Button x:ConnectionId='6' x:Name="buttonLogout"
                 HorizontalAlignment="Right" 
                 Margin="0,0,0,0" 
                 VerticalAlignment="Top" 
-                Height="36" Width="90"                           />
+                Height="40" Width="45"                           >
+                    <Image Source="/Assets/Icons/exit-2.png" Stretch="Fill"/>
+                </Button>
 
-            <TextBlock x:ConnectionId='7' x:Name="textViewWellcome" 
+                <TextBlock x:ConnectionId='7' x:Name="textViewWellcome" 
                  HorizontalAlignment="Left" 
                  Margin="115,-20,0,0" 
                  Text="Dobro dosli korisniče" 
@@ -93,25 +111,27 @@
                  FontSize="25"
                  Width="240" Height="35"/>
 
-            <RelativePanel HorizontalAlignment="Center" Margin="0,50,0,0">
+            <RelativePanel HorizontalAlignment="Center" Margin="-150,50,0,0">
                 <TextBox x:ConnectionId='9' x:Name="textBoxPretraga" 
                     HorizontalAlignment="Left"
                     Margin="0,0,0,0" 
                     Text="" 
                     VerticalAlignment="Top" 
-                    Height="36" Width="603"
+                    Height="28" Width="600"
                     RenderTransformOrigin="0.5,0.5" PlaceholderText="Pretraga"/>
-                <Button x:ConnectionId='10' x:Name="buttonPretraga" 
-                    Content="Pretrazi artikle" 
+                    <Button x:ConnectionId='10' x:Name="buttonPretraga"  
                     HorizontalAlignment="Left" 
-                    Margin="700,0,0,0" 
+                    Margin="610,-5,0,0" 
                     VerticalAlignment="Top" 
-                    Width="141"/>
-            </RelativePanel>
+                    Width="45"
+                    Height="40">
+                        <Image Source="/Assets/Icons/search.png" Stretch="Fill"/>
+                    </Button>
+                </RelativePanel>
 
             <Border BorderBrush="Black"
                 BorderThickness="1"
-                Margin="0,50,0,0">
+                Margin="0,71,0,0">
                 <GridView x:ConnectionId='8' x:Name="gridViewArtikli" Margin="0,0,0,0" Height="500" RenderTransformOrigin="0.5,0.5">
                     <GridView.RenderTransform>
                         <CompositeTransform ScaleY="-1"/>

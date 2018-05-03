@@ -6,9 +6,12 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <ScrollViewer Grid.Row="1">
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,0,0">
-        <VisualStateManager.VisualStateGroups>
+    <ScrollViewer Grid.Row="1" HorizontalScrollMode="Auto" VerticalScrollMode="Auto">
+    <Grid>
+            <Grid.Background>
+                <ImageBrush ImageSource="/Assets/LogoEKupovinaPlain.jpg"/>
+            </Grid.Background>
+            <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:ConnectionId='1' x:Name="VisualStateGroup">
 
                 <VisualState x:ConnectionId='2' x:Name="Wide">
@@ -52,55 +55,62 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         <Grid.RowDefinitions>
-          <RowDefinition/>
-          <RowDefinition/>
-          <RowDefinition/>
-        </Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="400"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
 
-
-            <StackPanel x:ConnectionId='4' Name="First" Margin="20,20,20,20">
-                <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Dobrodosli!" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="82" Width="270"/>
-                    
-                <Button x:ConnectionId='13' x:Name="ButtonLogout" Content="Log out" HorizontalAlignment="Right" Margin="0,0,20,0" VerticalAlignment="Top" Height="41" Width="74"                           />
-                <RelativePanel HorizontalAlignment="Center">
-                        <TextBlock HorizontalAlignment="Left" Margin="0,5,0,0" Text="Naziv artikla:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="30" Width="98"/>
-                        <TextBox x:ConnectionId='17' x:Name="TextBoxNazivArtikla" HorizontalAlignment="Left" Margin="100,0,0,0" Text="" VerticalAlignment="Top" Width="215" Height="45"/>
-                    </RelativePanel>
-                    <RelativePanel HorizontalAlignment="Center">
-                        <TextBox x:ConnectionId='14' x:Name="TextBoxKolicina" HorizontalAlignment="Left" Margin="100,0,0,0" Text="0" VerticalAlignment="Top" Width="73" Height="45" IsReadOnly="True" RenderTransformOrigin="0.521,0.488"/>
-                        <TextBlock HorizontalAlignment="Left" Margin="0,5,0,0" Text="Kolicina:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="29" Width="63"></TextBlock>
-                        <Button x:ConnectionId='15' x:Name="ButtonUp" Content="Up" HorizontalAlignment="Left" Margin="185,0,0,0" VerticalAlignment="Top" Height="44" Width="43"/>
-                        <Button x:ConnectionId='16' x:Name="ButtonDown" Content="Down" HorizontalAlignment="Left" Margin="232,0,0,0" VerticalAlignment="Top" Width="82" Height="44"/>
-                    </RelativePanel>
-                </StackPanel>
-
-                <StackPanel x:ConnectionId='5' Name="Second" Margin="20,20,20,20" Grid.Row="1">
-                    <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Odaberite u kojoj interesnoj skupini se nalazi artikal:" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="28"/>
-                    <ListBox x:ConnectionId='9' x:Name="ListBoxInteresi" HorizontalAlignment="Center" Height="139" Margin="0,0,0,0" VerticalAlignment="Top" Width="357" Background="#FFF3B3B3" />
-                    <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0" Text="Slika:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="29" Width="39"/>
-                    <Image HorizontalAlignment="Center" Height="85" Margin="0,0,0,0" VerticalAlignment="Top" Width="144"/>
-
-
-                    <Border BorderBrush="Black"
-                        BorderThickness="1"
-                        Margin="0,0,0,0">
-                        <Image x:ConnectionId='12' x:Name="imageSlika"/>
-                    </Border>
-
-                    <Button x:ConnectionId='10' x:Name="ButtonDodajSliku" Content="Dodaj sliku:" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Height="45" Width="106"/>
-                <Button x:ConnectionId='11' x:Name="ButtonDodajArtikal" Content="Dodaj novi artikal" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" FontSize="18" Width="280" Height="50"/>
-            </StackPanel>
-
-            <StackPanel x:ConnectionId='6' Name="Third" Margin="20,20,20,20" Grid.Row="2">
-                <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Moji artikli:" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="20" Height="41" Width="100"/>
+            <StackPanel x:ConnectionId='4' Name="First" Margin="20,20,20,20" Grid.Row="0">
+                <TextBlock HorizontalAlignment="Center" Margin="0,125,0,0" Text="Slika:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.5,0.5" Height="29" Width="39"/>
                 <Border BorderBrush="Black"
                         BorderThickness="1"
-                        Margin="0,0,0,0">
-                    <GridView x:ConnectionId='8' x:Name="GridViewArtikli" HorizontalAlignment="Center" Height="150" Margin="0,0,0,0" VerticalAlignment="Top" Width="756"                                                      
+                        Margin="0,0,0,0"
+                        Height="120"
+                        Width="100">
+                    <Image HorizontalAlignment="Center" Height="85" Margin="0,0,0,0" VerticalAlignment="Top" Width="144"/>
+
+                </Border>
+                <Button x:ConnectionId='8' x:Name="ButtonDodajSliku" Content="Dodaj sliku:" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="45" Width="106"/>
+                
+                <RelativePanel HorizontalAlignment="Center" Margin="0,20,0,0">
+                        <TextBlock HorizontalAlignment="Left" Margin="0,5,0,0" Text="Naziv artikla:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" Height="30" Width="98"/>
+                        <TextBox x:ConnectionId='15' x:Name="TextBoxNazivArtikla" HorizontalAlignment="Left" Margin="100,0,0,0" Text="" VerticalAlignment="Top" Width="215" Height="28"/>
+                    </RelativePanel>
+                <RelativePanel HorizontalAlignment="Center" Margin="0,10,0,0">
+                    <TextBox x:ConnectionId='12' x:Name="TextBoxKolicina" HorizontalAlignment="Left" Margin="100,2,0,0" Text="0" VerticalAlignment="Top" Width="73" Height="28" IsReadOnly="True" RenderTransformOrigin="0.521,0.488"/>
+                    <TextBlock HorizontalAlignment="Left" Margin="0,5,0,0" Text="Kolicina:" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Height="29" Width="63"></TextBlock>
+                    <Button x:ConnectionId='13' x:Name="ButtonUp" HorizontalAlignment="Left" Margin="185,0,0,0" VerticalAlignment="Top" Height="35" Width="43">
+                        <Image Source="/Assets/Icons/arrow-up.png" Stretch="Fill"/>
+                    </Button>
+                    <Button x:ConnectionId='14' x:Name="ButtonDown" HorizontalAlignment="Left" Margin="232,0,0,0" VerticalAlignment="Top" Width="43" Height="35">
+                        <Image Source="/Assets/Icons/arrow-down.png" Stretch="Fill"/>
+                    </Button>
+                </RelativePanel>
+                <TextBlock HorizontalAlignment="Center" Margin="0,30,0,0" Text="Odaberite u kojoj interesnoj skupini se nalazi artikal:" TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Height="28"/>
+                <ListBox x:ConnectionId='9' x:Name="ListBoxInteresi" HorizontalAlignment="Center" Height="139" Margin="0,0,0,0" VerticalAlignment="Top" Width="357" Background="#FFF3B3B3" />
+                
+                <Button x:ConnectionId='10' x:Name="ButtonDodajArtikal" Content="Dodaj novi artikal" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" FontSize="18" Width="280" Height="50"/>
+                <Button x:ConnectionId='11' x:Name="ButtonDodavanjeKupona" Content="Dodavanje kupona" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" FontSize="18" Height="50" Width="280"                                    />
+            </StackPanel>
+
+            <StackPanel x:ConnectionId='5' Name="Second" Margin="20,20,20,20" Grid.Row="0" Grid.Column="1">
+                <Button x:ConnectionId='6' x:Name="ButtonLogout" HorizontalAlignment="Right" Margin="0,0,20,0" VerticalAlignment="Top" Height="50" Width="50"                           >
+                    <Image Source="/Assets/Icons/exit-2.png" Stretch="Fill"/>
+                </Button>
+                <TextBlock HorizontalAlignment="Center" Margin="0,-50,0,0" Text="Dobrodosli!" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="48" Height="82" Width="270"/>
+
+                <TextBlock HorizontalAlignment="Center" Margin="0,50,0,0" Text="Moji artikli:" TextWrapping="Wrap"  VerticalAlignment="Top" FontSize="20" Height="41" Width="100"/>
+                <Border BorderBrush="Black"
+                        BorderThickness="1"
+                        Margin="0,0,0,0"
+                        Height="800">
+                    <GridView x:ConnectionId='7' x:Name="GridViewArtikli" HorizontalAlignment="Center" Height="150" Margin="0,0,0,0" VerticalAlignment="Top"                                                      
                         />
                 </Border>
-                <Button x:ConnectionId='7' x:Name="ButtonDodavanjeKupona" Content="Dodavanje kupona" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" FontSize="18" Height="50" Width="280"                                    />
             </StackPanel>
+
         </Grid>
     </ScrollViewer>
 </Page>

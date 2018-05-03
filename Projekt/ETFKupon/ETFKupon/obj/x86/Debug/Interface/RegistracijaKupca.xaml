@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:ConnectionId='1' x:Name="VisualStateGroup">
 
@@ -68,23 +68,23 @@
                     <TextBox x:ConnectionId='15' x:Name="textBoxIme" 
                     PlaceholderText="Ime"
                     HorizontalAlignment="Center" 
-                    Margin="0,110,0,0"
+                    Margin="0,10,0,0"
                     VerticalAlignment="Top" 
-                    Height="38"
-                    Width="230"
+                    Height="28"
+                    Width="300"
                                                         />
                             <TextBox x:ConnectionId='16' x:Name="textBoxPrezime"
                     PlaceholderText="Prezime"
                     HorizontalAlignment="Center" 
                     Margin="0,10,0,0" 
                     VerticalAlignment="Top" 
-                    Height="38" Width="230"/>
+                    Height="28" Width="300"/>
                     <TextBox x:ConnectionId='17' x:Name="textBoxAdresa" 
                     PlaceholderText="Adresa"
                     HorizontalAlignment="Center" 
                     Margin="0,10,0,0"
                     VerticalAlignment="Top" 
-                    Height="38" Width="230"/>
+                    Height="28" Width="300"/>
                 </StackPanel>
                 <StackPanel x:ConnectionId='5' Name="Second" Margin="20,20,20,20" Grid.Row="1">
                     <TextBox x:ConnectionId='10' x:Name="textBoxUsernameK" 
@@ -92,31 +92,31 @@
                     Margin="0,10,0,0" 
                     Text="" 
                     VerticalAlignment="Top" 
-                    Height="38" Width="250" PlaceholderText="Username"/>
+                    Height="28" Width="300" PlaceholderText="Username"/>
                     <TextBox x:ConnectionId='11' x:Name="textBoxPasswordK" 
                     HorizontalAlignment="Center"
                     Margin="0,10,0,0" 
                     Text="" 
                     VerticalAlignment="Top" 
-                    Height="38" Width="250" PlaceholderText="Password"/>
+                    Height="28" Width="300" PlaceholderText="Password"/>
                     <TextBox x:ConnectionId='12' x:Name="textBoxPonoviPasswordK" 
                     HorizontalAlignment="Center"
                     Margin="0,10,0,0" 
                     Text="" 
                     VerticalAlignment="Top" 
-                    Height="38" Width="250" PlaceholderText="Ponovi Password"/>
+                    Height="28" Width="300" PlaceholderText="Ponovi Password"/>
                     <TextBox x:ConnectionId='13' x:Name="textBoxEmail" 
                     HorizontalAlignment="Center"
                     Margin="0,10,0,0" 
                     Text="" 
-                    VerticalAlignment="Top" 
-                    Height="38" Width="250" PlaceholderText="Email"/>
+                    VerticalAlignment="Top"
+                    Height="28" Width="300" PlaceholderText="Email"/>
                     <TextBox x:ConnectionId='14' x:Name="textBoxBrKartice"
                     HorizontalAlignment="Center"
                     Margin="0,10,0,0" 
                     Text="" 
                     VerticalAlignment="Top"
-                    Height="38" Width="250" PlaceholderText="Broj Kartice"/>
+                    Height="28" Width="300" PlaceholderText="Broj Kartice"/>
                 </StackPanel>
 
                 <StackPanel x:ConnectionId='6' Name="Third" Margin="20,20,20,20" Grid.Row="2">
@@ -128,10 +128,12 @@
 
                     <Border BorderBrush="Black"
                         BorderThickness="1"
-                        Margin="300,10,300,100">
+                        Margin="0,10,0,0"
+                            Width="200"
+                            Height="240">
                         <Image x:ConnectionId='9' x:Name="imageSlika"/>
                     </Border>
-                    <Button x:ConnectionId='8' x:Name="buttonRegistracijaK" Content="Registracija" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Height="35" Width="225"                                  />
+                    <Button x:ConnectionId='8' x:Name="buttonRegistracijaK" Content="Registracija" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Height="35" Width="225"                                  />
                 </StackPanel>
             </Grid>
         </ScrollViewer>

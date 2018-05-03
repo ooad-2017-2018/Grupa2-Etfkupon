@@ -7,24 +7,19 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" RenderTransformOrigin="0.591,0.476">
+    <Grid >
         <ScrollViewer>
-        <StackPanel Margin="20,70,20,20">
-            <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Registruj se" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" FontSize="30" FontWeight="Bold" Height="37"/>
-            <TextBlock HorizontalAlignment="Center" Margin="0,30,0,0" Text="Username" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" FontSize="16" Height="27"/>
-            <TextBox x:ConnectionId='1' x:Name="TextBoxUsernameF" HorizontalAlignment="Center" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Width="275" RenderTransformOrigin="1.065,-1" Height="40"/>
+        <StackPanel Margin="20,250,20,20">
+                <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Registruj se" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" FontSize="28" FontWeight="Bold" Height="37"/>
+                <TextBox x:ConnectionId='1' x:Name="TextBoxUsernameF" HorizontalAlignment="Center" Margin="0,30,0,0" PlaceholderText="Username" Text="" VerticalAlignment="Top" Width="275" RenderTransformOrigin="1.065,-1" Height="28"/>
 
-            <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0" Text="Password" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" FontSize="16" Height="26"/>
-            <PasswordBox x:ConnectionId='2' x:Name="PasswordBox1" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="275" Height="40"/>
+            <PasswordBox x:ConnectionId='2' x:Name="PasswordBox1" PlaceholderText="Password" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="275" Height="28"/>
+
+            <PasswordBox x:ConnectionId='3' x:Name="PasswordBox2" PlaceholderText="Ponovi password" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="275" Height="28"/>
             
-            <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0" Text="Ponovi password" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" FontSize="16" Height="27"/>
-            <PasswordBox x:ConnectionId='3' x:Name="PasswordBox2" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Width="275" Height="42"/>
+            <TextBox x:ConnectionId='4' x:Name="TextBoxEmailF" PlaceholderText="Email" HorizontalAlignment="Center" Margin="0,20,0,0" Text="" VerticalAlignment="Top" Width="275" Height="28"/>
             
-            <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0" Text="Email" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" FontSize="16" Height="26"/>
-            <TextBox x:ConnectionId='4' x:Name="TextBoxEmailF" HorizontalAlignment="Center" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Width="275" Height="40"/>
-            
-            <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0" Text="Naziv firme" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" FontSize="16" Height="27"/>
-            <TextBox x:ConnectionId='5' x:Name="TextBoxNazivFirme" HorizontalAlignment="Center" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Width="275" Height="42"/>
+            <TextBox x:ConnectionId='5' x:Name="TextBoxNazivFirme" PlaceholderText="Naziv firme" HorizontalAlignment="Center" Margin="0,20,0,0" Text="" VerticalAlignment="Top" Width="275" Height="28"/>
             
             <Button x:ConnectionId='6' x:Name="ButtonRegistracijaF" Content="Registracija" HorizontalAlignment="Center" Margin="0,40,0,0" VerticalAlignment="Top" FontFamily="Segoe UI" Width="305" Height="41"                                  />
 

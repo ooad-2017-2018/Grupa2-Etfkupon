@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Name="ProfileUpdate" Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Name="ProfileUpdate">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:Name="VisualStateGroup">
                 
@@ -71,6 +71,7 @@
                     <TextBox x:Name="usernameAzurirano" PlaceholderText="Unesite username" HorizontalAlignment="Center"  Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
                     <TextBox x:Name="passwordAzurirano" PlaceholderText="Unesite password" HorizontalAlignment="Center" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
                     <TextBox x:Name="emailAzurirano" PlaceholderText="Unesite email" HorizontalAlignment="Center"  Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
+                    <TextBox x:Name="karticaAzurirano" PlaceholderText="Unesite broj kartice" HorizontalAlignment="Center"  Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
                     <Button x:Name="azurirajProfilDugme" Content="Azuriraj profil" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="35" Width="234" RenderTransformOrigin="0.5,0.486"/>
                 </StackPanel>
                 <StackPanel Name="Second" Margin="20,20,20,20" Grid.Row="1">
@@ -82,7 +83,9 @@
 
 
                 <StackPanel Name="Third"  Margin="20,20,20,20" Grid.Row="2">
-                    <Button x:Name="azurirajBack" Content="Nazad na profil" VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0,100,0,0"  Height="35" Width="234" Click="azurirajBack_Click"/>
+                    <Button x:Name="azurirajBack" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,100,0,0"  Height="60" Width="65" Click="azurirajBack_Click">
+                        <Image Source="/Assets/Icons/exit.png" Stretch="Fill" />
+                    </Button>
                 </StackPanel>
             </Grid>
         </ScrollViewer>

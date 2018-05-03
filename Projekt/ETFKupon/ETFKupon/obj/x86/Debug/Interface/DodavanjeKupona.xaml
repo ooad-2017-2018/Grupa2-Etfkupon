@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid>
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup x:ConnectionId='1' x:Name="VisualStateGroup">
                 <VisualState x:ConnectionId='2' x:Name="Wide">
@@ -23,14 +23,14 @@
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
         <ScrollViewer>
-        <RelativePanel x:ConnectionId='3' Name="First" Margin="20,20,20,20" HorizontalAlignment="Center">
+        <RelativePanel x:ConnectionId='3' Name="First" Margin="20,250,20,20" HorizontalAlignment="Center">
             <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0" Text="Dodavanje kupona" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22"/>
             <ListBox Height="135" Margin="0,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="522" Background="#FFD1CBCB"/>
             <TextBlock HorizontalAlignment="Center" Margin="0,196,0,0" Text="Popust na cijenu:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Center" Margin="120,190,0,0" Text="" VerticalAlignment="Top" Width="118" RenderTransformOrigin="-0.965,0.43" Height="19" FontSize="11"/>
+            <TextBox HorizontalAlignment="Center" Margin="120,190,0,0" Text="" VerticalAlignment="Top" Width="118" RenderTransformOrigin="-0.965,0.43" Height="28" FontSize="11"/>
             <TextBlock HorizontalAlignment="Left" Margin="250,196,0,0" Text="%" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="0,250,0,0" Text="Broj kupona:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBox x:ConnectionId='4' x:Name="numbertextBox" HorizontalAlignment="Left" Margin="120,245,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="118" IsReadOnly="True"/>
+            <TextBox x:ConnectionId='4' x:Name="numbertextBox" Height="28" HorizontalAlignment="Left" Margin="120,245,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="118" IsReadOnly="True"/>
             <Button x:ConnectionId='5' x:Name="ButtonUp" Content="Up" HorizontalAlignment="Left" Margin="120,290,0,0" VerticalAlignment="Top" Height="32" />
             <Button x:ConnectionId='6' x:Name="ButtonDown" Content="Down" HorizontalAlignment="Left" Margin="180,290,0,0" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="0,350,0,0" Text="Vrijedi od:" TextWrapping="Wrap" VerticalAlignment="Top"/>
@@ -38,7 +38,10 @@
             <DatePicker x:ConnectionId='7' x:Name="DatePickerVrijediOd" HorizontalAlignment="Left" Margin="120,345,0,0" VerticalAlignment="Top"/>
             <DatePicker x:ConnectionId='8' x:Name="DatePickerVrijediDo" HorizontalAlignment="Left" Margin="120,395,0,0" VerticalAlignment="Top"/>
             <Button x:ConnectionId='9' x:Name="ButtonDodajKupon" Content="Dodaj kupon" HorizontalAlignment="Center" Margin="80,440,0,0" VerticalAlignment="Top" Width="377"/>
-        </RelativePanel>
+                <Button x:ConnectionId='10' x:Name="ButtonFirmaNazad" HorizontalAlignment="Center" Margin="220,480,0,0" VerticalAlignment="Top" Width="70" Height="60"                               >
+                    <Image Source="/Assets/Icons/exit-2.png" Stretch="Fill"/>
+                </Button>
+            </RelativePanel>
         </ScrollViewer>
         
         
