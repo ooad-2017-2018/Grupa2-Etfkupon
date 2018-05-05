@@ -95,25 +95,25 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Interface\AzuriranjeProfila.xaml.cs">
+    <Compile Include="View\AzuriranjeProfila.xaml.cs">
       <DependentUpon>AzuriranjeProfila.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Interface\DodavanjeInteresa.xaml.cs">
+    <Compile Include="View\DodavanjeInteresa.xaml.cs">
       <DependentUpon>DodavanjeInteresa.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Interface\DodavanjeKupona.xaml.cs">
+    <Compile Include="View\DodavanjeKupona.xaml.cs">
       <DependentUpon>DodavanjeKupona.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Interface\PocetnaFirme.xaml.cs">
+    <Compile Include="View\PocetnaFirme.xaml.cs">
       <DependentUpon>PocetnaFirme.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Interface\PocetnaKupca.xaml.cs">
+    <Compile Include="View\PocetnaKupca.xaml.cs">
       <DependentUpon>PocetnaKupca.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Interface\RegistracijaFirme.xaml.cs">
+    <Compile Include="View\RegistracijaFirme.xaml.cs">
       <DependentUpon>RegistracijaFirme.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Interface\RegistracijaKupca.xaml.cs">
+    <Compile Include="View\RegistracijaKupca.xaml.cs">
       <DependentUpon>RegistracijaKupca.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.cs">
@@ -527,31 +527,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="Interface\AzuriranjeProfila.xaml">
+    <Page Include="View\AzuriranjeProfila.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Interface\DodavanjeInteresa.xaml">
+    <Page Include="View\DodavanjeInteresa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Interface\DodavanjeKupona.xaml">
+    <Page Include="View\DodavanjeKupona.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Interface\PocetnaFirme.xaml">
+    <Page Include="View\PocetnaFirme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Interface\PocetnaKupca.xaml">
+    <Page Include="View\PocetnaKupca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Interface\RegistracijaFirme.xaml">
+    <Page Include="View\RegistracijaFirme.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Interface\RegistracijaKupca.xaml">
+    <Page Include="View\RegistracijaKupca.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -565,7 +565,10 @@
       <Version>6.0.6</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="ModelView\" />
+    <Folder Include="Model\" />
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
