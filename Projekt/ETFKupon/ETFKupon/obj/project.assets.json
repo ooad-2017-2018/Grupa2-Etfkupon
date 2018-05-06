@@ -25777,24 +25777,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\NadjaD\\.nuget\\packages\\": {},
+    "C:\\Users\\Adnan\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\NadjaD\\Desktop\\OOAD projekat\\Projekt\\ETFKupon\\ETFKupon\\ETFKupon.csproj",
+      "projectUniqueName": "C:\\Users\\Adnan\\Desktop\\Cetvrti semestar\\OOAD Projekt\\Projekt\\ETFKupon\\ETFKupon\\ETFKupon.csproj",
       "projectName": "ETFKupon",
-      "projectPath": "C:\\Users\\NadjaD\\Desktop\\OOAD projekat\\Projekt\\ETFKupon\\ETFKupon\\ETFKupon.csproj",
-      "packagesPath": "C:\\Users\\NadjaD\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\NadjaD\\Desktop\\OOAD projekat\\Projekt\\ETFKupon\\ETFKupon\\obj\\",
+      "projectPath": "C:\\Users\\Adnan\\Desktop\\Cetvrti semestar\\OOAD Projekt\\Projekt\\ETFKupon\\ETFKupon\\ETFKupon.csproj",
+      "packagesPath": "C:\\Users\\Adnan\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Adnan\\Desktop\\Cetvrti semestar\\OOAD Projekt\\Projekt\\ETFKupon\\ETFKupon\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\NadjaD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Adnan\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],

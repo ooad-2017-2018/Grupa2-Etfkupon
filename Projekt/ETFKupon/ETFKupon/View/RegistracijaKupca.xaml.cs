@@ -49,7 +49,7 @@ namespace ETFKupon.Interface
             KupacModelView k = new KupacModelView();
             k.dodaj(kupac);
             textBoxIme.Text = " ";
-            textBoxIme.Text = MainPage.etfKupon.ListaKupaca.Count.ToString();
+            //textBoxIme.Text = MainPage.etfKupon.ListaKupaca.Count.ToString();
             //MessageDialog msg = new MessageDialog(MainPage.etfKupon.ListaKupaca.Count.ToString());
             //this.Frame.Navigate(typeof(PocetnaKupca));
         }
