@@ -23,11 +23,12 @@ namespace ETFKupon
         }
         Tuple<int, string> ValidirajUsernameKupca(string username)
         {
-            if (username.Length >= 4 && username.Length <= 15) return new Tuple<int, string>(0, "Validno");
+            if (username.Length > 15) return new Tuple<int, string>(2, "Username mora biti kraci od 15 znakova!");
             else if (username.Length < 4) return new Tuple<int, string>(1, "Username mora biti duzi od 4 znaka!");
             else if (username == string.Empty) return new Tuple<int, string>(5, "Polje username ne moze biti prazno!");
-            else if (MainPage.etfKupon.ListaKupaca.Where(p => String.Equals(p.Username, username, StringComparison.CurrentCulture)) != null) return new Tuple<int, string>(4, "Username vec postoji!");
-            else return new Tuple<int, string>(2, "Username mora biti kraci od 15 znakova!");
+            else if (MainPage.etfKupon.ListaKupaca.Where(p => String.Equals(p.Username, username, StringComparison.CurrentCulture)) != null ||
+                      MainPage.etfKupon.ListaFirmi.Where(p => String.Equals(p.Username, username, StringComparison.CurrentCulture)) != null) return new Tuple<int, string>(4, "Username vec postoji!");
+            else return new Tuple<int, string>(0, "Validno");
         }
         Tuple<int, string> ValidirajPasswordKupca(string password)
         {
@@ -63,11 +64,7 @@ namespace ETFKupon
         }
         Tuple<int, string> ValidirajUsernameFirme(string username)
         {
-            if (username.Length >= 4 && username.Length <= 15) return new Tuple<int, string>(0, "Validno");
-            else if (username.Length < 4) return new Tuple<int, string>(1, "Username mora biti duzi od 4 znaka!");
-            else if (username == string.Empty) return new Tuple<int, string>(5, "Polje username ne moze biti prazno!");
-            else if (MainPage.etfKupon.ListaFirmi.Where(p => String.Equals(p.Username, username, StringComparison.CurrentCulture)) != null) return new Tuple<int, string>(4, "Username vec postoji!");
-            else return new Tuple<int, string>(2, "Username mora biti kraci od 15 znakova!");
+            return ValidirajUsernameKupca(username);
         }
         Tuple<int, string> ValidirajPasswordFirme(string password)
         {
