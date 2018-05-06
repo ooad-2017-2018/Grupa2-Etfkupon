@@ -8,7 +8,7 @@ namespace ETFKupon.Model
 {
     public class Firma
     {
-        public string id { get; set; }
+        public static int id = -1;
         public string Naziv { get; set; }
         public string Username { get; set; }
         private string password;
@@ -21,12 +21,12 @@ namespace ETFKupon.Model
 
         public Firma()
         {
+            id++;
             ListaKupona = new List<Kupon>();
             ListaArtikala = new List<Artikal>();
         }
-        public Firma(string _id, string ime, string user, string lozinka, string mail, List<Artikal> artikli, List<Kupon> kuponi)
+        public Firma(string ime, string user, string lozinka, string mail, List<Artikal> artikli, List<Kupon> kuponi)
         {
-            id = _id;
             Naziv = ime;
             Username = user;
             Password = lozinka;

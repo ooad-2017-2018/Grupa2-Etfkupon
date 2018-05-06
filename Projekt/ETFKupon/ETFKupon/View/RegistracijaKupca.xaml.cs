@@ -48,10 +48,7 @@ namespace ETFKupon.Interface
             kupac.Slika = null;
             KupacModelView k = new KupacModelView();
             k.dodaj(kupac);
-            textBoxIme.Text = " ";
-            //textBoxIme.Text = MainPage.etfKupon.ListaKupaca.Count.ToString();
-            //MessageDialog msg = new MessageDialog(MainPage.etfKupon.ListaKupaca.Count.ToString());
-            this.Frame.Navigate(typeof(PocetnaKupca));
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

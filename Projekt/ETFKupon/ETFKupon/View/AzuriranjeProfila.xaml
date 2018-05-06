@@ -72,7 +72,7 @@
                     <TextBox x:Name="passwordAzurirano" PlaceholderText="Unesite password" HorizontalAlignment="Center" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
                     <TextBox x:Name="emailAzurirano" PlaceholderText="Unesite email" HorizontalAlignment="Center"  Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
                     <TextBox x:Name="karticaAzurirano" PlaceholderText="Unesite broj kartice" HorizontalAlignment="Center"  Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
-                    <Button x:Name="azurirajProfilDugme" Content="Azuriraj profil" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="35" Width="234" RenderTransformOrigin="0.5,0.486"/>
+                    <Button x:Name="azurirajProfilDugme" Content="Azuriraj profil" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="35" Width="234" RenderTransformOrigin="0.5,0.486" Click="azurirajProfilDugme_Click"/>
                 </StackPanel>
                 <StackPanel Name="Second" Margin="20,20,20,20" Grid.Row="1">
                     <Border BorderBrush="Black" BorderThickness="1" Margin="100,0,100,0" Height="130">

@@ -25,10 +25,14 @@ namespace ETFKupon
     public sealed partial class MainPage : Page
     {
         public static EtfKupon etfKupon;
+        public static Kupac TrenutniKupac { get; set; }
+        public static Firma TrenutnaFirma { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
             etfKupon = new EtfKupon();
+            TrenutnaFirma = null;
+            TrenutniKupac = null;
         }
 
         private void buttonRegistracijaKupca_Click(object sender, RoutedEventArgs e)
@@ -43,7 +47,11 @@ namespace ETFKupon
 
         private void buttonPrijava_Click(object sender, RoutedEventArgs e)
         {
-
+            TrenutniKupac = etfKupon.ListaKupaca.Find(x => x.Username == textBoxUsername.Text);
+            if (TrenutniKupac == null)
+            {
+                TrenutnaFirma = etfKupon.ListaFirmi.Find(x => x.Username == textBoxUsername.Text);
+            }
         }
     }
 }

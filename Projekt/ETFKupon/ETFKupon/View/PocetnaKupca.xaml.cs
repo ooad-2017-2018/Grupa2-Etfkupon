@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ETFKupon.ModelView;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -34,6 +35,7 @@ namespace ETFKupon.Interface
 
         private void buttonLogout_Click(object sender, RoutedEventArgs e)
         {
+            MainPage.TrenutniKupac = null;
             this.Frame.Navigate(typeof(MainPage));
         }
 
@@ -42,9 +44,12 @@ namespace ETFKupon.Interface
             this.Frame.Navigate(typeof(AzuriranjeProfila));
         }
 
-        private void buttonKorpa_Click(object sender, RoutedEventArgs e)
+        private void buttonObrisi_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(View.Korpa));
+            KupacPocetnaModelView kp = new KupacPocetnaModelView();
+            kp.odbaci(MainPage.etfKupon.ListaKupaca.Find(x => x.Username == MainPage.TrenutniKupac.Username));
+            MainPage.TrenutniKupac = null;
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

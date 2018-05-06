@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ETFKupon.Model;
+using ETFKupon.ModelView;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -35,6 +37,20 @@ namespace ETFKupon.Interface
         private void azurirajBack_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(PocetnaKupca));
+        }
+
+        private void azurirajProfilDugme_Click(object sender, RoutedEventArgs e)
+        {
+            Kupac tmp = new Kupac();
+            tmp.Ime = imeAzurirano.Text;
+            tmp.Prezime = prezimeAzurirano.Text;
+            tmp.Username = usernameAzurirano.Text;
+            tmp.Password = passwordAzurirano.Text;
+            tmp.BrojKartice = karticaAzurirano.Text;
+            tmp.Email = emailAzurirano.Text;
+            //TODO slika
+            KupacPocetnaModelView kp = new KupacPocetnaModelView();
+            kp.azuriraj(tmp);
         }
     }
 }

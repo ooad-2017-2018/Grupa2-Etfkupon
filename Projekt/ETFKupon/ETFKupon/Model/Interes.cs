@@ -9,18 +9,17 @@ namespace ETFKupon.Model
 {
     public class Interes
     {
-        public int IdInteresa { get; set; }
+        public static int id = -1;
         public string Naziv { get; set; }
-        public BitmapImage Slika { get; set; }
+
         public Interes()
         {
-
+            id++;
         }
-        public Interes(int id, string naziv, BitmapImage slika)
+
+        public Interes(string naziv)
         {
-            IdInteresa = id;
             Naziv = naziv;
-            Slika = slika;
         }
     }
 

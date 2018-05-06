@@ -9,7 +9,7 @@ namespace ETFKupon.Model
 {
     public class Artikal
     {
-        public string id { get; set; }
+        public static int id = -1;
         public string Naziv { get; set; }
         public int Kolicina { get; set; }
         public double Cijena { get; set; }
@@ -23,12 +23,11 @@ namespace ETFKupon.Model
 
         public Artikal()
         {
-
+            id++;
         }
 
-        public Artikal(string _id, string ime, int kolicina, double cijena, BitmapImage slika, Interes interes, Kupon kupon)
+        public Artikal(string ime, int kolicina, double cijena, BitmapImage slika, Interes interes, Kupon kupon)
         {
-            id = _id;
             Naziv = ime;
             Kolicina = kolicina;
             Cijena = cijena;

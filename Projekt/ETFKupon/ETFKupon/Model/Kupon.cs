@@ -8,18 +8,17 @@ namespace ETFKupon.Model
 {
     public class Kupon
     {
-        public string id { get; set; }
+        public static int id = -1;
         public double Postotak { get; set; }
         public int Kolicina { get; set; }
 
         public Kupon()
         {
-                
+            id++;   
         }
 
-        public Kupon(string _id, double postotak, int kolicina)
+        public Kupon(double postotak, int kolicina)
         {
-            id = _id;
             Kolicina = kolicina;
             Postotak = postotak;
         }

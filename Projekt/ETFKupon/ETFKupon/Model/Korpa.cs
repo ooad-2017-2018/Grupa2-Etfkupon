@@ -8,17 +8,17 @@ namespace ETFKupon.Model
 {
     public class Korpa
     {
-        public string id { get; set; }
+        public static int id = -1;
         public List<Artikal> ListaArtikala { get; set; }
 
         public Korpa()
         {
+            id++;
             ListaArtikala = new List<Artikal>();
         }
 
-        public Korpa(string _id, List<Artikal> artikli)
+        public Korpa(List<Artikal> artikli)
         {
-            id = _id;
             ListaArtikala = artikli;
         }
 
@@ -27,9 +27,7 @@ namespace ETFKupon.Model
             double cijena = 0;
             for (int i = 0; i < ListaArtikala.Count; i++)
             {
-                List<Artikal> tmp = ListaArtikala.FindAll(x => x.id == ListaArtikala.ElementAt(i).id);
-                for (int j = 0; j < tmp.Count; j++)
-                    cijena += tmp.ElementAt(i).Cijena;
+                cijena += ListaArtikala.ElementAt(i).Cijena;
             }
             return cijena;
         }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ETFKupon.Model;
+using ETFKupon.ModelView;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -30,6 +32,14 @@ namespace ETFKupon.Interface
         private void buttonPocetnaKupcaInteresi_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(PocetnaKupca));
+        }
+
+        private void buttonDodajInterese_Click(object sender, RoutedEventArgs e)
+        {
+            Interes interes = new Interes();
+            interes.Naziv = comboBoxInteresi.SelectedValue.ToString();
+            InteresModelView i = new InteresModelView();
+            i.dodaj(interes);
         }
     }
 }

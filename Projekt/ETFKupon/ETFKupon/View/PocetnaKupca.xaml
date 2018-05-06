@@ -69,15 +69,15 @@
                     Margin="0,20,0,0" 
                     VerticalAlignment="Top" 
                     Width="70"
-                    Height="60">
-                        <Image Source="/Assets/Icons/garbage-2.png" Stretch="Fill"/>
+                    Height="60" Click="buttonObrisi_Click">
+                        <Image Source="/Assets/Icons/garbage-2.png" Stretch="Fill" Height="48" VerticalAlignment="Bottom"/>
                     </Button>
                     <Button x:Name="buttonKorpa"
                     HorizontalAlignment="Left" 
                     Margin="80,20,0,0" 
                     VerticalAlignment="Top" 
                     Width="70"
-                    Height="60" Click="buttonKorpa_Click">
+                    Height="60">
                         <Image Source="/Assets/Icons/shopping-cart.png" Stretch="Fill"/>
                     </Button>
                 </RelativePanel>
