@@ -8,8 +8,8 @@ namespace ETFKupon.Model
 {
     public class EtfKupon
     {
-        private List<Kupac> ListaKupaca;
-        private List<Firma> ListaFirmi;
+        public List<Kupac> ListaKupaca { get; set; }
+        public List<Firma> ListaFirmi { get; set; }
 
         public EtfKupon()
         {

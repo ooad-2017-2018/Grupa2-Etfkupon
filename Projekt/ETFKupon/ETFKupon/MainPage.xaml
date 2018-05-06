@@ -75,7 +75,7 @@
                         VerticalAlignment="Top" 
                         HorizontalAlignment="Center"
                         Height="32" 
-                        Width="122"/>
+                        Width="122" Click="buttonPrijava_Click"/>
         </StackPanel>
         <StackPanel Name="Third" Margin="20,20,20,20" Grid.Row="2">
 

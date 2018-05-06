@@ -95,6 +95,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModelView\KupacModelView.cs" />
     <Compile Include="ModelView\RelayCommand.cs" />
     <Compile Include="Model\Artikal.cs" />
     <Compile Include="Model\EtfKupon.cs" />

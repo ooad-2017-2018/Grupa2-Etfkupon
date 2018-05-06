@@ -13,6 +13,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using ETFKupon.Model;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -23,9 +24,11 @@ namespace ETFKupon
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public static EtfKupon etfKupon;
         public MainPage()
         {
             this.InitializeComponent();
+            etfKupon = new EtfKupon();
         }
 
         private void buttonRegistracijaKupca_Click(object sender, RoutedEventArgs e)
@@ -36,6 +39,11 @@ namespace ETFKupon
         private void buttonRegistracijaFirme_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(RegistracijaFirme));
+        }
+
+        private void buttonPrijava_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

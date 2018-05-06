@@ -1,10 +1,13 @@
-﻿using System;
+﻿using ETFKupon.Model;
+using ETFKupon.ModelView;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -34,7 +37,21 @@ namespace ETFKupon.Interface
 
         private void buttonRegistracijaK_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(PocetnaKupca));
+            Kupac kupac = new Kupac();
+            kupac.Ime = textBoxIme.Text;
+            kupac.Prezime = textBoxPrezime.Text;
+            kupac.UserName = textBoxUsernameK.Text;
+            kupac.Password = textBoxPasswordK.Text;
+            kupac.Adresa = textBoxAdresa.Text;
+            kupac.BrojKartice = textBoxBrKartice.Text;
+            kupac.Email = textBoxEmail.Text;
+            kupac.Slika = null;
+            KupacModelView k = new KupacModelView();
+            k.dodaj(kupac);
+            textBoxIme.Text = " ";
+            textBoxIme.Text = MainPage.etfKupon.ListaKupaca.Count.ToString();
+            //MessageDialog msg = new MessageDialog(MainPage.etfKupon.ListaKupaca.Count.ToString());
+            //this.Frame.Navigate(typeof(PocetnaKupca));
         }
     }
 }

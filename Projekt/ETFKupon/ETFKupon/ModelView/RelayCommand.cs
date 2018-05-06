@@ -1,22 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 
-namespace AppUIBasics.Common
+namespace ETFKupon.ModelView
 {
-    /// <summary>
-    /// A command whose sole purpose is to relay its functionality 
-    /// to other objects by invoking delegates. 
-    /// The default return value for the CanExecute method is 'true'.
-    /// <see cref="RaiseCanExecuteChanged"/> needs to be called whenever
-    /// <see cref="CanExecute"/> is expected to return a different value.
-    /// </summary>
     public class RelayCommand : ICommand
     {
-        private readonly Action _execute;
+        private readonly Action<object> _execute;
         private readonly Func<bool> _canExecute;
 
         /// <summary>
@@ -28,23 +22,15 @@ namespace AppUIBasics.Common
         /// Creates a new command that can always execute.
         /// </summary>
         /// <param name="execute">The execution logic.</param>
-        public RelayCommand(Action execute)
-            : this(execute, null)
+        #region Constructors 
+        public RelayCommand(Action<object> execute) : this(execute, null) { }
+        public RelayCommand(Action<object> execute, Func<bool> canExecute)
         {
-        }
-
-        /// <summary>
-        /// Creates a new command.
-        /// </summary>
-        /// <param name="execute">The execution logic.</param>
-        /// <param name="canExecute">The execution status logic.</param>
-        public RelayCommand(Action execute, Func<bool> canExecute)
-        {
-            if (execute == null)
-                throw new ArgumentNullException("execute");
+            if (execute == null) throw new ArgumentNullException("execute");
             _execute = execute;
             _canExecute = canExecute;
-        }
+        } 
+        #endregion // Constructors
 
         /// <summary>
         /// Determines whether this <see cref="RelayCommand"/> can execute in its current state.
@@ -66,7 +52,7 @@ namespace AppUIBasics.Common
         /// </param>
         public void Execute(object parameter)
         {
-            _execute();
+            _execute(parameter);
         }
 
         /// <summary>
