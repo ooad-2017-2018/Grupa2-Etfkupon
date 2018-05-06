@@ -3,39 +3,39 @@
 
 ![Alt text](LogoEKupovina.jpg?raw=true)
 
-1. Adnan Brğanin
-2. Nağa Dardagan
+1. Adnan Brï¿½anin
+2. Naï¿½a Dardagan
 3. Armin Bilal
 
 ## Opis teme 
 
-Naš sistem e-kupovine se zasniva na ideji automatizovanja procesa kupovine. 
-Kako nismo uspjeli pronaæi odgovarajuæi sistem za e-kupovinu na podruèju BiH, naša ideja je da uradimo sistem koji æe to olakšati na naèin: 
-- korisniku æe se ponuditi da izabere njegove interese
-- na osnovu tih interesa, korisniku æe se prikazivati odgovarajuæi artikli koji bi ga mogli zanimati
-- korisnik moe dodavati ili brisati svoje interese
-- takoğer æe biti prikaz odreğenih popusta u radnjama koje bi mogle interesovati korisnika sistema
+Naï¿½ sistem e-kupovine se zasniva na ideji automatizovanja procesa kupovine. 
+Kako nismo uspjeli pronaï¿½i odgovarajuï¿½i sistem za e-kupovinu na podruï¿½ju BiH, naï¿½a ideja je da uradimo sistem koji ï¿½e to olakï¿½ati na naï¿½in: 
+- korisniku ï¿½e se ponuditi da izabere njegove interese
+- na osnovu tih interesa, korisniku ï¿½e se prikazivati odgovarajuï¿½i artikli koji bi ga mogli zanimati
+- korisnik moï¿½e dodavati ili brisati svoje interese
+- takoï¿½er ï¿½e biti prikaz odreï¿½enih popusta u radnjama koje bi mogle interesovati korisnika sistema
 
-Sistem bi mogao olakšati kupovinu u smislu da korisnik neæe morati iæi od radnje do radnje da bi našao odgovarajuæi artikal za sebe. 
+Sistem bi mogao olakï¿½ati kupovinu u smislu da korisnik neï¿½e morati iï¿½i od radnje do radnje da bi naï¿½ao odgovarajuï¿½i artikal za sebe. 
 
 ## Procesi
 
-Korisnik nakon definisanja interesa dobija listu artikala sa nazivom radnje u kojoj se nalazi artikal, cijenom te moguænosti kupovine. 
-Prikazat æe se kolièina artikla, velièine (ako se radi o odjevnim predmetima)... 
-Radnik (firma) æe imati svoj dio u sistemu kako bi mogli dodavati nove artikle te stavljati odgovarajuæe kupone (popuste) na veæ postojeæe. 
-Takoğer, firme æe biti u moguænosti da provjere stanje artikala kako bi mogli aurirati.
-Administrator æe moæi sve kontrolisati i on æe biti root user. 
+Korisnik nakon definisanja interesa dobija listu artikala sa nazivom radnje u kojoj se nalazi artikal, cijenom te moguï¿½nosti kupovine. 
+Prikazat ï¿½e se koliï¿½ina artikla, veliï¿½ine (ako se radi o odjevnim predmetima)... 
+Radnik (firma) ï¿½e imati svoj dio u sistemu kako bi mogli dodavati nove artikle te stavljati odgovarajuï¿½e kupone (popuste) na veï¿½ postojeï¿½e. 
+Takoï¿½er, firme ï¿½e biti u moguï¿½nosti da provjere stanje artikala kako bi mogli aï¿½urirati.
+Administrator ï¿½e moï¿½i sve kontrolisati i on ï¿½e biti root user. 
 
 - *Registracija korisnika*:
-Korisniku æe biti omoguæeno da se registruje na sistem, unese svoje liène podatke, odabere interese te konaèno pošalje zahtjev adminstratoru 
-za odobrenje otvaranja raèuna. U svakom trenutku æe se naravno moæi logovati jer æe se èuvati podaci interno. Takoğer ako se korisniku nešto 
-na profilu ne sviğa, profil moe urediti ali isto tako i poslati zahtjev za zatvaranje profila ako eli da prestane koristiti sistem. 
+Korisniku ï¿½e biti omoguï¿½eno da se registruje na sistem, unese svoje liï¿½ne podatke, odabere interese te konaï¿½no poï¿½alje zahtjev adminstratoru 
+za odobrenje otvaranja raï¿½una. U svakom trenutku ï¿½e se naravno moï¿½i logovati jer ï¿½e se ï¿½uvati podaci interno. Takoï¿½er ako se korisniku neï¿½to 
+na profilu ne sviï¿½a, profil moï¿½e urediti ali isto tako i poslati zahtjev za zatvaranje profila ako ï¿½eli da prestane koristiti sistem. 
 - *Registracija firme*:
-Firma æe takoğer poslati zahtjev za kreiranje raèuna, te æe nakon što firma otvori account, imati moguænost pregleda raèuna što ukljuèuje: 
-auriranje ponuda, podatke o ponudama te trenutnu statistiku prodavanja. U auriranju se podrazumijevaju opcije poput izmjena trenutne ponude, 
+Firma ï¿½e takoï¿½er poslati zahtjev za kreiranje raï¿½una, te ï¿½e nakon ï¿½to firma otvori account, imati moguï¿½nost pregleda raï¿½una ï¿½to ukljuï¿½uje: 
+aï¿½uriranje ponuda, podatke o ponudama te trenutnu statistiku prodavanja. U aï¿½uriranju se podrazumijevaju opcije poput izmjena trenutne ponude, 
 brisanje ponude te stvaranje nove ponude. 
 
-Sami procesi registracije korisnika, firme kao i proces kupovine se moe pronaæi u folderu root/UseCaseIScenarij
+Sami procesi registracije korisnika, firme kao i proces kupovine se moï¿½e pronaï¿½i u folderu root/UseCaseIScenarij
 
 ## Funkcionalnosti
 - registracija te dodavanje interesa za korisnike
@@ -43,10 +43,19 @@ Sami procesi registracije korisnika, firme kao i proces kupovine se moe pronaæi
 - pregled profila (i za korisnika i za firmu) te editovanje profila
 - dodavanje novih artikala (firme)
 - kupovina artikala (korisnici)
-- popunjavanje ankete na kraju svakog mjeseca (korisnici) kako bi firme mogle vidjeti gdje korisnici ele vidjeti neko snienje
+- popunjavanje ankete na kraju svakog mjeseca (korisnici) kako bi firme mogle vidjeti gdje korisnici ï¿½ele vidjeti neko sniï¿½enje
 
 ## Akteri
-- *korisnik* - klasièni kupac, korisnik sistema kojeg zanima e-kupovina
-- *radnik/firma* - onaj koji daje moguænost kupovine, aurira svoje artikle te popuste 
-- *admin* - onaj koji reguliše rad sistema te ima moguænosti koje ima i korisnik i radnik
+- *korisnik* - klasiï¿½ni kupac, korisnik sistema kojeg zanima e-kupovina
+- *radnik/firma* - onaj koji daje moguï¿½nost kupovine, aï¿½urira svoje artikle te popuste 
+- *admin* - onaj koji reguliï¿½e rad sistema te ima moguï¿½nosti koje ima i korisnik i radnik
 
+## Dokumentacija za validaciju (Error codes)
+- *0* - OK
+- *1* - Prekratka duÅ¾ina
+- *2* - Preduga duÅ¾ina
+- *3* - Passwordi se ne poklapaju
+- *4* - Email veÄ‡ postoji 
+- *5* - Polje ne moÅ¾e biti prazno
+- *6* - BrojÄana vrijednost je manja od oÄekivane
+- *7* - BrojÄana vrijednost je veÄ‡a od oÄekivane 
