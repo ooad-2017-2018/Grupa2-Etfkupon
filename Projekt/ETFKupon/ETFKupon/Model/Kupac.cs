@@ -12,7 +12,7 @@ namespace ETFKupon.Model
         public string id { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public string UserName { get; set; }
+        public string Username { get; set; }
         private string password;
         public string Password { set => password = value; }
         public string Email { get; set; }
@@ -34,7 +34,7 @@ namespace ETFKupon.Model
             id = _id;
             Ime = ime;
             Prezime = prezime;
-            UserName = user;
+            Username = user;
             Password = lozinka;
             Email = email;
             Adresa = adresa;

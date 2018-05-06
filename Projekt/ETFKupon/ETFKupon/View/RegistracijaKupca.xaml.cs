@@ -40,7 +40,7 @@ namespace ETFKupon.Interface
             Kupac kupac = new Kupac();
             kupac.Ime = textBoxIme.Text;
             kupac.Prezime = textBoxPrezime.Text;
-            kupac.UserName = textBoxUsernameK.Text;
+            kupac.Username = textBoxUsernameK.Text;
             kupac.Password = textBoxPasswordK.Text;
             kupac.Adresa = textBoxAdresa.Text;
             kupac.BrojKartice = textBoxBrKartice.Text;
