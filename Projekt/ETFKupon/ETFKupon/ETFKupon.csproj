@@ -114,6 +114,9 @@
     <Compile Include="View\DodavanjeKupona.xaml.cs">
       <DependentUpon>DodavanjeKupona.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\Korpa.xaml.cs">
+      <DependentUpon>Korpa.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\PocetnaFirme.xaml.cs">
       <DependentUpon>PocetnaFirme.xaml</DependentUpon>
     </Compile>
@@ -546,6 +549,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\DodavanjeKupona.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Korpa.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
