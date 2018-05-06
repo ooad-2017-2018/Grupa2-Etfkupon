@@ -1,9 +1,9 @@
 App.xbf
-Interface\AzuriranjeProfila.xbf
-Interface\DodavanjeInteresa.xbf
-Interface\DodavanjeKupona.xbf
-Interface\PocetnaFirme.xbf
-Interface\PocetnaKupca.xbf
-Interface\RegistracijaFirme.xbf
-Interface\RegistracijaKupca.xbf
 MainPage.xbf
+View\AzuriranjeProfila.xbf
+View\DodavanjeInteresa.xbf
+View\DodavanjeKupona.xbf
+View\PocetnaFirme.xbf
+View\PocetnaKupca.xbf
+View\RegistracijaFirme.xbf
+View\RegistracijaKupca.xbf

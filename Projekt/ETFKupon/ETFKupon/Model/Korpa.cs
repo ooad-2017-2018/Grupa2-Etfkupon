@@ -8,7 +8,7 @@ namespace ETFKupon.Model
 {
     public class Korpa
     {
-        public int IdKorpe { get; set; }
+        public string id { get; set; }
         public List<Artikal> ListaArtikala { get; set; }
 
         public Korpa()
@@ -16,9 +16,9 @@ namespace ETFKupon.Model
             ListaArtikala = new List<Artikal>();
         }
 
-        public Korpa(int id, List<Artikal> artikli)
+        public Korpa(string _id, List<Artikal> artikli)
         {
-            IdKorpe = id;
+            id = _id;
             ListaArtikala = artikli;
         }
 
@@ -27,7 +27,7 @@ namespace ETFKupon.Model
             double cijena = 0;
             for (int i = 0; i < ListaArtikala.Count; i++)
             {
-                List<Artikal> tmp = ListaArtikala.FindAll(x => x.IdArtikla == ListaArtikala.ElementAt(i).IdArtikla);
+                List<Artikal> tmp = ListaArtikala.FindAll(x => x.id == ListaArtikala.ElementAt(i).id);
                 for (int j = 0; j < tmp.Count; j++)
                     cijena += tmp.ElementAt(i).Cijena;
             }

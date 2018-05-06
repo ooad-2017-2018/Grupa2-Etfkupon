@@ -95,6 +95,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModelView\RelayCommand.cs" />
+    <Compile Include="Model\Artikal.cs" />
+    <Compile Include="Model\EtfKupon.cs" />
+    <Compile Include="Model\Firma.cs" />
+    <Compile Include="Model\Interes.cs" />
+    <Compile Include="Model\Korpa.cs" />
+    <Compile Include="Model\Kupac.cs" />
+    <Compile Include="Model\Kupon.cs" />
     <Compile Include="View\AzuriranjeProfila.xaml.cs">
       <DependentUpon>AzuriranjeProfila.xaml</DependentUpon>
     </Compile>
@@ -568,10 +576,7 @@
       <Version>6.0.6</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ModelView\" />
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

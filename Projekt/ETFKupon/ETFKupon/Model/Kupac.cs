@@ -3,40 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Windows.UI.Xaml.Media.Imaging;
 
 namespace ETFKupon.Model
 {
     public class Kupac
     {
-        public int IdKupca { get; set; }
+        public string id { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
         public string UserName { get; set; }
-        private string Password;
+        private string password;
+        public string Password { set => password = value; }
         public string Email { get; set; }
         public string Adresa { get; set; }
-        public string BrKartice { get; set; }
+        public string BrojKartice { get; set; }
         public double StanjeRacuna { get; set; }
-        //TODO slika
+        public BitmapImage Slika { get; set; }
         public List<Interes> ListaInteresa { get; set; }
         public Korpa MojaKorpa { get; set; }
+        
 
         public Kupac()
         {
             ListaInteresa = new List<Interes>();
         }
 
-        public Kupac(int id, string ime, string prezime, string user, string lozinka, string email, string adresa, string kartica, double racun, List<Interes> interesi, Korpa korpa)
+        public Kupac(string _id, string ime, string prezime, string user, string lozinka, string email, string adresa, string kartica, double racun, BitmapImage slika,  List<Interes> interesi, Korpa korpa)
         {
-            IdKupca = id;
+            id = _id;
             Ime = ime;
             Prezime = prezime;
             UserName = user;
             Password = lozinka;
             Email = email;
             Adresa = adresa;
-            BrKartice = kartica;
+            BrojKartice = kartica;
             StanjeRacuna = racun;
+            Slika = slika;
             ListaInteresa = interesi;
             MojaKorpa = korpa;
         }
