@@ -95,10 +95,14 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ModelView\ArtikalModelView.cs" />
+    <Compile Include="ModelView\FirmaModelView.cs" />
+    <Compile Include="ModelView\FIrmaPocetnaModelView.cs" />
     <Compile Include="ModelView\InteresModelView.cs" />
     <Compile Include="ModelView\KorpaModelView.cs" />
     <Compile Include="ModelView\KupacModelView.cs" />
     <Compile Include="ModelView\KupacPocetnaModelView.cs" />
+    <Compile Include="ModelView\KuponModelView.cs" />
     <Compile Include="ModelView\RelayCommand.cs" />
     <Compile Include="Model\Artikal.cs" />
     <Compile Include="Model\EtfKupon.cs" />

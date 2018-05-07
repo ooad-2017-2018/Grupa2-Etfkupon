@@ -29,7 +29,7 @@ namespace ETFKupon.Interface
 
         private void ButtonRegistracijaF_Click(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(PocetnaFirme));
+            this.Frame.Navigate(typeof(MainPage));
         }
     }
 }

@@ -27,7 +27,7 @@
             <TextBlock HorizontalAlignment="Center" Margin="0,20,0,0" Text="Dodavanje kupona" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="22"/>
             <ListBox Height="135" Margin="0,50,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="522" Background="#FFD1CBCB"/>
             <TextBlock HorizontalAlignment="Center" Margin="0,196,0,0" Text="Popust na cijenu:" TextWrapping="Wrap" VerticalAlignment="Top"/>
-            <TextBox HorizontalAlignment="Center" Margin="120,190,0,0" Text="" VerticalAlignment="Top" Width="118" RenderTransformOrigin="-0.965,0.43" Height="28" FontSize="11"/>
+            <TextBox x:Name="textBoxPopust" HorizontalAlignment="Center" Margin="120,190,0,0" Text="" VerticalAlignment="Top" Width="118" RenderTransformOrigin="-0.965,0.43" Height="28" FontSize="11"/>
             <TextBlock HorizontalAlignment="Left" Margin="250,196,0,0" Text="%" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBlock HorizontalAlignment="Left" Margin="0,250,0,0" Text="Broj kupona:" TextWrapping="Wrap" VerticalAlignment="Top"/>
             <TextBox x:Name="numbertextBox" Height="28" HorizontalAlignment="Left" Margin="120,245,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="118" IsReadOnly="True"/>
