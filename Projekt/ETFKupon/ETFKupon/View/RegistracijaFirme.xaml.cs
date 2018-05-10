@@ -27,18 +27,7 @@ namespace ETFKupon.Interface
         public RegistracijaFirme()
         {
             this.InitializeComponent();
-        }
-
-        private void ButtonRegistracijaF_Click(object sender, RoutedEventArgs e)
-        {
-            Firma kupac = new Firma();
-            kupac.Naziv = TextBoxNazivFirme.Text;
-            kupac.Username = TextBoxUsernameF.Text;
-            kupac.Password = PasswordBox1.Password;
-            kupac.Email = TextBoxEmailF.Text;
-            FirmaModelView k = new FirmaModelView();
-            k.dodaj(kupac);
-            this.Frame.Navigate(typeof(MainPage));
+            DataContext = new FirmaModelView();
         }
     }
 }

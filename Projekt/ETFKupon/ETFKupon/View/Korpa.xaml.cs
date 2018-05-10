@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ETFKupon.ModelView;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,6 +26,7 @@ namespace ETFKupon.View
         public Korpa()
         {
             this.InitializeComponent();
+            DataContext = new KorpaModelView();
         }
 
         private void buttonPocetnaKupcaKorpa_Click(object sender, RoutedEventArgs e)

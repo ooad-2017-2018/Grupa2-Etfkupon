@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ETFKupon.Model
 {
-    public class Firma
+    public class Firma: INotifyPropertyChanged
     {
         public static int id = -1;
         public string Naziv { get; set; }
@@ -32,6 +33,15 @@ namespace ETFKupon.Model
             Password = lozinka;
             ListaArtikala = artikli;
             ListaKupona = kuponi;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
     }
 }

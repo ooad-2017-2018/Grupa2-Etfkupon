@@ -3,8 +3,10 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:local="using:ETFKupon.Interface"
+    xmlns:viewmodels="using:KupacPocetnaModelView.ModelView"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    
     mc:Ignorable="d">
 
     <Grid Name="ProfileUpdate">
@@ -66,13 +68,13 @@
                 </Grid.ColumnDefinitions>
 
                 <StackPanel Name="First" Margin="20,20,20,20">
-                    <TextBox x:Name="imeAzurirano" PlaceholderText="Unesite ime" HorizontalAlignment="Center" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
-                    <TextBox x:Name="prezimeAzurirano" PlaceholderText="Unesite prezime" HorizontalAlignment="Center"  Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
-                    <TextBox x:Name="usernameAzurirano" PlaceholderText="Unesite username" HorizontalAlignment="Center"  Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
-                    <TextBox x:Name="passwordAzurirano" PlaceholderText="Unesite password" HorizontalAlignment="Center" Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
-                    <TextBox x:Name="emailAzurirano" PlaceholderText="Unesite email" HorizontalAlignment="Center"  Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
-                    <TextBox x:Name="karticaAzurirano" PlaceholderText="Unesite broj kartice" HorizontalAlignment="Center"  Margin="0,0,0,0" Text="" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged"/>
-                    <Button x:Name="azurirajProfilDugme" Content="Azuriraj profil" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="35" Width="234" RenderTransformOrigin="0.5,0.486" Click="azurirajProfilDugme_Click"/>
+                    <TextBox x:Name="imeAzurirano" PlaceholderText="Unesite ime" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged" Text="{Binding Path=Novi.Ime,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                    <TextBox x:Name="prezimeAzurirano" PlaceholderText="Unesite prezime" HorizontalAlignment="Center"  Margin="0,0,0,0" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged" Text="{Binding Path=Novi.Prezime,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                    <TextBox x:Name="usernameAzurirano" PlaceholderText="Unesite username" HorizontalAlignment="Center"  Margin="0,0,0,0" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged" Text="{Binding Path=Novi.Username,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                    <TextBox x:Name="passwordAzurirano" PlaceholderText="Unesite password" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged" Text="{Binding Path=Novi.Password,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                    <TextBox x:Name="emailAzurirano" PlaceholderText="Unesite email" HorizontalAlignment="Center"  Margin="0,0,0,0" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged" Text="{Binding Path=Novi.Email,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                    <TextBox x:Name="karticaAzurirano" PlaceholderText="Unesite broj kartice" HorizontalAlignment="Center"  Margin="0,0,0,0" VerticalAlignment="Top" Height="30" Width="234" TextChanged="TextBox_TextChanged" Text="{Binding Path=Novi.BrojKartice,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                    <Button x:Name="azurirajProfilDugme" Content="Azuriraj profil" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="35" Width="234" RenderTransformOrigin="0.5,0.486" Command="{Binding Path=Azuriraj}"/>
                 </StackPanel>
                 <StackPanel Name="Second" Margin="20,20,20,20" Grid.Row="1">
                     <Border BorderBrush="Black" BorderThickness="1" Margin="100,0,100,0" Height="130">
@@ -84,7 +86,7 @@
 
                 <StackPanel Name="Third"  Margin="20,20,20,20" Grid.Row="2">
                     <Button x:Name="azurirajBack" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,100,0,0"  Height="60" Width="65" Click="azurirajBack_Click">
-                        <Image Source="/Assets/Icons/exit.png" Stretch="Fill" />
+                        <Image Source="/Assets/Icons/exit.png" Stretch="Fill" Height="48" VerticalAlignment="Top" />
                     </Button>
                 </StackPanel>
             </Grid>

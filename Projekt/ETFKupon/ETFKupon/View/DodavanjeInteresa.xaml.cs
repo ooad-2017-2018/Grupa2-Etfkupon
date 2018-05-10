@@ -27,6 +27,7 @@ namespace ETFKupon.Interface
         public DodavanjeInteresa()
         {
             this.InitializeComponent();
+            DataContext = new InteresModelView();
         }
 
         private void buttonPocetnaKupcaInteresi_Click(object sender, RoutedEventArgs e)
@@ -34,12 +35,12 @@ namespace ETFKupon.Interface
             this.Frame.Navigate(typeof(PocetnaKupca));
         }
 
-        private void buttonDodajInterese_Click(object sender, RoutedEventArgs e)
+        /*private void buttonDodajInterese_Click(object sender, RoutedEventArgs e)
         {
             Interes interes = new Interes();
             interes.Naziv = comboBoxInteresi.SelectedValue.ToString();
             InteresModelView i = new InteresModelView();
             i.dodaj(interes);
-        }
+        }*/
     }
 }

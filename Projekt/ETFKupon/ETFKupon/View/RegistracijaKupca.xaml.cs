@@ -28,27 +28,7 @@ namespace ETFKupon.Interface
         public RegistracijaKupca()
         {
             this.InitializeComponent();
-        }
-
-        private void textBoxIme_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void buttonRegistracijaK_Click(object sender, RoutedEventArgs e)
-        {
-            Kupac kupac = new Kupac();
-            kupac.Ime = textBoxIme.Text;
-            kupac.Prezime = textBoxPrezime.Text;
-            kupac.Username = textBoxUsernameK.Text;
-            kupac.Password = textBoxPasswordK.Text;
-            kupac.Adresa = textBoxAdresa.Text;
-            kupac.BrojKartice = textBoxBrKartice.Text;
-            kupac.Email = textBoxEmail.Text;
-            kupac.Slika = null;
-            KupacModelView k = new KupacModelView();
-            k.dodaj(kupac);
-            this.Frame.Navigate(typeof(MainPage));
+            DataContext = new KupacModelView();
         }
     }
 }

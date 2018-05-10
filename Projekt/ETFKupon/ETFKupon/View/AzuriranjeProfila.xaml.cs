@@ -27,6 +27,7 @@ namespace ETFKupon.Interface
         public AzuriranjeProfila()
         {
             this.InitializeComponent();
+            DataContext = new KupacPocetnaModelView();
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -39,7 +40,7 @@ namespace ETFKupon.Interface
             this.Frame.Navigate(typeof(PocetnaKupca));
         }
 
-        private void azurirajProfilDugme_Click(object sender, RoutedEventArgs e)
+        /*private void azurirajProfilDugme_Click(object sender, RoutedEventArgs e)
         {
             Kupac tmp = new Kupac();
             tmp.Ime = imeAzurirano.Text;
@@ -51,6 +52,6 @@ namespace ETFKupon.Interface
             //TODO slika
             KupacPocetnaModelView kp = new KupacPocetnaModelView();
             kp.azuriraj(tmp);
-        }
+        }*/
     }
 }

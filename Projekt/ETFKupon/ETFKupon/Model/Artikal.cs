@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -7,7 +8,7 @@ using Windows.UI.Xaml.Media.Imaging;
 
 namespace ETFKupon.Model
 {
-    public class Artikal
+    public class Artikal: INotifyPropertyChanged
     {
         public static int id = -1;
         public string Naziv { get; set; }
@@ -34,6 +35,15 @@ namespace ETFKupon.Model
             Grupa = interes;
             Slika = slika;
             Popust = kupon;
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected void OnPropertyChanged(string propertyName)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
         }
     }
 }

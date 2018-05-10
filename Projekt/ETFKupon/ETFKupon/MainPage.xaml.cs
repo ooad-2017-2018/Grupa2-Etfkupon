@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using ETFKupon.Model;
+using ETFKupon.ModelView;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -25,6 +26,9 @@ namespace ETFKupon
     public sealed partial class MainPage : Page
     {
         public static EtfKupon etfKupon = new EtfKupon();
+        private KupacModelView kupacModelView;
+        private FirmaModelView firmaModelView;
+
         public static Kupac TrenutniKupac { get; set; }
         public static Firma TrenutnaFirma { get; set; }
         public MainPage()
@@ -35,12 +39,26 @@ namespace ETFKupon
             TrenutniKupac = null;
         }
 
+        public MainPage(KupacModelView kupacModelView)
+        {
+            this.kupacModelView = kupacModelView;
+        }
+
+        public MainPage(KupacPocetnaModelView kupacPocetnaModelView)
+        {
+        }
+
+        public MainPage(FirmaModelView firmaModelView)
+        {
+            this.firmaModelView = firmaModelView;
+        }
+
         private void buttonRegistracijaKupca_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(RegistracijaKupca));
         }
 
-        private void buttonRegistracijaFirme_Click(object sender, RoutedEventArgs e)
+       private void buttonRegistracijaFirme_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(RegistracijaFirme));
         }

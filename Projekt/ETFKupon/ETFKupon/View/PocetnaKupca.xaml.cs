@@ -23,9 +23,30 @@ namespace ETFKupon.Interface
     /// </summary>
     public sealed partial class PocetnaKupca : Page
     {
+        private InteresModelView interesModelView;
+        private KupacPocetnaModelView kupacPocetnaModelView;
+        private KorpaModelView korpaModelView;
+
         public PocetnaKupca()
         {
             this.InitializeComponent();
+            DataContext = new KupacPocetnaModelView();
+            NavigationCacheMode = NavigationCacheMode.Required;
+        }
+
+        public PocetnaKupca(InteresModelView interesModelView)
+        {
+            this.interesModelView = interesModelView;
+        }
+
+        public PocetnaKupca(KupacPocetnaModelView kupacPocetnaModelView)
+        {
+            this.kupacPocetnaModelView = kupacPocetnaModelView;
+        }
+
+        public PocetnaKupca(KorpaModelView korpaModelView)
+        {
+            this.korpaModelView = korpaModelView;
         }
 
         private void buttonInterface_Click(object sender, RoutedEventArgs e)
@@ -47,12 +68,14 @@ namespace ETFKupon.Interface
         {
             this.Frame.Navigate(typeof(View.Korpa));
         }
-        private void buttonObrisi_Click(object sender, RoutedEventArgs e)
+        /*private void buttonObrisi_Click(object sender, RoutedEventArgs e)
         {
+            
             KupacPocetnaModelView kp = new KupacPocetnaModelView();
             kp.odbaci(MainPage.etfKupon.ListaKupaca.Find(x => x.Username == MainPage.TrenutniKupac.Username));
+           
             MainPage.TrenutniKupac = null;
             this.Frame.Navigate(typeof(MainPage));
-        }
+        }*/
     }
 }

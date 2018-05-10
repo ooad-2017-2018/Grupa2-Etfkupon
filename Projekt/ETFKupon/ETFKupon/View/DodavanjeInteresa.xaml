@@ -5,14 +5,16 @@
     xmlns:local="using:ETFKupon.Interface"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:viewmodels="using:InterfaceModelView.ModelView"
     mc:Ignorable="d">
     <ScrollViewer>
     <Grid Name="InteresLayout" >
             <StackPanel Margin="20,300,20,20">
-                <ComboBox x:Name="comboBoxInteresi" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Height="384" Width="372">
+                <ComboBox x:Name="comboBoxInteresi" HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Height="384" Width="372"
+                    ItemTemplate = "{Binding Path=Interes,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}">
                     <ComboBox/>
                 </ComboBox>
-                <Button x:Name="buttonDodajInterese" Content="Dodaj oznacene interese " HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Height="52" Width="195" Click="buttonDodajInterese_Click"/>
+                <Button x:Name="buttonDodajInterese" Content="Dodaj oznacene interese " HorizontalAlignment="Center" Margin="0,50,0,0" VerticalAlignment="Top" Height="52" Width="195" Command="{Binding Path=Dodaj}"/>
                 <Button x:Name="buttonPocetnaKupcaInteresi" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Height="50" Width="50" Click="buttonPocetnaKupcaInteresi_Click">
                     <Image Source="/Assets/Icons/exit-2.png" Stretch="Fill"/>
                 </Button>

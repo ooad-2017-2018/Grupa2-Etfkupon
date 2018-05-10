@@ -6,63 +6,63 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    
+
     <ScrollViewer HorizontalScrollMode="Auto" VerticalScrollMode="Auto">
         <Grid Name="LoginPage">
             <VisualStateManager.VisualStateGroups>
-            <VisualStateGroup x:Name="VisualStateGroup">
-                <VisualState x:Name="Wide">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowHeight="800"/>
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="First.(Grid.Row)" Value="0"/>
-                        <Setter Target="First.(Grid.Column)" Value="0"/>
-                        <Setter Target="Second.(Grid.Row)" Value="1"/>
-                        <Setter Target="Second.(Grid.Column)" Value="0"/>
-                        <Setter Target="Third.(Grid.Row)" Value="2"/>
-                        <Setter Target="Third.(Grid.Column)" Value="0"/>
+                <VisualStateGroup x:Name="VisualStateGroup">
+                    <VisualState x:Name="Wide">
+                        <VisualState.StateTriggers>
+                            <AdaptiveTrigger MinWindowHeight="800"/>
+                        </VisualState.StateTriggers>
+                        <VisualState.Setters>
+                            <Setter Target="First.(Grid.Row)" Value="0"/>
+                            <Setter Target="First.(Grid.Column)" Value="0"/>
+                            <Setter Target="Second.(Grid.Row)" Value="1"/>
+                            <Setter Target="Second.(Grid.Column)" Value="0"/>
+                            <Setter Target="Third.(Grid.Row)" Value="2"/>
+                            <Setter Target="Third.(Grid.Column)" Value="0"/>
 
-                        <Setter Target="First.(Grid.ColumnSpan)" Value="1"/>
-                    </VisualState.Setters>
-                </VisualState>
+                            <Setter Target="First.(Grid.ColumnSpan)" Value="1"/>
+                        </VisualState.Setters>
+                    </VisualState>
 
-                <VisualState x:Name="Narrow">
-                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger MinWindowWidth="0"/>
-                    </VisualState.StateTriggers>
-                    <VisualState.Setters>
-                        <Setter Target="First.(Grid.Row)" Value="0"/>
-                        <Setter Target="First.(Grid.Column)" Value="0"/>
-                        <Setter Target="Second.(Grid.Row)" Value="1"/>
-                        <Setter Target="Second.(Grid.Column)" Value="0"/>
-                        <Setter Target="Third.(Grid.Row)" Value="2"/>
-                        <Setter Target="Third.(Grid.Column)" Value="0"/>
+                    <VisualState x:Name="Narrow">
+                        <VisualState.StateTriggers>
+                            <AdaptiveTrigger MinWindowWidth="0"/>
+                        </VisualState.StateTriggers>
+                        <VisualState.Setters>
+                            <Setter Target="First.(Grid.Row)" Value="0"/>
+                            <Setter Target="First.(Grid.Column)" Value="0"/>
+                            <Setter Target="Second.(Grid.Row)" Value="1"/>
+                            <Setter Target="Second.(Grid.Column)" Value="0"/>
+                            <Setter Target="Third.(Grid.Row)" Value="2"/>
+                            <Setter Target="Third.(Grid.Column)" Value="0"/>
 
-                        <Setter Target="First.(Grid.ColumnSpan)" Value="1"/>
-                        <Setter Target="Second.(Grid.ColumnSpan)" Value="1"/>
-                        <Setter Target="Third.(Grid.ColumnSpan)" Value="1"/>
-                    </VisualState.Setters>
-                </VisualState>
-            </VisualStateGroup>
-        </VisualStateManager.VisualStateGroups>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <StackPanel Name="Second" Margin="20,20,20,20" Grid.Row="1">
-            <TextBox x:Name="textBoxUsername" 
+                            <Setter Target="First.(Grid.ColumnSpan)" Value="1"/>
+                            <Setter Target="Second.(Grid.ColumnSpan)" Value="1"/>
+                            <Setter Target="Third.(Grid.ColumnSpan)" Value="1"/>
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel Name="Second" Margin="20,20,20,20" Grid.Row="1">
+                <TextBox x:Name="textBoxUsername" 
                  HorizontalAlignment="Stretch"  
                  Text="" 
                  VerticalAlignment="Top" 
                  Height="28" 
                  Width="300" PlaceholderText="Username"/>
 
-            <TextBox x:Name="textBoxPassword" 
+                <TextBox x:Name="textBoxPassword" 
                  HorizontalAlignment="Stretch" 
                  Margin="0,20,0,0" 
                  Text="" 
@@ -76,22 +76,22 @@
                         HorizontalAlignment="Center"
                         Height="32" 
                         Width="122" Click="buttonPrijava_Click"/>
-        </StackPanel>
-        <StackPanel Name="Third" Margin="20,20,20,20" Grid.Row="2">
+            </StackPanel>
+            <StackPanel Name="Third" Margin="20,20,20,20" Grid.Row="2">
 
-            <TextBlock x:Name="textBoxRegistacija1" 
+                <TextBlock x:Name="textBoxRegistacija1" 
                  HorizontalAlignment="Center" 
                  Margin="0,0,0,0" 
                  Text="Novi ste na našoj stranici?" 
                  VerticalAlignment="Top"/>
 
-            <TextBlock x:Name="textBoxRegistacija2" 
+                <TextBlock x:Name="textBoxRegistacija2" 
                  HorizontalAlignment="Center" 
                  Margin="0,0,0,0" 
                  Text="Registrujte se ovdje" 
                  VerticalAlignment="Top"/>
-            
-            <Button x:Name="buttonRegistracijaKupca" 
+
+                <Button x:Name="buttonRegistracijaKupca" 
                 Content="Registruj se kao kupac" 
                 HorizontalAlignment="Center" 
                 Margin="0,10,0,0" 
@@ -99,14 +99,14 @@
                 Height="35" 
                 Width="171" Click="buttonRegistracijaKupca_Click"/>
 
-            <Button x:Name="buttonRegistracijaFirme" 
+                <Button x:Name="buttonRegistracijaFirme" 
                 Content="Registruj se kao firma" 
                 HorizontalAlignment="Center" 
                 Margin="0,10,0,0" 
                 VerticalAlignment="Top" 
                 Height="35" Width="171" Click="buttonRegistracijaFirme_Click"/>
-        </StackPanel>
+            </StackPanel>
 
-    </Grid>
+        </Grid>
     </ScrollViewer>
 </Page>
