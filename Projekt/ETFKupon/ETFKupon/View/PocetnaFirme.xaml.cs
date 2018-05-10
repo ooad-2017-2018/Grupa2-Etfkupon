@@ -46,5 +46,7 @@ namespace ETFKupon.Interface
         {
             this.Frame.Navigate(typeof(MainPage));
         }
+        
+        
     }
 }

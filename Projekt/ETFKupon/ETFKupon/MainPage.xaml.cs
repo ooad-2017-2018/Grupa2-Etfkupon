@@ -24,13 +24,13 @@ namespace ETFKupon
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public static EtfKupon etfKupon;
+        public static EtfKupon etfKupon = new EtfKupon();
         public static Kupac TrenutniKupac { get; set; }
         public static Firma TrenutnaFirma { get; set; }
         public MainPage()
         {
             this.InitializeComponent();
-            etfKupon = new EtfKupon();
+            //etfKupon = new EtfKupon();
             TrenutnaFirma = null;
             TrenutniKupac = null;
         }
@@ -51,7 +51,9 @@ namespace ETFKupon
             if (TrenutniKupac == null)
             {
                 TrenutnaFirma = etfKupon.ListaFirmi.Find(x => x.Username == textBoxUsername.Text);
-            }
+                if (TrenutnaFirma != null)
+                    this.Frame.Navigate(typeof(PocetnaFirme));
+            } else this.Frame.Navigate(typeof(PocetnaKupca));
         }
     }
 }

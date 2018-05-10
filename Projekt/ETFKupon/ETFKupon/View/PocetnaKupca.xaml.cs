@@ -43,7 +43,10 @@ namespace ETFKupon.Interface
         {
             this.Frame.Navigate(typeof(AzuriranjeProfila));
         }
-
+        private void buttonPocetnaKupcaKorpa_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(View.Korpa));
+        }
         private void buttonObrisi_Click(object sender, RoutedEventArgs e)
         {
             KupacPocetnaModelView kp = new KupacPocetnaModelView();
