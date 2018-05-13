@@ -28,11 +28,65 @@
     <AppxPackagedFile Include="C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\bin\x86\Debug\ETFKupon.exe">
       <PackagePath>entrypoint\ETFKupon.exe</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\entityframework.core\7.0.0-beta6\lib\dotnet\EntityFramework.Core.dll">
+      <PackagePath>EntityFramework.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\entityframework.relational\7.0.0-beta6\lib\dotnet\EntityFramework.Relational.dll">
+      <PackagePath>EntityFramework.Relational.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\entityframework.sqlite\7.0.0-beta6\lib\dotnet\EntityFramework.Sqlite.dll">
+      <PackagePath>EntityFramework.Sqlite.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\ix-async\1.2.4\lib\portable-windows8+net45+wp8\System.Interactive.Async.dll">
+      <PackagePath>System.Interactive.Async.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.azure.mobile.client\4.0.2\lib\uap10.0\Microsoft.Azure.Mobile.Client.dll">
       <PackagePath>Microsoft.Azure.Mobile.Client.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.codeanalysis.common\1.0.0\lib\portable-net45+win8\Microsoft.CodeAnalysis.dll">
+      <PackagePath>Microsoft.CodeAnalysis.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.codeanalysis.csharp\1.0.0\lib\portable-net45+win8\Microsoft.CodeAnalysis.CSharp.dll">
+      <PackagePath>Microsoft.CodeAnalysis.CSharp.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.csharp\4.0.1\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.data.sqlite\1.0.0-beta6\runtimes\win10-x86\native\sqlite3.dll">
+      <PackagePath>sqlite3.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.data.sqlite\1.0.0-beta6\lib\dotnet\Microsoft.Data.Sqlite.dll">
+      <PackagePath>Microsoft.Data.Sqlite.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.framework.caching.abstractions\1.0.0-beta6\lib\dotnet\Microsoft.Framework.Caching.Abstractions.dll">
+      <PackagePath>Microsoft.Framework.Caching.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.framework.caching.memory\1.0.0-beta6\lib\dotnet\Microsoft.Framework.Caching.Memory.dll">
+      <PackagePath>Microsoft.Framework.Caching.Memory.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.framework.configuration\1.0.0-beta6\lib\dotnet\Microsoft.Framework.Configuration.dll">
+      <PackagePath>Microsoft.Framework.Configuration.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.framework.configuration.abstractions\1.0.0-beta6\lib\dotnet\Microsoft.Framework.Configuration.Abstractions.dll">
+      <PackagePath>Microsoft.Framework.Configuration.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.framework.configuration.binder\1.0.0-beta6\lib\dotnet\Microsoft.Framework.Configuration.Binder.dll">
+      <PackagePath>Microsoft.Framework.Configuration.Binder.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.framework.dependencyinjection\1.0.0-beta6\lib\dotnet\Microsoft.Framework.DependencyInjection.dll">
+      <PackagePath>Microsoft.Framework.DependencyInjection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.framework.dependencyinjection.abstractions\1.0.0-beta6\lib\dotnet\Microsoft.Framework.DependencyInjection.Abstractions.dll">
+      <PackagePath>Microsoft.Framework.DependencyInjection.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.framework.logging\1.0.0-beta6\lib\dotnet\Microsoft.Framework.Logging.dll">
+      <PackagePath>Microsoft.Framework.Logging.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.framework.logging.abstractions\1.0.0-beta6\lib\dotnet\Microsoft.Framework.Logging.Abstractions.dll">
+      <PackagePath>Microsoft.Framework.Logging.Abstractions.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.framework.optionsmodel\1.0.0-beta6\lib\dotnet\Microsoft.Framework.OptionsModel.dll">
+      <PackagePath>Microsoft.Framework.OptionsModel.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\microsoft.netcore.portable.compatibility\1.0.2\lib\netcore50\System.ComponentModel.DataAnnotations.dll">
       <PackagePath>System.ComponentModel.DataAnnotations.dll</PackagePath>
@@ -75,6 +129,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\newtonsoft.json\9.0.1\lib\portable-net45+wp80+win8+wpa81\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\remotion.linq\2.0.0-alpha-004\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll">
+      <PackagePath>Remotion.Linq.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\runtime.any.system.collections\4.0.11\lib\netcore50\System.Collections.dll">
       <PackagePath>System.Collections.dll</PackagePath>
@@ -1560,6 +1617,12 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\entityframework.commands\7.0.0-beta6\lib\net45\EntityFramework.Commands.xml">
+      <PackagePath>EntityFramework.Commands.xml</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Adnan\.nuget\packages\entityframework.commands\7.0.0-beta6\lib\net45\EntityFramework.Commands.dll">
+      <PackagePath>EntityFramework.Commands.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Adnan\Desktop\Cetvrti semestar\OOAD Projekt\Projekt\ETFKupon\ETFKupon\bin\x86\Debug\ETFKupon.xr.xml">
       <PackagePath>ETFKupon.xr.xml</PackagePath>

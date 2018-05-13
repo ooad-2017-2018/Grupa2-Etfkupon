@@ -9,11 +9,12 @@ namespace ETFKupon.Model
 {
     public class Firma: INotifyPropertyChanged
     {
-        public static int id = -1;
+        //public static int id = -1;
+        public string id { get; set;  }
         public string Naziv { get; set; }
         public string Username { get; set; }
         private string password;
-        public string Password { set => password = value; }
+        public string Password { get; set; }
         public string Email { get; set; }
         public double StanjeRacuna { get; }
         public List<Artikal> ListaArtikala { get; set; }
@@ -22,7 +23,7 @@ namespace ETFKupon.Model
 
         public Firma()
         {
-            id++;
+            //id++;
             ListaKupona = new List<Kupon>();
             ListaArtikala = new List<Artikal>();
         }

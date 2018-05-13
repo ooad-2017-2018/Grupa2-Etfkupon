@@ -1,4 +1,6 @@
 WinMetadata\Windows.winmd
+EntityFramework.Commands.dll
+EntityFramework.Commands.xml
 Assets\Icons\add.png
 Assets\Icons\add-1.png
 Assets\Icons\add-2.png

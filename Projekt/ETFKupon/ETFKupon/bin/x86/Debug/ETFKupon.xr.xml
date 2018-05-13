@@ -1,5 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="Azuriraj" />
+    <RootPropertyPathName Name="Novi" />
+    <RootPropertyPathName Name="BrojKartice" />
+    <RootPropertyPathName Name="Email" />
+    <RootPropertyPathName Name="Password" />
+    <RootPropertyPathName Name="Username" />
+    <RootPropertyPathName Name="Prezime" />
+    <RootPropertyPathName Name="Ime" />
+    <RootPropertyPathName Name="Dodaj" />
+    <RootPropertyPathName Name="Interes" />
+    <RootPropertyPathName Name="Odbaci" />
+    <RootPropertyPathName Name="Artikal" />
+    <RootPropertyPathName Name="Firma" />
+    <RootPropertyPathName Name="Naziv" />
+    <RootPropertyPathName Name="Kupac" />
+    <RootPropertyPathName Name="Adresa" />
+  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
       <RootProperty Name="RequestedTheme" />
@@ -66,6 +84,7 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Content" />
       <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="Command" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontFamily" />
       <RootEvent Name="Click" />
@@ -73,10 +92,10 @@
     <RootType FullName="Windows.UI.Xaml.Controls.Image">
       <RootProperty Name="Source" />
       <RootProperty Name="Stretch" />
-      <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Margin" />
       <RootProperty Name="Width" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Border">
@@ -91,15 +110,20 @@
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Text" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="IsReadOnly" />
       <RootEvent Name="TextChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Path" />
+      <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="ETFKupon.Interface.AzuriranjeProfila" />
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
@@ -108,7 +132,9 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
+      <RootProperty Name="ItemTemplate" />
       <RootProperty Name="Items" />
+      <RootProperty Name="SelectedValue" />
     </RootType>
     <RootType FullName="ETFKupon.Interface.DodavanjeInteresa" />
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
@@ -144,6 +170,7 @@
       <RootProperty Name="VerticalAlignment" />
     </RootType>
     <RootType FullName="ETFKupon.Interface.DodavanjeKupona" />
+    <RootType FullName="ETFKupon.View.Korpa" />
     <RootType FullName="Windows.UI.Xaml.Controls.GridView">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
@@ -170,6 +197,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Password" />
     </RootType>
     <RootType FullName="ETFKupon.Interface.RegistracijaFirme" />
     <RootType FullName="ETFKupon.Interface.RegistracijaKupca" />

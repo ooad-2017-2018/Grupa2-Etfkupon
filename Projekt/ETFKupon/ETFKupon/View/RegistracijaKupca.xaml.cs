@@ -28,7 +28,13 @@ namespace ETFKupon.Interface
         public RegistracijaKupca()
         {
             this.InitializeComponent();
-            DataContext = new KupacModelView();
+            DataContext = new KupacModelView();
+
+        }
+
+        private void buttonRegistracijaK_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

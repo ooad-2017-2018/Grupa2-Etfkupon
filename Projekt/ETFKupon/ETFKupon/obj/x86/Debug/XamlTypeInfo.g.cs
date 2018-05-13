@@ -132,29 +132,31 @@ namespace ETFKupon.ETFKupon_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[10];
+            _typeNameTable = new string[11];
             _typeNameTable[0] = "ETFKupon.Interface.AzuriranjeProfila";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "ETFKupon.Interface.DodavanjeInteresa";
             _typeNameTable[4] = "ETFKupon.Interface.DodavanjeKupona";
-            _typeNameTable[5] = "ETFKupon.Interface.PocetnaFirme";
-            _typeNameTable[6] = "ETFKupon.Interface.PocetnaKupca";
-            _typeNameTable[7] = "ETFKupon.Interface.RegistracijaFirme";
-            _typeNameTable[8] = "ETFKupon.Interface.RegistracijaKupca";
-            _typeNameTable[9] = "ETFKupon.MainPage";
+            _typeNameTable[5] = "ETFKupon.View.Korpa";
+            _typeNameTable[6] = "ETFKupon.Interface.PocetnaFirme";
+            _typeNameTable[7] = "ETFKupon.Interface.PocetnaKupca";
+            _typeNameTable[8] = "ETFKupon.Interface.RegistracijaFirme";
+            _typeNameTable[9] = "ETFKupon.Interface.RegistracijaKupca";
+            _typeNameTable[10] = "ETFKupon.MainPage";
 
-            _typeTable = new global::System.Type[10];
+            _typeTable = new global::System.Type[11];
             _typeTable[0] = typeof(global::ETFKupon.Interface.AzuriranjeProfila);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::ETFKupon.Interface.DodavanjeInteresa);
             _typeTable[4] = typeof(global::ETFKupon.Interface.DodavanjeKupona);
-            _typeTable[5] = typeof(global::ETFKupon.Interface.PocetnaFirme);
-            _typeTable[6] = typeof(global::ETFKupon.Interface.PocetnaKupca);
-            _typeTable[7] = typeof(global::ETFKupon.Interface.RegistracijaFirme);
-            _typeTable[8] = typeof(global::ETFKupon.Interface.RegistracijaKupca);
-            _typeTable[9] = typeof(global::ETFKupon.MainPage);
+            _typeTable[5] = typeof(global::ETFKupon.View.Korpa);
+            _typeTable[6] = typeof(global::ETFKupon.Interface.PocetnaFirme);
+            _typeTable[7] = typeof(global::ETFKupon.Interface.PocetnaKupca);
+            _typeTable[8] = typeof(global::ETFKupon.Interface.RegistracijaFirme);
+            _typeTable[9] = typeof(global::ETFKupon.Interface.RegistracijaKupca);
+            _typeTable[10] = typeof(global::ETFKupon.MainPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -192,11 +194,12 @@ namespace ETFKupon.ETFKupon_XamlTypeInfo
         private object Activate_0_AzuriranjeProfila() { return new global::ETFKupon.Interface.AzuriranjeProfila(); }
         private object Activate_3_DodavanjeInteresa() { return new global::ETFKupon.Interface.DodavanjeInteresa(); }
         private object Activate_4_DodavanjeKupona() { return new global::ETFKupon.Interface.DodavanjeKupona(); }
-        private object Activate_5_PocetnaFirme() { return new global::ETFKupon.Interface.PocetnaFirme(); }
-        private object Activate_6_PocetnaKupca() { return new global::ETFKupon.Interface.PocetnaKupca(); }
-        private object Activate_7_RegistracijaFirme() { return new global::ETFKupon.Interface.RegistracijaFirme(); }
-        private object Activate_8_RegistracijaKupca() { return new global::ETFKupon.Interface.RegistracijaKupca(); }
-        private object Activate_9_MainPage() { return new global::ETFKupon.MainPage(); }
+        private object Activate_5_Korpa() { return new global::ETFKupon.View.Korpa(); }
+        private object Activate_6_PocetnaFirme() { return new global::ETFKupon.Interface.PocetnaFirme(); }
+        private object Activate_7_PocetnaKupca() { return new global::ETFKupon.Interface.PocetnaKupca(); }
+        private object Activate_8_RegistracijaFirme() { return new global::ETFKupon.Interface.RegistracijaFirme(); }
+        private object Activate_9_RegistracijaKupca() { return new global::ETFKupon.Interface.RegistracijaKupca(); }
+        private object Activate_10_MainPage() { return new global::ETFKupon.MainPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -237,37 +240,44 @@ namespace ETFKupon.ETFKupon_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 5:   //  ETFKupon.Interface.PocetnaFirme
+            case 5:   //  ETFKupon.View.Korpa
                 userType = new global::ETFKupon.ETFKupon_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_PocetnaFirme;
+                userType.Activator = Activate_5_Korpa;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  ETFKupon.Interface.PocetnaKupca
+            case 6:   //  ETFKupon.Interface.PocetnaFirme
                 userType = new global::ETFKupon.ETFKupon_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_PocetnaKupca;
+                userType.Activator = Activate_6_PocetnaFirme;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  ETFKupon.Interface.RegistracijaFirme
+            case 7:   //  ETFKupon.Interface.PocetnaKupca
                 userType = new global::ETFKupon.ETFKupon_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_RegistracijaFirme;
+                userType.Activator = Activate_7_PocetnaKupca;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  ETFKupon.Interface.RegistracijaKupca
+            case 8:   //  ETFKupon.Interface.RegistracijaFirme
                 userType = new global::ETFKupon.ETFKupon_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_RegistracijaKupca;
+                userType.Activator = Activate_8_RegistracijaFirme;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  ETFKupon.MainPage
+            case 9:   //  ETFKupon.Interface.RegistracijaKupca
                 userType = new global::ETFKupon.ETFKupon_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_MainPage;
+                userType.Activator = Activate_9_RegistracijaKupca;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  ETFKupon.MainPage
+                userType = new global::ETFKupon.ETFKupon_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_MainPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
