@@ -27,26 +27,7 @@ namespace ETFKupon.Interface
         public RegistracijaFirme()
         {
             this.InitializeComponent();
-
             DataContext = new FirmaModelView();
-        }
-        private void ButtonRegistracijaF_Click(object sender, RoutedEventArgs e)
-        {
-            Firma kupac = new Firma();
-            kupac.Username = textBoxUsername.Text;
-            if (PasswordBox1.Password == PasswordBox2.Password)
-            {
-                kupac.Password = PasswordBox1.Password;
-                kupac.Email = TextBoxEmailF.Text;
-                FirmaModelView k = new FirmaModelView();
-                k.dodaj(kupac);
-                this.Frame.Navigate(typeof(MainPage));
-            }
-            else
-            {
-                // Obavjestenje korisnika o pogresnoj unesenoj sifri
-            }
-            
         }
     }
 }

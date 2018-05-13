@@ -25777,26 +25777,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\User\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+    "C:\\Users\\NadjaD\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ETFkupon\\Projekt\\ETFKupon\\ETFKupon\\ETFKupon.csproj",
+      "projectUniqueName": "C:\\Users\\NadjaD\\Desktop\\OOAD\\Projekt\\ETFKupon\\ETFKupon\\ETFKupon.csproj",
       "projectName": "ETFKupon",
-      "projectPath": "D:\\ETFkupon\\Projekt\\ETFKupon\\ETFKupon\\ETFKupon.csproj",
-      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "D:\\ETFkupon\\Projekt\\ETFKupon\\ETFKupon\\obj\\",
+      "projectPath": "C:\\Users\\NadjaD\\Desktop\\OOAD\\Projekt\\ETFKupon\\ETFKupon\\ETFKupon.csproj",
+      "packagesPath": "C:\\Users\\NadjaD\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\NadjaD\\Desktop\\OOAD\\Projekt\\ETFKupon\\ETFKupon\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\"
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\NadjaD\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
