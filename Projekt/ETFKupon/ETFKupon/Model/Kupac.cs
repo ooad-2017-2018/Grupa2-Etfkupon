@@ -20,6 +20,7 @@ namespace ETFKupon.Model
         public string Username { get; set; }
         private string password;
         public string Password { get;  set; }
+        public string PasswordPotvrda { get; set; }
         public string Email { get; set; }
         public string Adresa { get; set; }
         public string BrojKartice { get; set; }
@@ -34,7 +35,7 @@ namespace ETFKupon.Model
         {
             //id++;
             ListaInteresa = new List<Interes>();
-            Ime = Prezime = Adresa = Username = Password = Email = BrojKartice = "";
+            Ime = Prezime = Adresa = Username = Password = PasswordPotvrda = Email = BrojKartice = "";
             StanjeRacuna = 0;
         }
 

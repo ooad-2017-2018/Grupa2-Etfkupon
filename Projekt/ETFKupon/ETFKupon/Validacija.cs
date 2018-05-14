@@ -52,7 +52,7 @@ namespace ETFKupon
         }
         public Tuple<int, string> ValidirajPasswordPotvrduKupca(string password, string potvrda)
         {
-            if (password == potvrda) return new Tuple<int, string>(0, "Validno");
+            if (String.Equals(password, potvrda)) return new Tuple<int, string>(0, "Validno");
             else return new Tuple<int, string>(3, "Passwordi se ne poklapaju!");
         }
         public Tuple<int, string> ValidirajEmailKupca(string email)

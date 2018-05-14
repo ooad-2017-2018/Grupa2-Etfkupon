@@ -6,9 +6,14 @@
     xmlns:viewmodels="using:FirmaModelView.ModelView"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="using:WinUX.Xaml.Controls.Validation"
+    xmlns:rules="using:WinUX.Data.Validation.Rules"
+    xmlns:validation="using:WinUX.Data.Validation"
     mc:Ignorable="d">
-
     <Grid >
+        <Grid.Resources>
+            
+        </Grid.Resources>
         <ScrollViewer>
         <StackPanel Margin="20,250,20,20">
                 <TextBlock HorizontalAlignment="Center" Margin="0,0,0,0" Text="Registruj se" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.45" FontSize="28" FontWeight="Bold" Height="37"/>
@@ -16,7 +21,7 @@
 
                 <PasswordBox x:Name="PasswordBox1" PlaceholderText="Password" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="275" Height="28" Password="{Binding Path=Firma.Password,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
 
-            <PasswordBox x:Name="PasswordBox2" PlaceholderText="Ponovi password" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="275" Height="28"/>
+                <PasswordBox x:Name="PasswordBox2" PlaceholderText="Ponovi password" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="275" Height="28" Password="{Binding Path=Firma.PasswordPotvrda,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
 
                 <TextBox x:Name="TextBoxEmailF" PlaceholderText="Email" HorizontalAlignment="Center" Margin="0,20,0,0" VerticalAlignment="Top" Width="275" Height="28" Text="{Binding Path=Firma.Email,UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
 

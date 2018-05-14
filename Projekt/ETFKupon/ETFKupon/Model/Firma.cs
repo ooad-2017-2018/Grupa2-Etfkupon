@@ -15,6 +15,7 @@ namespace ETFKupon.Model
         public string Username { get; set; }
         private string password;
         public string Password { get; set; }
+        public string PasswordPotvrda { get; set; }
         public string Email { get; set; }
         public double StanjeRacuna { get; }
         public List<Artikal> ListaArtikala { get; set; }
@@ -26,6 +27,8 @@ namespace ETFKupon.Model
             //id++;
             ListaKupona = new List<Kupon>();
             ListaArtikala = new List<Artikal>();
+            Naziv = Username = Password = PasswordPotvrda = Email = "";
+            StanjeRacuna = 0;
         }
         public Firma(string ime, string user, string lozinka, string mail, List<Artikal> artikli, List<Kupon> kuponi)
         {

@@ -39,13 +39,16 @@ namespace ETFKupon.ModelView
             Tuple<int, string> vPassword;
             Tuple<int, string> vEmail;
             Tuple<int, string> vNaziv;
+            Tuple<int, string> vPasswordPotvrda;
 
             
             vUsername = vKupac.ValidirajUsernameKupca(firma.Username);
             vPassword = vKupac.ValidirajPasswordKupca(firma.Password);
             vEmail = vKupac.ValidirajEmailKupca(firma.Email);
             vNaziv = vKupac.ValidirajNazivFirme(firma.Naziv);
-            int suma = vUsername.Item1 + vPassword.Item1 + vEmail.Item1 + vEmail.Item1;
+            vPasswordPotvrda = vKupac.ValidirajPasswordPotvrduFirme(firma.Password, firma.PasswordPotvrda);
+
+            int suma = vUsername.Item1 + vPassword.Item1 + vEmail.Item1 + vEmail.Item1 + vPasswordPotvrda.Item1;
             if (suma == 0)
             {
                 userTableObj.InsertAsync(firma);
@@ -59,6 +62,7 @@ namespace ETFKupon.ModelView
             if (vUsername.Item1 != 0) poruka += vUsername.Item2 + '\n';
             if (vPassword.Item1 != 0) poruka += vPassword.Item2 + '\n';
             if (vEmail.Item1 != 0) poruka += vEmail.Item2 + '\n';
+            if (vPasswordPotvrda.Item1 != 0) poruka += vPasswordPotvrda.Item2 + '\n';
 
             if (poruka != null) new MessageDialog(poruka).ShowAsync();
 

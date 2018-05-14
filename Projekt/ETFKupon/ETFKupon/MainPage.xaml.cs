@@ -70,8 +70,16 @@ namespace ETFKupon
             {
                 TrenutnaFirma = etfKupon.ListaFirmi.Find(x => x.Username == textBoxUsername.Text);
                 if (TrenutnaFirma != null)
-                    this.Frame.Navigate(typeof(PocetnaFirme));
-            } else this.Frame.Navigate(typeof(PocetnaKupca));
+                {
+                    if (TrenutnaFirma.Password == textBoxPassword.Text)
+                        this.Frame.Navigate(typeof(PocetnaFirme));
+                }
+            }
+            else
+            {
+                if (TrenutniKupac.Password == textBoxPassword.Text)
+                this.Frame.Navigate(typeof(PocetnaKupca));
+            }
         }
     }
 }

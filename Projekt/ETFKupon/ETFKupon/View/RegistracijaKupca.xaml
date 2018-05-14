@@ -106,7 +106,7 @@
                     HorizontalAlignment="Center"
                     Margin="80,10,80,0" 
                     VerticalAlignment="Top" 
-                    Height="28" Width="300" PlaceholderText="Ponovi Password"/>
+                    Height="28" Width="300" Text="{Binding Path=Kupac.PasswordPotvrda,UpdateSourceTrigger=PropertyChanged,Mode=TwoWay}"  PlaceholderText="Ponovi Password"/>
                     <TextBox x:Name="textBoxEmail" 
                     HorizontalAlignment="Center"
                     Margin="0,10,0,0" 

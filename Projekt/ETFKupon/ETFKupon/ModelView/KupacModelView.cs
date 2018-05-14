@@ -38,6 +38,7 @@ namespace ETFKupon.ModelView
             Tuple<int, string> vUsername;
             Tuple<int, string> vPassword;
             Tuple<int, string> vEmail;
+            Tuple<int, string> vPasswordPotvrda;
 
             vAdresa = vKupac.ValidirajAdresuKupca(Kupac.Adresa);
             vIme = vKupac.ValidirajImeKupca(Kupac.Ime);
@@ -45,7 +46,8 @@ namespace ETFKupon.ModelView
             vUsername = vKupac.ValidirajUsernameKupca(Kupac.Username);
             vPassword = vKupac.ValidirajPasswordKupca(Kupac.Password);
             vEmail = vKupac.ValidirajEmailKupca(Kupac.Email);
-            int suma = vAdresa.Item1 + vIme.Item1 + vPrezime.Item1 + vPassword.Item1 + vEmail.Item1;
+            vPasswordPotvrda = vKupac.ValidirajPasswordPotvrduKupca(Kupac.Password, Kupac.PasswordPotvrda);
+            int suma = vAdresa.Item1 + vIme.Item1 + vPrezime.Item1 + vPassword.Item1 + vEmail.Item1 + vUsername.Item1 + vPasswordPotvrda.Item1;
             if (suma == 0)
             {
                 MainPage.etfKupon.ListaKupaca.Add(Kupac);
@@ -60,6 +62,7 @@ namespace ETFKupon.ModelView
             if (vUsername.Item1 != 0) poruka += vUsername.Item2 + '\n';
             if (vPassword.Item1 != 0) poruka += vPassword.Item2 + '\n';
             if (vEmail.Item1 != 0) poruka += vEmail.Item2 + '\n';
+            if (vPasswordPotvrda.Item1 != 0) poruka += vPasswordPotvrda.Item2 + '\n';
 
             if (poruka != null) new MessageDialog(poruka).ShowAsync();
 
