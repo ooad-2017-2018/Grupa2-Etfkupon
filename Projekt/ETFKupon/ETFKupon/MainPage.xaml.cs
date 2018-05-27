@@ -37,6 +37,7 @@ namespace ETFKupon
             //etfKupon = new EtfKupon();
             TrenutnaFirma = null;
             TrenutniKupac = null;
+            //dodati popunjavanje listi iz baze
         }
 
         public MainPage(KupacModelView kupacModelView)

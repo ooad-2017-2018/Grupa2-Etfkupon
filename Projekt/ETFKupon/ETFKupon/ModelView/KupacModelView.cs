@@ -30,8 +30,8 @@ namespace ETFKupon.ModelView
 
         public void dodaj(object parametar)
         {
-            IMobileServiceTable<Kupac> userTableObj = App.MobileService.GetTable<Kupac>();
-            IMobileServiceTable<proba> blabla = App.MobileService.GetTable<proba>();
+            IMobileServiceTable<KupacBaza> userTableObj = App.MobileService.GetTable<KupacBaza>();
+            //IMobileServiceTable<proba> blabla = App.MobileService.GetTable<proba>();
             Validacija vKupac = new Validacija();
             Tuple<int, string> vAdresa;
             Tuple<int, string> vIme;
@@ -51,11 +51,9 @@ namespace ETFKupon.ModelView
             int suma = vAdresa.Item1 + vIme.Item1 + vPrezime.Item1 + vPassword.Item1 + vEmail.Item1 + vUsername.Item1 + vPasswordPotvrda.Item1;
             if (suma == 0)
             {
-                proba x = new proba();
-                x.tekst = "tekst za bazu";
+                KupacBaza x = new KupacBaza(Kupac.Ime, Kupac.Prezime, Kupac.Username, Kupac.Password, Kupac.Email, Kupac.Adresa, Kupac.BrojKartice, Kupac.StanjeRacuna);
                 MainPage.etfKupon.ListaKupaca.Add(Kupac);
-                userTableObj.InsertAsync(Kupac);
-                blabla.InsertAsync(x);
+                userTableObj.InsertAsync(x);
                 NavigationService.Navigate(typeof(MainPage), new MainPage(this));
                 return;
             }

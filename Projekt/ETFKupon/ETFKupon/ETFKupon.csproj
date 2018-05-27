@@ -95,8 +95,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ETFBaza\Models\Kupac.cs" />
-    <Compile Include="ETFBaza\Models\KupacDbContext.cs" />
+    <Compile Include="Model\FirmaBaza.cs" />
+    <Compile Include="Model\KupacBaza.cs" />
     <Compile Include="ModelView\ArtikalModelView.cs" />
     <Compile Include="ModelView\FirmaModelView.cs" />
     <Compile Include="ModelView\FIrmaPocetnaModelView.cs" />
@@ -612,9 +612,7 @@
       <Version>2.4.17005.1</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ETFBaza\Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

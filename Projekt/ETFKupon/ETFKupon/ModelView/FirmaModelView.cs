@@ -31,7 +31,7 @@ namespace ETFKupon.ModelView
 
         public void dodaj(object parametar)
         {
-            IMobileServiceTable<Firma> userTableObj = App.MobileService.GetTable<Firma>();
+            IMobileServiceTable<FirmaBaza> userTableObj = App.MobileService.GetTable<FirmaBaza>();
             Validacija vKupac = new Validacija();
             
             
@@ -51,7 +51,8 @@ namespace ETFKupon.ModelView
             int suma = vUsername.Item1 + vPassword.Item1 + vEmail.Item1 + vEmail.Item1 + vPasswordPotvrda.Item1;
             if (suma == 0)
             {
-                userTableObj.InsertAsync(firma);
+                FirmaBaza firmicaHehe = new FirmaBaza(firma.Naziv, firma.Username, firma.Password, firma.Email, firma.StanjeRacuna);
+                userTableObj.InsertAsync(firmicaHehe);
                 MainPage.etfKupon.ListaFirmi.Add(firma);
                 NavigationService.Navigate(typeof(MainPage), new MainPage(this));
                 return;

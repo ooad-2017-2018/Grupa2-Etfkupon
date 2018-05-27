@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ETFKupon.ETFBaza.Models
+namespace ETFKupon.Model
 {
-    class Kupac
+    class KupacBaza
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public string id { get; set; }
@@ -19,6 +19,17 @@ namespace ETFKupon.ETFBaza.Models
         public string Adresa { get; set; }
         public string BrojKartice { get; set; }
         public double StanjeRacuna { get; set; }
-        //public byte[] Slika { get; set; }
+
+        public KupacBaza(string _ime, string _prezime, string _username, string _password, string _email, string _adresa, string _brojKartice, double _stanjeRacuna)
+        {
+            Ime = _ime;
+            Prezime = _prezime;
+            Username = _username;
+            Password = _password;
+            Email = _email;
+            Adresa = _adresa;
+            BrojKartice = _brojKartice;
+            StanjeRacuna = _stanjeRacuna;
+        }
     }
 }
