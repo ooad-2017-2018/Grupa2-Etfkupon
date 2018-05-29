@@ -204,3 +204,154 @@ Projekt/ETFKupon/ETFKupon/*.fxlib
 # Custom ignores
 Projekt/ETFKupon/ETFKupon/gallery.xml
 Projekt/ETFKupon/ETFKupon/project.lock.json
+
+
+# ASP.NET ignores
+###################
+# compiled source #
+###################
+Projekt/ETFKuponASPNET/ETFKupon/*.com
+Projekt/ETFKuponASPNET/ETFKupon/*.class
+Projekt/ETFKuponASPNET/ETFKupon/*.dll
+Projekt/ETFKuponASPNET/ETFKupon/*.exe
+Projekt/ETFKuponASPNET/ETFKupon/*.pdb
+Projekt/ETFKuponASPNET/ETFKupon/*.dll.config
+Projekt/ETFKuponASPNET/ETFKupon/*.cache
+Projekt/ETFKuponASPNET/ETFKupon/*.suo
+# Include dlls if they’re in the NuGet packages directory
+Projekt/ETFKuponASPNET/ETFKupon/!/packages/*/lib/*.dll
+Projekt/ETFKuponASPNET/ETFKupon/!/packages/*/lib/*/*.dll
+# Include dlls if they're in the CommonReferences directory
+Projekt/ETFKuponASPNET/ETFKupon/!*CommonReferences/*.dll
+####################
+# VS Upgrade stuff #
+####################
+Projekt/ETFKuponASPNET/ETFKupon/UpgradeLog.XML
+Projekt/ETFKuponASPNET/ETFKupon/_UpgradeReport_Files/
+###############
+# Directories #
+###############
+Projekt/ETFKuponASPNET/ETFKupon/bin/
+Projekt/ETFKuponASPNET/ETFKupon/obj/
+Projekt/ETFKuponASPNET/ETFKupon/TestResults/
+###################
+# Web publish log #
+###################
+Projekt/ETFKuponASPNET/ETFKupon/*.Publish.xml
+#############
+# Resharper #
+#############
+Projekt/ETFKuponASPNET/ETFKupon//_ReSharper.*
+Projekt/ETFKuponASPNET/ETFKupon/*.ReSharper.*
+############
+# Packages #
+############
+# it’s better to unpack these files and commit the raw source
+# git has its own built in compression methods
+Projekt/ETFKuponASPNET/ETFKupon/*.7z
+Projekt/ETFKuponASPNET/ETFKupon/*.dmg
+Projekt/ETFKuponASPNET/ETFKupon/*.gz
+Projekt/ETFKuponASPNET/ETFKupon/*.iso
+Projekt/ETFKuponASPNET/ETFKupon/*.jar
+Projekt/ETFKuponASPNET/ETFKupon/*.rar
+Projekt/ETFKuponASPNET/ETFKupon/*.tar
+Projekt/ETFKuponASPNET/ETFKupon/*.zip
+######################
+# Logs and databases #
+######################
+Projekt/ETFKuponASPNET/ETFKupon/*.log
+Projekt/ETFKuponASPNET/ETFKupon/*.sqlite
+# OS generated files #
+######################
+Projekt/ETFKuponASPNET/ETFKupon/.DS_Store?
+Projekt/ETFKuponASPNET/ETFKupon/ehthumbs.db
+Projekt/ETFKuponASPNET/ETFKupon/Icon?
+Projekt/ETFKuponASPNET/ETFKupon/Thumbs.db
+Projekt/ETFKuponASPNET/ETFKupon/[Bb]in
+Projekt/ETFKuponASPNET/ETFKupon/[Oo]bj
+Projekt/ETFKuponASPNET/ETFKupon/[Tt]est[Rr]esults
+Projekt/ETFKuponASPNET/ETFKupon/*.suo
+Projekt/ETFKuponASPNET/ETFKupon/*.user
+Projekt/ETFKuponASPNET/ETFKupon/*.[Cc]ache
+Projekt/ETFKuponASPNET/ETFKupon/*[Rr]esharper*
+Projekt/ETFKuponASPNET/ETFKupon/packages
+Projekt/ETFKuponASPNET/ETFKupon/NuGet.exe
+Projekt/ETFKuponASPNET/ETFKupon/_[Ss]cripts
+Projekt/ETFKuponASPNET/ETFKupon/*.exe
+Projekt/ETFKuponASPNET/ETFKupon/*.dll
+Projekt/ETFKuponASPNET/ETFKupon/*.nupkg
+Projekt/ETFKuponASPNET/ETFKupon/*.ncrunchsolution
+Projekt/ETFKuponASPNET/ETFKupon/*.dot[Cc]over
+
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.com
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.class
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.dll
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.exe
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.pdb
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.dll.config
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.cache
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.suo
+# Include dlls if they’re in the NuGet packages directory
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/!/packages/*/lib/*.dll
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/!/packages/*/lib/*/*.dll
+# Include dlls if they're in the CommonReferences directory
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/!*CommonReferences/*.dll
+####################
+# VS Upgrade stuff #
+####################
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/UpgradeLog.XML
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/_UpgradeReport_Files/
+###############
+# Directories #
+###############
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/bin/
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/obj/
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/TestResults/
+###################
+# Web publish log #
+###################
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.Publish.xml
+#############
+# Resharper #
+#############
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon//_ReSharper.*
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.ReSharper.*
+############
+# Packages #
+############
+# it’s better to unpack these files and commit the raw source
+# git has its own built in compression methods
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.7z
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.dmg
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.gz
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.iso
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.jar
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.rar
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.tar
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.zip
+######################
+# Logs and databases #
+######################
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.log
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.sqlite
+# OS generated files #
+######################
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/.DS_Store?
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/ehthumbs.db
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/Icon?
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/Thumbs.db
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/[Bb]in
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/[Oo]bj
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/[Tt]est[Rr]esults
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.suo
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.user
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.[Cc]ache
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*[Rr]esharper*
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/packages
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/NuGet.exe
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/_[Ss]cripts
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.exe
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.dll
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.nupkg
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.ncrunchsolution
+Projekt/ETFKuponASPNET/ETFKupon/ETFKupon/*.dot[Cc]over

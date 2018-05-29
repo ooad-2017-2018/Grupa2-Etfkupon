@@ -59,3 +59,23 @@ Sami procesi registracije korisnika, firme kao i proces kupovine se može prona�
 - *5* - Polje ne može biti prazno
 - *6* - Brojčana vrijednost je manja od očekivane
 - *7* - Brojčana vrijednost je veća od očekivane 
+
+## Rute Web Aplikacije
+
+- *get all*: /KupacBaza
+- *get by id*: /KupacBaza/Details/:id
+- *get*: KupacBaza/Create
+- *post*: KupacBaza/Create
+- *get*: KupacBaza/Edit/:id
+- *post*: KupacBaza/Edit/:id
+- *get*: KupacBaza/Delete/:id
+- *post*: KupacBaza/Delete/:id
+
+- *get all*: /FirmaBaza
+- *get by id*: /FirmaBaza/Details/:id
+- *get*: FirmaBaza/Create
+- *post*: FirmaBaza/Create
+- *get*: FirmaBaza/Edit/:id
+- *post*: FirmaBaza/Edit/:id
+- *get*: FirmaBaza/Delete/:id
+- *post*: FirmaBaza/Delete/:id
