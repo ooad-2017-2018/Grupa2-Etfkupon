@@ -1,63 +1,48 @@
-﻿@model IEnumerable<ETFKupon.Models.FirmaBaza>
+﻿@model IEnumerable<object>
 
 @{
-    ViewBag.Title = "Index";
+
+    ViewBag.Title = "Početna strana";
+    List<ETFKupon.Models.Artikal> listaArtikalaFirme = Model.ToList()[0] as List<ETFKupon.Models.Artikal>;
+    List<ETFKupon.Models.Kupon> listaKuponaFirme = Model.ToList()[1] as List<ETFKupon.Models.Kupon>;
 }
 
-<h2>Index</h2>
+<div class="topnav">
+    <font size="6">Dobrodošali</font>
+    <button>Odjavi se</button>
+</div>
 
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.id)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Naziv)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Username)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StanjeRacuna)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.id)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Naziv)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Username)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StanjeRacuna)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Details", "Details", new { id=item.id }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.id })
-        </td>
-    </tr>
-}
+<h2>Lista Artikala</h2>
+<ul>
+    @foreach (var item in listaArtikalaFirme)
+    {
+        <li>@item.Naziv @item.Kolicina @item.Cijena</li>
+    }
+</ul>
+<h2>Lista Kupona</h2>
+<ul>
+    @foreach (var item in listaKuponaFirme)
+    {
+        <li>@item.Kolicina @item.Postotak</li>
+    }
+</ul>
 
-</table>
+<div class="dodavanjeArtikla">
+    <h2>Dodavanje Artikla: </h2>
+    <input type="text" placeholder="Naziv artikla" name="nazivArtikala">
+    <input type="text" placeholder="Kolicina" name="kolicinaArtikala">
+    @Html.DropDownList("Lista interesa", ViewBag.ListaInteresaSelekcija as List<SelectListItem>, "Odaberi interes:")
+    <button type="submit">Dodaj atikal!</button>
+</div>
+
+<div class="dodavanjeKupona">
+    <h2>Dodavanje Kupona: </h2>
+    <input type="text" placeholder="Sniženje" name="PostotakKupona">
+    <input type="text" placeholder="Kolicina" name="kolicinaKupona">
+    @Html.DropDownList("Lista interesa", ViewBag.ListaArtikalaSelekcija as List<SelectListItem>, "Odaberi artikal:")
+    <button type="submit">Dodaj kupon!</button>
+</div>

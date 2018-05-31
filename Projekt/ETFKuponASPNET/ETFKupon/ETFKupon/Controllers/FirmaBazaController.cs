@@ -17,7 +17,45 @@ namespace ETFKupon.Controllers
         // GET: FirmaBaza
         public ActionResult Index()
         {
-            return View(db.FirmaBaza.ToList());
+            //FirmaBaza firmaBaza = db.FirmaBaza.Find(id);
+      
+            List<Artikal> artikliFime = new List<Artikal>();
+            foreach (Artikal x in db.Artikal.ToList()) 
+                if (x.idFirma == firmaBaza.id)
+                    artikliFime.Add(x);
+
+            List<Kupon> kuponiFime = new List<Kupon>();
+            foreach (Kupon x in db.Kupon.ToList())
+                if (x.idFirma == firmaBaza.id)
+                    kuponiFime.Add(x);
+
+            List<object> lista = new List<object>();
+            lista.Add(artikliFime); 
+            lista.Add(kuponiFime); 
+            
+            List<Interes> interesiLista = new List<Interes>();
+            interesiLista = db.Interes.ToList();
+            ViewBag.ListaInteresaSelekcija = new List<SelectListItem>();
+            for (int i = 0; i < interesiLista.Count; i++)
+                ViewBag.ListaInteresaSelekcija.Add(
+                    new SelectListItem()
+                    {
+                        Value = i.ToString(),
+                        Text = interesiLista[i].Naziv
+                    });
+
+            List<Artikal> artikliLista = new List<Artikal>();
+            artikliLista = artikliFime;
+            ViewBag.ListaArtikalaSelekcija = new List<SelectListItem>();
+            for (int i = 0; i < artikliLista.Count; i++)
+                ViewBag.ListaArtikalaSelekcija.Add(
+                    new SelectListItem()
+                    {
+                        Value = i.ToString(),
+                        Text = artikliLista[i].Naziv
+                    });
+
+            return View(lista);
         }
 
         // GET: FirmaBaza/Details/5
