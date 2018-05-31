@@ -1,18 +1,19 @@
-﻿@{
+﻿
+@{
     ViewBag.Title = "Home Page";
 }
 
 <div class="jumbotron">
     <h1>ETFKupon</h1>
     <p class="lead">Dobrodošli na revolucionarni sistem kupovine ETFKupon</p>
-    <input id="usernameLogin" type="text" placeholder="Username" />
-    <br /> <br />
-    <input id="passwordLogin" type="password" placeholder="Password" />
-    <br /> <br />
-    @using (Html.BeginForm("Index", "KupacBaza"))
-    {
+    <form method="POST">
+        <input name="usernameLogin" id="usernameLogin" type="text" placeholder="Username" />
+        <br /> <br />
+        <input name="passwordLogin" id="passwordLogin" type="password" placeholder="Password" />
+        
+        <br /> <br />
         <p><button type="submit" class="btn btn-primary btn-lg">Login</button></p>
-    }
+    </form>
 </div>
 <div class="row">
     <div class="col-md-4">
