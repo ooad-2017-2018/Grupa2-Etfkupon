@@ -7,18 +7,19 @@
     List<ETFKupon.Models.InteresKupca> listaInteresaKupca = Model.ToList()[2] as List<ETFKupon.Models.InteresKupca>;
 }
 
-<div class="topnav">
-    <font size="6">Dobrodošao korisniče</font>
-    <input type="text" placeholder="Pretraga artikala" name="pretragaArtikala">
-    <button type="submit">Traži</button>
-    <button>Edituj profil</button>
-    <button>Obriši profil</button>
-    <button>Odjavi se</button>
-</div>
+<div class="jumbotron">
+    <div style="text-align:center">
+        <font size="6">Dobrodošao korisniče @Session["User"].ToString()</font>
+    </div>
+    <div style="text-align:center">
+        <input type="text" placeholder="Pretraga artikala" name="pretragaArtikala">
+        <button class="btn btn-default type="submit">Traži</button>
+        <button class="btn btn-default">Edituj profil</button>
+        <button class="btn btn-default">Obriši profil</button>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+        <button class="btn btn-primary btn-lg">Odjavi se</button>
+    </div>
+</div>
 
 <h2>Lista interesa</h2>
 <ul>
