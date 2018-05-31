@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Web;
 
@@ -9,6 +10,8 @@ namespace ETFKupon.Models
     public class Kupon
     {
         [ScaffoldColumn(false)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [Key]
         public string id { get; set; }
         [Required(ErrorMessage = "Postotak je neophodan!")]
         [Range(1, 100, ErrorMessage = "Postotak mora biti između 1 i 100!")]

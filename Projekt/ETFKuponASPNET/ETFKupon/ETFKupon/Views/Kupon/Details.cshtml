@@ -1,0 +1,42 @@
+﻿@model ETFKupon.Models.Kupon
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Kupon</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Postotak)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Postotak)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kolicina)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kolicina)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idFirma)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idFirma)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -10,121 +10,107 @@ using ETFKupon.Models;
 
 namespace ETFKupon.Controllers
 {
-    public class KupacBazaController : Controller
+    public class KuponController : Controller
     {
         private DatabaseContext db = new DatabaseContext();
-        // GET: KupacBaza
+
+        // GET: Kupon
         public ActionResult Index()
         {
-            List<object> lista = new List<object>();
-            List<Interes> interesiLista = new List<Interes>();
-            interesiLista = db.Interes.ToList();
-            lista.Add(db.Interes.ToList());
-            lista.Add(db.Artikal.ToList());
-            lista.Add(db.InteresKupca.ToList());
-            ViewBag.ListaInteresaSelekcija = new List<SelectListItem>() ;
-            for (int i = 0; i < interesiLista.Count; i++)
-                ViewBag.ListaInteresaSelekcija.Add(
-                    new SelectListItem()
-                    {
-                        Value = i.ToString(),
-                        Text = interesiLista[i].Naziv
-                    });
-            
-            return View(lista);
+            return View(db.Kupon.ToList());
         }
 
-        // GET: KupacBaza/Details/5
+        // GET: Kupon/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            KupacBaza kupacBaza = db.KupacBaza.Find(id);
-            if (kupacBaza == null)
+            Kupon kupon = db.Kupon.Find(id);
+            if (kupon == null)
             {
                 return HttpNotFound();
             }
-            return View(kupacBaza);
+            return View(kupon);
         }
 
-        // GET: KupacBaza/Create
+        // GET: Kupon/Create
         public ActionResult Create()
         {
             return View();
         }
 
-        // POST: KupacBaza/Create
+        // POST: Kupon/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,Ime,Prezime,Username,Password,Email,Adresa,BrojKartice,StanjeRacuna")] KupacBaza kupacBaza)
+        public ActionResult Create([Bind(Include = "id,Postotak,Kolicina,idFirma")] Kupon kupon)
         {
             if (ModelState.IsValid)
             {
-                db.KupacBaza.Add(kupacBaza);
+                db.Kupon.Add(kupon);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(kupacBaza);
+            return View(kupon);
         }
 
-        // GET: KupacBaza/Edit/5
+        // GET: Kupon/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            KupacBaza kupacBaza = db.KupacBaza.Find(id);
-            if (kupacBaza == null)
+            Kupon kupon = db.Kupon.Find(id);
+            if (kupon == null)
             {
                 return HttpNotFound();
             }
-            return View(kupacBaza);
+            return View(kupon);
         }
 
-        // POST: KupacBaza/Edit/5
+        // POST: Kupon/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,Ime,Prezime,Username,Password,Email,Adresa,BrojKartice,StanjeRacuna")] KupacBaza kupacBaza)
+        public ActionResult Edit([Bind(Include = "id,Postotak,Kolicina,idFirma")] Kupon kupon)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(kupacBaza).State = EntityState.Modified;
+                db.Entry(kupon).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(kupacBaza);
+            return View(kupon);
         }
 
-        // GET: KupacBaza/Delete/5
+        // GET: Kupon/Delete/5
         public ActionResult Delete(string id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            KupacBaza kupacBaza = db.KupacBaza.Find(id);
-            if (kupacBaza == null)
+            Kupon kupon = db.Kupon.Find(id);
+            if (kupon == null)
             {
                 return HttpNotFound();
             }
-            return View(kupacBaza);
+            return View(kupon);
         }
 
-        // POST: KupacBaza/Delete/5
+        // POST: Kupon/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(string id)
         {
-            KupacBaza kupacBaza = db.KupacBaza.Find(id);
-            db.KupacBaza.Remove(kupacBaza);
+            Kupon kupon = db.Kupon.Find(id);
+            db.Kupon.Remove(kupon);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

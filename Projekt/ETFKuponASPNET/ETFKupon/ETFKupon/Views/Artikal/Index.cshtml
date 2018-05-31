@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ETFKupon.Models.FirmaBaza>
+﻿@model IEnumerable<ETFKupon.Models.Artikal>
 
 @{
     ViewBag.Title = "Index";
@@ -12,22 +12,19 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.id)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.Naziv)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Username)
+            @Html.DisplayNameFor(model => model.Kolicina)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Password)
+            @Html.DisplayNameFor(model => model.Cijena)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Email)
+            @Html.DisplayNameFor(model => model.idKupon)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.StanjeRacuna)
+            @Html.DisplayNameFor(model => model.idFirma)
         </th>
         <th></th>
     </tr>
@@ -35,22 +32,19 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.id)
-        </td>
-        <td>
             @Html.DisplayFor(modelItem => item.Naziv)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Username)
+            @Html.DisplayFor(modelItem => item.Kolicina)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Password)
+            @Html.DisplayFor(modelItem => item.Cijena)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Email)
+            @Html.DisplayFor(modelItem => item.idKupon)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.StanjeRacuna)
+            @Html.DisplayFor(modelItem => item.idFirma)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.id }) |

@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ETFKupon.Models.FirmaBaza>
+﻿@model IEnumerable<ETFKupon.Models.Kupon>
 
 @{
     ViewBag.Title = "Index";
@@ -15,19 +15,13 @@
             @Html.DisplayNameFor(model => model.id)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Naziv)
+            @Html.DisplayNameFor(model => model.Postotak)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Username)
+            @Html.DisplayNameFor(model => model.Kolicina)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Password)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Email)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StanjeRacuna)
+            @Html.DisplayNameFor(model => model.idFirma)
         </th>
         <th></th>
     </tr>
@@ -38,19 +32,13 @@
             @Html.DisplayFor(modelItem => item.id)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Naziv)
+            @Html.DisplayFor(modelItem => item.Postotak)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Username)
+            @Html.DisplayFor(modelItem => item.Kolicina)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Password)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.StanjeRacuna)
+            @Html.DisplayFor(modelItem => item.idFirma)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.id }) |

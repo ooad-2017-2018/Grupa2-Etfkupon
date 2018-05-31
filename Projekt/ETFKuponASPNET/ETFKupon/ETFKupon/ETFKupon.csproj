@@ -158,9 +158,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ArtikalController.cs" />
     <Compile Include="Controllers\FirmaBazaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InteresController.cs" />
+    <Compile Include="Controllers\InteresKupcaController.cs" />
+    <Compile Include="Controllers\KorpaController.cs" />
     <Compile Include="Controllers\KupacBazaController.cs" />
+    <Compile Include="Controllers\KuponController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -226,6 +231,31 @@
     <Content Include="Views\FirmaBaza\Details.cshtml" />
     <Content Include="Views\FirmaBaza\Edit.cshtml" />
     <Content Include="Views\FirmaBaza\Index.cshtml" />
+    <Content Include="Views\Artikal\Create.cshtml" />
+    <Content Include="Views\Artikal\Delete.cshtml" />
+    <Content Include="Views\Artikal\Details.cshtml" />
+    <Content Include="Views\Artikal\Edit.cshtml" />
+    <Content Include="Views\Artikal\Index.cshtml" />
+    <Content Include="Views\Interes\Create.cshtml" />
+    <Content Include="Views\Interes\Delete.cshtml" />
+    <Content Include="Views\Interes\Details.cshtml" />
+    <Content Include="Views\Interes\Edit.cshtml" />
+    <Content Include="Views\Interes\Index.cshtml" />
+    <Content Include="Views\InteresKupca\Create.cshtml" />
+    <Content Include="Views\InteresKupca\Delete.cshtml" />
+    <Content Include="Views\InteresKupca\Details.cshtml" />
+    <Content Include="Views\InteresKupca\Edit.cshtml" />
+    <Content Include="Views\InteresKupca\Index.cshtml" />
+    <Content Include="Views\Korpa\Create.cshtml" />
+    <Content Include="Views\Korpa\Delete.cshtml" />
+    <Content Include="Views\Korpa\Details.cshtml" />
+    <Content Include="Views\Korpa\Edit.cshtml" />
+    <Content Include="Views\Korpa\Index.cshtml" />
+    <Content Include="Views\Kupon\Create.cshtml" />
+    <Content Include="Views\Kupon\Delete.cshtml" />
+    <Content Include="Views\Kupon\Details.cshtml" />
+    <Content Include="Views\Kupon\Edit.cshtml" />
+    <Content Include="Views\Kupon\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
