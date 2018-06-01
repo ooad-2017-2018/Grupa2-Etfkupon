@@ -9,8 +9,10 @@ namespace ETFKupon.Controllers
 {
     public class HomeController : Controller
     {
+        string passwordGreska;
         public ActionResult Index()
         {
+            passwordGreska = "";
             return View();
         }
 
@@ -42,10 +44,14 @@ namespace ETFKupon.Controllers
                 {
 
                     if (passwordLogin.Equals(listaKupaca[i].Password))
+                    {
+                        Session["User"] = listaKupaca[i];
                         return RedirectToAction("Index", "KupacBaza");
+                    }
                     else
                     {
                         //ModelState.AddModelError("Password", "Password ne valja!");
+                        ViewBag.passwordGreska = "Password nije validan!";
                         return View();
                     }
 
@@ -56,7 +62,10 @@ namespace ETFKupon.Controllers
                 if (listaFirmi[i].Username.Equals(usernameLogin))
                 {
                     if (passwordLogin.Equals(listaFirmi[i].Password))
+                    {
+                        Session["User"] = listaFirmi[i];
                         return RedirectToAction("Index", "FirmaBaza");
+                    }
                     else
                     {
                         //ModelState.AddModelError("Password", "Password ne valja!");

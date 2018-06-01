@@ -123,5 +123,24 @@ namespace ETFKupon.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult SaveRecords(Interes model)
+        {
+            try
+            {
+                Interes interes = new Interes();
+                interes.Naziv = model.Naziv;
+          
+                db.Interes.Add(interes);
+                db.SaveChanges();
+                String lastIntereslId = interes.id;
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

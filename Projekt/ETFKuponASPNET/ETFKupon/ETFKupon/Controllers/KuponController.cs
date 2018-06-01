@@ -123,5 +123,27 @@ namespace ETFKupon.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult SaveRecords(Kupon model)
+        {
+            try
+            {
+                Kupon kupon = new Kupon();
+                kupon.Kolicina = model.Kolicina;
+                kupon.Postotak = model.Postotak;
+                FirmaBaza firmaBaza = Session["User"] as ETFKupon.Models.FirmaBaza;
+                kupon.idFirma = firmaBaza.id;
+                
+                db.Kupon.Add(kupon);
+                db.SaveChanges();
+                String lastKuponlId = kupon.id;
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Web;
 
 namespace ETFKupon.Models
 {
+    [BindableType]
     public class Artikal
     {
         [ScaffoldColumn(false)]

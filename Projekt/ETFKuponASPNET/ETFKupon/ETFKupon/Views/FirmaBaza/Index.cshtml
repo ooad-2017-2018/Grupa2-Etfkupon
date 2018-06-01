@@ -8,7 +8,7 @@
 }
 
 <div class="topnav">
-    <font size="6">Dobrodošali</font>
+    <font size="6">Dobrodošali @Session["User"].ToString()</font>
     <button>Odjavi se</button>
 </div>
 
@@ -32,17 +32,27 @@
 </ul>
 
 <div class="dodavanjeArtikla">
-    <h2>Dodavanje Artikla: </h2>
-    <input type="text" placeholder="Naziv artikla" name="nazivArtikala">
-    <input type="text" placeholder="Kolicina" name="kolicinaArtikala">
-    @Html.DropDownList("Lista interesa", ViewBag.ListaInteresaSelekcija as List<SelectListItem>, "Odaberi interes:")
-    <button type="submit">Dodaj atikal!</button>
+    @using (Html.BeginForm("SaveRecords", "Artikal", FormMethod.Post))
+    {
+        <h2>Dodavanje Artikla: </h2>
+        @Html.TextBoxFor(model => (model as ETFKupon.Models.Artikal).Naziv, new { @class = "fore-control", @placeholder = "Naziv artikla", @name = "nazivArtikala" })
+        @Html.TextBoxFor(model => (model as ETFKupon.Models.Artikal).Kolicina, new { @class = "fore-control", @placeholder = "Kolicina artikla", @name = "kolicinaArtikala" })
+        @Html.TextBoxFor(model => (model as ETFKupon.Models.Artikal).Cijena, new { @class = "fore-control", @placeholder = "Cijena artikla", @name = "cijenaArtikala" })
+
+        @Html.DropDownList("Lista kupona", ViewBag.ListaKuponaSelekcija as List<SelectListItem>, "Odaberi kupon:")
+        @Html.DropDownList("Lista interesa", ViewBag.ListaInteresaSelekcija as List<SelectListItem>, "Odaberi interes:")
+        <button type="submit">Dodaj atikal!</button>
+    }
+
 </div>
 
 <div class="dodavanjeKupona">
-    <h2>Dodavanje Kupona: </h2>
-    <input type="text" placeholder="Sniženje" name="PostotakKupona">
-    <input type="text" placeholder="Kolicina" name="kolicinaKupona">
-    @Html.DropDownList("Lista interesa", ViewBag.ListaArtikalaSelekcija as List<SelectListItem>, "Odaberi artikal:")
-    <button type="submit">Dodaj kupon!</button>
+    @using (Html.BeginForm("SaveRecords", "Kupon", FormMethod.Post))
+    {
+        <h2>Dodavanje Kupona: </h2>
+        @Html.TextBoxFor(model => (model as ETFKupon.Models.Kupon).Kolicina, new { @class = "fore-control", @placeholder = "Količina", @name = "količinaKupon" })
+        @Html.TextBoxFor(model => (model as ETFKupon.Models.Kupon).Postotak, new { @class = "fore-control", @placeholder = "Snjiženje", @name = "postotakKupon" })
+        
+        <button type="submit">Dodaj kupon!</button>
+    }
 </div>

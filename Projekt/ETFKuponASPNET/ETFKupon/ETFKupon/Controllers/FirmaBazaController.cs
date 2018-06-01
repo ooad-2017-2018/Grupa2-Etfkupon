@@ -17,16 +17,16 @@ namespace ETFKupon.Controllers
         // GET: FirmaBaza
         public ActionResult Index()
         {
-            //FirmaBaza firmaBaza = db.FirmaBaza.Find(id);
-      
+            FirmaBaza firmaBaza = Session["User"] as ETFKupon.Models.FirmaBaza;
+
             List<Artikal> artikliFime = new List<Artikal>();
             foreach (Artikal x in db.Artikal.ToList()) 
-                if (x.idFirma == firmaBaza.id)
+                if (firmaBaza != null && x.idFirma == firmaBaza.id)
                     artikliFime.Add(x);
 
             List<Kupon> kuponiFime = new List<Kupon>();
             foreach (Kupon x in db.Kupon.ToList())
-                if (x.idFirma == firmaBaza.id)
+                if (firmaBaza != null && x.idFirma == firmaBaza.id)
                     kuponiFime.Add(x);
 
             List<object> lista = new List<object>();
@@ -53,6 +53,17 @@ namespace ETFKupon.Controllers
                     {
                         Value = i.ToString(),
                         Text = artikliLista[i].Naziv
+                    });
+
+            List<Kupon> kuponiLista = new List<Kupon>();
+            kuponiLista = kuponiFime;
+            ViewBag.ListaKuponaSelekcija = new List<SelectListItem>();
+            for (int i = 0; i < kuponiLista.Count; i++)
+                ViewBag.ListaKuponaSelekcija.Add(
+                    new SelectListItem()
+                    {
+                        Value = i.ToString(),
+                        Text = kuponiLista[i].Kolicina.ToString() + kuponiLista[i].Postotak.ToString()
                     });
 
             return View(lista);
@@ -160,6 +171,10 @@ namespace ETFKupon.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+
+        public ActionResult SaveRecords() {
+            return View();
         }
     }
 }

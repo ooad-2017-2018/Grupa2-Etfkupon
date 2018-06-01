@@ -29,5 +29,10 @@ namespace ETFKupon.Models
         //veze
         //public virtual Kupon Kupon { get; set; }
         //public virtual Artikal Artikal { get; set; }
+
+        public override string ToString()
+        {
+            return Naziv;
+        }
     }
 }

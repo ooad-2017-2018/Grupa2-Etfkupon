@@ -140,5 +140,28 @@ namespace ETFKupon.Controllers
             }
             base.Dispose(disposing);
         }
+        public ActionResult SaveRecords(Artikal model)
+        {
+            try
+            {
+                Artikal artikal = new Artikal();
+                artikal.Naziv = model.Naziv;
+                artikal.Kolicina = model.Kolicina;
+                artikal.Cijena = model.Cijena;
+                FirmaBaza firmaBaza = Session["User"] as ETFKupon.Models.FirmaBaza;
+                artikal.idFirma = firmaBaza.id;
+                Kupon k = new Kupon();
+                artikal.idKupon = model.idKupon; //pokupiti element iz dropdown
+
+                db.Artikal.Add(artikal);
+                db.SaveChanges();
+                String lastArtikalId = artikal.id;
+
+            }
+            catch (Exception e) {
+                throw e;
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

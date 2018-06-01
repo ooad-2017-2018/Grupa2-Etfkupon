@@ -32,6 +32,11 @@ namespace ETFKupon.Models
         [Range(1, 10000, ErrorMessage = "Stanje racuna mora biti između 1 i 10000!")]
         public double StanjeRacuna { get; set; }
 
+
+        public override string ToString()
+        {
+            return Ime + " " + Prezime;
+        }
         // veze
         //public virtual Korpa Korpa { get; set; }
         //public virtual InteresKupca InteresKupca { get; set; }
