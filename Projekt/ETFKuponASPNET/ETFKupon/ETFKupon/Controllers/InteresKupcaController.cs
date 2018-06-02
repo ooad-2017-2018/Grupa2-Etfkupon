@@ -123,5 +123,25 @@ namespace ETFKupon.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult SaveRecords()
+        {
+            try
+            {
+                InteresKupca interes = new InteresKupca();
+                string selvalue = Request["Lista interesa"]; //ne radiiiiiii
+                interes.idInteres = selvalue;
+                interes.idKupac = Session["UserId"].ToString();
+                db.InteresKupca.Add(interes);
+                db.SaveChanges();
+                String lastIntereslId = interes.id;
+
+            }
+            catch (Exception e)
+            {
+                throw e;
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

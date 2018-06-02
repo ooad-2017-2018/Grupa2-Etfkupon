@@ -17,18 +17,37 @@ namespace ETFKupon.Controllers
         public ActionResult Index()
         {
             List<object> lista = new List<object>();
-            List<Interes> interesiLista = new List<Interes>();
-            interesiLista = db.Interes.ToList();
-            lista.Add(db.Interes.ToList());
-            lista.Add(db.Artikal.ToList());
-            lista.Add(db.InteresKupca.ToList());
+
+            List<InteresKupca> interesiLista = new List<InteresKupca>();
+            foreach (InteresKupca x in db.InteresKupca.ToList())
+                if (x.idKupac.Equals(Session["UserId"].ToString()))
+                    interesiLista.Add(x);
+
+            List<Interes> interesiKupca = new List<Interes>();
+            foreach (InteresKupca y in interesiLista)
+               interesiKupca.Add(db.Interes.ToList().Find(x => x.id.Equals(y.idInteres)));
+
+            lista.Add(interesiKupca);
+
+            List<ArtikalInteres> interesArtikal = new List<ArtikalInteres>();
+            foreach (ArtikalInteres x in db.ArtikalInteres.ToList())
+                foreach(Interes y in interesiKupca)
+                    if (x.idInteresa.Equals(y.id))
+                        interesArtikal.Add(x);
+
+            List<Artikal> artikliKupca = new List<Artikal>();
+            foreach (ArtikalInteres y in interesArtikal)
+                artikliKupca.Add(db.Artikal.ToList().Find(x => x.id.Equals(y.idArtikla)));
+
+            lista.Add(artikliKupca);
+
             ViewBag.ListaInteresaSelekcija = new List<SelectListItem>() ;
-            for (int i = 0; i < interesiLista.Count; i++)
+            for (int i = 0; i < db.Interes.ToList().Count; i++)
                 ViewBag.ListaInteresaSelekcija.Add(
                     new SelectListItem()
                     {
                         Value = i.ToString(),
-                        Text = interesiLista[i].Naziv
+                        Text = db.Interes.ToList()[i].Naziv
                     });
             
             return View(lista);
