@@ -159,6 +159,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\ArtikalController.cs" />
+    <Compile Include="Controllers\ArtikalInteresController.cs" />
     <Compile Include="Controllers\FirmaBazaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\InteresController.cs" />
@@ -175,6 +176,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Artikal.cs" />
+    <Compile Include="Models\ArtikalInteres.cs" />
     <Compile Include="Models\DatabaseContext.cs" />
     <Compile Include="Models\FirmaBaza.cs" />
     <Compile Include="Models\Interes.cs" />
@@ -256,6 +258,11 @@
     <Content Include="Views\Kupon\Details.cshtml" />
     <Content Include="Views\Kupon\Edit.cshtml" />
     <Content Include="Views\Kupon\Index.cshtml" />
+    <Content Include="Views\ArtikalInteres\Create.cshtml" />
+    <Content Include="Views\ArtikalInteres\Delete.cshtml" />
+    <Content Include="Views\ArtikalInteres\Details.cshtml" />
+    <Content Include="Views\ArtikalInteres\Edit.cshtml" />
+    <Content Include="Views\ArtikalInteres\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

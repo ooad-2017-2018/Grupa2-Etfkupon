@@ -7,9 +7,13 @@
     List<ETFKupon.Models.Kupon> listaKuponaFirme = Model.ToList()[1] as List<ETFKupon.Models.Kupon>;
 }
 
-<div class="topnav">
-    <font size="6">Dobrodošali @Session["User"].ToString()</font>
-    <button>Odjavi se</button>
+<div class="jumbotron">
+    <div style="text-align:center">
+        <font size="6">Dobrodošli @Session["User"].ToString()</font>
+        <input type="button" class="btn btn-default" value="Edituj profil" onclick="window.location.href='@Url.Action("Edit", "FirmaBaza",new { id= @Session["UserId"]})';" />
+        <input type="button" class="btn btn-default" value="Obriši profil" onclick="window.location.href='@Url.Action("Delete", "FirmaBaza", new { id=@Session["UserId"] })';" />
+        <input type="button" class="btn btn-primary btn-lg" value="Odjavi se" onclick="window.location.href='@Url.Action("Index", "Home")';" />
+    </div>
 </div>
 
 <p>
@@ -41,7 +45,7 @@
 
         @Html.DropDownList("Lista kupona", ViewBag.ListaKuponaSelekcija as List<SelectListItem>, "Odaberi kupon:")
         @Html.DropDownList("Lista interesa", ViewBag.ListaInteresaSelekcija as List<SelectListItem>, "Odaberi interes:")
-        <button type="submit">Dodaj atikal!</button>
+        <button type="submit">Dodaj artikal!</button>
     }
 
 </div>

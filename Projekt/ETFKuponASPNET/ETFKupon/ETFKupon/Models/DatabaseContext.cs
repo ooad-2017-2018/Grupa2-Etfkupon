@@ -18,6 +18,7 @@ namespace ETFKupon.Models
         public DbSet<Korpa> Korpa { get; set; }
         public DbSet<KupacBaza> KupacBaza { get; set; }
         public DbSet<Kupon> Kupon { get; set; }
+        public DbSet<ArtikalInteres> ArtikalInteres { get; set; }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();

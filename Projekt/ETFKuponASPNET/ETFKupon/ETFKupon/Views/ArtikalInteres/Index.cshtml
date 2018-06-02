@@ -1,4 +1,4 @@
-﻿@model IEnumerable<ETFKupon.Models.Interes>
+﻿@model IEnumerable<ETFKupon.Models.ArtikalInteres>
 
 @{
     ViewBag.Title = "Index";
@@ -12,10 +12,10 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.id)
+            @Html.DisplayNameFor(model => model.idArtikla)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Naziv)
+            @Html.DisplayNameFor(model => model.idInteresa)
         </th>
         <th></th>
     </tr>
@@ -23,10 +23,10 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.id)
+            @Html.DisplayFor(modelItem => item.idArtikla)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Naziv)
+            @Html.DisplayFor(modelItem => item.idInteresa)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.id }) |

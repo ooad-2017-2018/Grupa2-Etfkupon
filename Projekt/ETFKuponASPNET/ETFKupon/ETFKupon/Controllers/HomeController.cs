@@ -46,6 +46,7 @@ namespace ETFKupon.Controllers
                     if (passwordLogin.Equals(listaKupaca[i].Password))
                     {
                         Session["User"] = listaKupaca[i];
+                        Session["UserId"] = listaKupaca[i].id;
                         return RedirectToAction("Index", "KupacBaza");
                     }
                     else
@@ -64,11 +65,13 @@ namespace ETFKupon.Controllers
                     if (passwordLogin.Equals(listaFirmi[i].Password))
                     {
                         Session["User"] = listaFirmi[i];
+                        Session["UserId"] = listaFirmi[i].id;
                         return RedirectToAction("Index", "FirmaBaza");
                     }
                     else
                     {
                         //ModelState.AddModelError("Password", "Password ne valja!");
+                        ViewBag.passwordGreska = "Password nije validan!";
                         return View();
                     }
                 }

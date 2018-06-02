@@ -12,12 +12,12 @@
         <font size="6">Dobrodošao korisniče @Session["User"].ToString()</font>
     </div>
     <div style="text-align:center">
-        <input type="text" placeholder="Pretraga artikala" name="pretragaArtikala">
+        <input style="height:34px" type="text" placeholder="Pretraga artikala" name="pretragaArtikala">
         <button class="btn btn-default type="submit">Traži</button>
-        <button class="btn btn-default">Edituj profil</button>
-        <button class="btn btn-default">Obriši profil</button>
-
-        <button class="btn btn-primary btn-lg">Odjavi se</button>
+        <input type="button" class="btn btn-default" value="Edituj profil" onclick="window.location.href='@Url.Action("Edit", "KupacBaza",new { id= @Session["UserId"]})';"/>
+        <input type="button" class="btn btn-default" value="Obriši profil" onclick="window.location.href='@Url.Action("Delete", "KupacBaza", new { id=@Session["UserId"] })';"/>
+        
+        <input type="button" class="btn btn-primary btn-lg" value="Odjavi se" onclick="window.location.href='@Url.Action("Index", "Home")';"/>
     </div>
 </div>
 

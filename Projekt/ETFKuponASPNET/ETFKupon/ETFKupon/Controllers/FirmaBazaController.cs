@@ -101,7 +101,7 @@ namespace ETFKupon.Controllers
             {
                 db.FirmaBaza.Add(firmaBaza);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                return RedirectToAction("Index", "Home");
             }
 
             return View(firmaBaza);
@@ -161,7 +161,7 @@ namespace ETFKupon.Controllers
             FirmaBaza firmaBaza = db.FirmaBaza.Find(id);
             db.FirmaBaza.Remove(firmaBaza);
             db.SaveChanges();
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "Home");
         }
 
         protected override void Dispose(bool disposing)
