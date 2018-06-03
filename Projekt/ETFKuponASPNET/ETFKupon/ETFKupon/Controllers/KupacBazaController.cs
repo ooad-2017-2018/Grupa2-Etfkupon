@@ -46,7 +46,7 @@ namespace ETFKupon.Controllers
                 ViewBag.ListaInteresaSelekcija.Add(
                     new SelectListItem()
                     {
-                        Value = i.ToString(),
+                        Value = db.Interes.ToList()[i].id,
                         Text = db.Interes.ToList()[i].Naziv
                     });
             

@@ -44,7 +44,6 @@
         @Html.TextBoxFor(model => (model as ETFKupon.Models.Artikal).Cijena, new { @class = "fore-control", @placeholder = "Cijena artikla", @name = "cijenaArtikala" })
 
         @Html.DropDownList("Lista kupona", ViewBag.ListaKuponaSelekcija as List<SelectListItem>, "Odaberi kupon:")
-        @Html.DropDownList("Lista interesa", ViewBag.ListaInteresaSelekcija as List<SelectListItem>, "Odaberi interes:")
         <button type="submit">Dodaj artikal!</button>
     }
 

@@ -14,8 +14,7 @@ namespace ETFKupon.Controllers
     public class ArtikalController : Controller
     {
         private DatabaseContext db = new DatabaseContext();
-        private double cijena = 0;
-        private int num = 0;
+      
 
         // GET: Artikal
         public ActionResult Index()
@@ -31,13 +30,14 @@ namespace ETFKupon.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Session["ArtikalId"] = id;
-            num = int.Parse(kolicinaArtikala);
+            Session["Kolicina"] = int.Parse(kolicinaArtikala); 
+
             Artikal artikal = db.Artikal.Find(id);
             if (artikal == null)
             {
                 return HttpNotFound();
             }
-            cijena = artikal.Cijena * Int64.Parse(kolicinaArtikala);
+            double cijena = artikal.Cijena * Int64.Parse(kolicinaArtikala);
 
             Kupon k = db.Kupon.Find(artikal.idKupon);
             if (k != null) {
@@ -46,11 +46,17 @@ namespace ETFKupon.Controllers
                     ViewBag.postotakSnizenja = "Artikal ima kupon s popustom od " + k.Postotak.ToString() + "%";
                 }
             }
-            ViewBag.isplata = "Iznos za naplatu je " + cijena.ToString();
-            /*KupacBaza kupac = db.KupacBaza.Find(Session["UserId"]);
-            kupac.StanjeRacuna -= cijena;
-            db.Entry(kupac).State = EntityState.Modified;
-            db.SaveChanges();*/
+            ViewBag.postotakSnizenja = "Iznos za naplatu " + cijena.ToString();
+            Session["Cijena"] = cijena;
+            
+            KupacBaza kupac = db.KupacBaza.Find(Session["UserId"]);
+            if (kupac != null)
+            {
+                if (kupac.StanjeRacuna < double.Parse(Session["Cijena"].ToString()))
+                {
+                    ViewBag.novac = "Nemate dovoljno novca!";
+                }
+            }
 
             return View(artikal);
         }
@@ -170,7 +176,8 @@ namespace ETFKupon.Controllers
                 FirmaBaza firmaBaza = Session["User"] as ETFKupon.Models.FirmaBaza;
                 artikal.idFirma = firmaBaza.id;
                 Kupon k = new Kupon();
-                artikal.idKupon = model.idKupon; //pokupiti element iz dropdown
+                string selvalue = Request["Lista kupona"];
+                artikal.idKupon = selvalue; 
 
                 db.Artikal.Add(artikal);
                 db.SaveChanges();
@@ -190,9 +197,9 @@ namespace ETFKupon.Controllers
                 KupacBaza kupac = db.KupacBaza.Find(Session["UserId"]);
                 if (kupac != null)
                 {
-                    if (kupac.StanjeRacuna >= cijena)
+                    if (kupac.StanjeRacuna >= double.Parse(Session["Cijena"].ToString()))
                     {
-                        kupac.StanjeRacuna -= cijena;
+                        kupac.StanjeRacuna -= double.Parse(Session["Cijena"].ToString());
                         db.Entry(kupac).State = EntityState.Modified;
                         db.SaveChanges();
                         Artikal artikal = db.Artikal.Find(Session["ArtikalId"]);
@@ -215,7 +222,7 @@ namespace ETFKupon.Controllers
                                 }
                             }
 
-                            artikal.Kolicina -= num;
+                            artikal.Kolicina -= int.Parse(Session["Kolicina"].ToString());
                             if (artikal.Kolicina - 1 <= 0)
                             {
                                 db.Artikal.Remove(artikal);
@@ -235,7 +242,7 @@ namespace ETFKupon.Controllers
 
                             ViewBag.novac = "Kupovina uspjesna!";
                         }
-                    } else { ViewBag.novac = "Zao nam je, nemate dovoljno sredstava na racunu!"; }
+                    } else { ViewBag.novac = "Zao nam je, nemate dovoljno sredstava na racunu!"; return RedirectToAction("Details", new { id = Session["ArtikalId"].ToString() }); }
                 }
             }
             catch (Exception e)

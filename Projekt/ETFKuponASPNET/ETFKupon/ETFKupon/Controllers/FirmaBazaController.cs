@@ -62,7 +62,7 @@ namespace ETFKupon.Controllers
                 ViewBag.ListaKuponaSelekcija.Add(
                     new SelectListItem()
                     {
-                        Value = i.ToString(),
+                        Value = db.Kupon.ToList()[i].id,
                         Text = kuponiLista[i].Kolicina.ToString() + kuponiLista[i].Postotak.ToString()
                     });
 
