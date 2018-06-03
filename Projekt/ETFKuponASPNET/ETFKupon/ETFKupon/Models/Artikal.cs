@@ -24,6 +24,10 @@ namespace ETFKupon.Models
         public string idKupon { get; set; }
         public string idFirma { get; set; }
 
+        public override string ToString()
+        {
+            return id;
+        }
         // veze
         //public virtual ICollection<FirmaBaza> FirmaArtikal { get; set; }
         //public virtual ICollection<Kupon> KuponArtikal { get; set; }

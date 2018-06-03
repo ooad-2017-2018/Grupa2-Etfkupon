@@ -12,7 +12,7 @@
     </div>
     <div style="text-align:center">
         <input style="height:34px" type="text" placeholder="Pretraga artikala" name="pretragaArtikala">
-        <button class="btn btn-default type="submit">Traži</button>
+        <button class="btn btn-default" type="submit">Traži</button>
         <input type="button" class="btn btn-default" value="Edituj profil" onclick="window.location.href='@Url.Action("Edit", "KupacBaza",new { id= @Session["UserId"]})';"/>
         <input type="button" class="btn btn-default" value="Obriši profil" onclick="window.location.href='@Url.Action("Delete", "KupacBaza", new { id=@Session["UserId"] })';"/>
         
@@ -28,13 +28,16 @@
     }
 </ul>
 <h2>Lista Artikala</h2>
-<ul>
+<div>
     @foreach (var item in listaArtikala)
     {
         <li>@item.Naziv @item.Kolicina @item.Cijena</li>
+        @Html.ActionLink("Kupi", "Details", new { controller = "Artikal", id = item.id })
     }
-</ul>
+</div>
 <h2>Korpa</h2>
+
+
 
 <div class="dodavanjeInteresa">
     @using (Html.BeginForm("SaveRecords", "InteresKupca", FormMethod.Post))

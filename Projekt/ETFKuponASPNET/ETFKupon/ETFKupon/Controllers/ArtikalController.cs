@@ -14,6 +14,8 @@ namespace ETFKupon.Controllers
     public class ArtikalController : Controller
     {
         private DatabaseContext db = new DatabaseContext();
+        private double cijena = 0;
+        private int num = 0;
 
         // GET: Artikal
         public ActionResult Index()
@@ -22,17 +24,34 @@ namespace ETFKupon.Controllers
         }
 
         // GET: Artikal/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(string id, string kolicinaArtikala = "1")
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            Session["ArtikalId"] = id;
+            num = int.Parse(kolicinaArtikala);
             Artikal artikal = db.Artikal.Find(id);
             if (artikal == null)
             {
                 return HttpNotFound();
             }
+            cijena = artikal.Cijena * Int64.Parse(kolicinaArtikala);
+
+            Kupon k = db.Kupon.Find(artikal.idKupon);
+            if (k != null) {
+                if (k.Kolicina != 0) {
+                    cijena -= cijena * (k.Postotak / 100);
+                    ViewBag.postotakSnizenja = "Artikal ima kupon s popustom od " + k.Postotak.ToString() + "%";
+                }
+            }
+            ViewBag.isplata = "Iznos za naplatu je " + cijena.ToString();
+            /*KupacBaza kupac = db.KupacBaza.Find(Session["UserId"]);
+            kupac.StanjeRacuna -= cijena;
+            db.Entry(kupac).State = EntityState.Modified;
+            db.SaveChanges();*/
+
             return View(artikal);
         }
 
@@ -159,6 +178,68 @@ namespace ETFKupon.Controllers
 
             }
             catch (Exception e) {
+                throw e;
+            }
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult Kupovina()
+        {
+            try
+            {
+                KupacBaza kupac = db.KupacBaza.Find(Session["UserId"]);
+                if (kupac != null)
+                {
+                    if (kupac.StanjeRacuna >= cijena)
+                    {
+                        kupac.StanjeRacuna -= cijena;
+                        db.Entry(kupac).State = EntityState.Modified;
+                        db.SaveChanges();
+                        Artikal artikal = db.Artikal.Find(Session["ArtikalId"]);
+                        if (artikal != null)
+                        {
+                            Kupon k = db.Kupon.Find(artikal.idKupon);
+                            if (k != null)
+                            {
+                                if (k.Kolicina - 1 == 0)
+                                {
+                                    db.Kupon.Remove(k);
+                                    db.SaveChanges();
+                                    artikal.idKupon = null;
+                                }
+                                else
+                                {
+                                    k.Kolicina--;
+                                    db.Entry(k).State = EntityState.Modified;
+                                    db.SaveChanges();
+                                }
+                            }
+
+                            artikal.Kolicina -= num;
+                            if (artikal.Kolicina - 1 <= 0)
+                            {
+                                db.Artikal.Remove(artikal);
+                                db.SaveChanges();
+                            }
+                            else
+                            {
+                                db.Entry(artikal).State = EntityState.Modified;
+                                db.SaveChanges();
+                            }
+
+                            Korpa korpa = new Korpa();
+                            korpa.idKupac = kupac.id;
+                            korpa.idArtikal = artikal.id;
+                            db.Korpa.Add(korpa);
+                            db.SaveChanges();
+
+                            ViewBag.novac = "Kupovina uspjesna!";
+                        }
+                    } else { ViewBag.novac = "Zao nam je, nemate dovoljno sredstava na racunu!"; }
+                }
+            }
+            catch (Exception e)
+            {
                 throw e;
             }
             return RedirectToAction("Index");
