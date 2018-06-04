@@ -95,7 +95,7 @@ namespace ETFKupon.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,Naziv,Username,Password,Email,StanjeRacuna")] FirmaBaza firmaBaza)
+        public ActionResult Create([Bind(Include = "id,Naziv,Username,Password,Email,StanjeRacuna,Latitude,Longitude")] FirmaBaza firmaBaza)
         {
             if (ModelState.IsValid)
             {

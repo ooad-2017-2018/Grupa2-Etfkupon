@@ -60,6 +60,9 @@ Sami procesi registracije korisnika, firme kao i proces kupovine se može prona�
 - *6* - Brojčana vrijednost je manja od očekivane
 - *7* - Brojčana vrijednost je veća od očekivane 
 
+## Deploy
+Našu aplikaciju možete isprobati na linku: http://etfkupon.azurewebsites.net/
+
 ## Rute Web Aplikacije
 
 - *get all*: /KupacBaza

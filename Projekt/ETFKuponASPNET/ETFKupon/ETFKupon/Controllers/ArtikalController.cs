@@ -30,8 +30,9 @@ namespace ETFKupon.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             Session["ArtikalId"] = id;
-            Session["Kolicina"] = int.Parse(kolicinaArtikala); 
-
+            Session["Kolicina"] = int.Parse(kolicinaArtikala);
+            ViewBag.Latitude = db.FirmaBaza.Find(db.Artikal.Find(id).idFirma).Latitude;
+            ViewBag.Longitude = db.FirmaBaza.Find(db.Artikal.Find(id).idFirma).Longitude;
             Artikal artikal = db.Artikal.Find(id);
             if (artikal == null)
             {

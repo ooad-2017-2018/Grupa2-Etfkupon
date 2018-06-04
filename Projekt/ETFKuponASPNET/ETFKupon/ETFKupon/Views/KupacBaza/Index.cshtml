@@ -4,6 +4,7 @@
     ViewBag.Title = "Početna strana";
     List<ETFKupon.Models.Interes> listaInteresa = Model.ToList()[0] as List<ETFKupon.Models.Interes>;
     List<ETFKupon.Models.Artikal> listaArtikala = Model.ToList()[1] as List<ETFKupon.Models.Artikal>;
+    List<ETFKupon.Models.Artikal> artikliKorpa = Model.ToList()[2] as List<ETFKupon.Models.Artikal>;
 }
 
 <div class="jumbotron">
@@ -36,6 +37,12 @@
     }
 </div>
 <h2>Korpa</h2>
+<div>
+    @foreach (var item in artikliKorpa)
+    {
+        <li>@item.Naziv @item.Kolicina @item.Cijena</li>
+    }
+</div>
 
 
 
@@ -47,3 +54,4 @@
         <button type="submit">Dodaj interes!</button>
     }
 </div>
+

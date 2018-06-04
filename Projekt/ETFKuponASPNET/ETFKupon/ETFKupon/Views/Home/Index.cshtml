@@ -8,12 +8,12 @@
     <p class="lead">Dobrodošli na revolucionarni sistem kupovine ETFKupon</p>
     <form method="POST">
         <input class="form-control" name="usernameLogin" id="usernameLogin" type="text" placeholder="Username" />
-        <br /> 
+        <br />
         <div id="passwordGreska" style="font-size:small">
             @Html.Label("", Convert.ToString((string)ViewBag.passwordGreska))
-        </div> 
+        </div>
         <input class="form-control" name="passwordLogin" id="passwordLogin" type="password" placeholder="Password" />
-        
+
         <br /> <br />
         <p><button type="submit" class="btn btn-primary btn-lg">Login &raquo;</button></p>
     </form>
@@ -26,8 +26,8 @@
             kućnu dostavu artikala, ovdje se možete registrovati. Registracija je potpuno besplatna, a pogodnosti
             su neograničene.
         </p>
-        <input type="button" class="btn btn-default" value="Registruj se kao kupac &raquo;" onclick="window.location.href='@Url.Action("Create", "KupacBaza")';"/>
-        
+        <input type="button" class="btn btn-default" value="Registruj se kao kupac &raquo;" onclick="window.location.href='@Url.Action("Create", "KupacBaza")';" />
+
     </div>
     <div class="col-md-5" style="float:right">
         <h2>Registracija firme</h2>

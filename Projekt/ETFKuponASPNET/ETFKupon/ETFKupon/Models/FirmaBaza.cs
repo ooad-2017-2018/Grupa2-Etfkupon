@@ -26,6 +26,8 @@ namespace ETFKupon.Models
         [Range(1, 10000, ErrorMessage = "Stanje racuna mora biti između 1 i 10000!")]
         public double StanjeRacuna { get; set; }
 
+        public string Latitude { get; set; }
+        public string Longitude { get; set; }
         //veze
         //public virtual Kupon Kupon { get; set; }
         //public virtual Artikal Artikal { get; set; }

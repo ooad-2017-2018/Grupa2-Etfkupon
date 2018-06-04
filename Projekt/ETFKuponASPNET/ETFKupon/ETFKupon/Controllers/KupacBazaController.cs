@@ -41,6 +41,17 @@ namespace ETFKupon.Controllers
 
             lista.Add(artikliKupca);
 
+            List<Korpa> korpaKupca = db.Korpa.ToList();
+            List<Artikal> artikliKorpa = new List<Artikal>();
+            foreach (Korpa x in korpaKupca) {
+                if (x.idKupac.Equals(Session["UserId"]))
+                    foreach (Artikal y in db.Artikal.ToList())
+                        if (y.id.Equals(x.idArtikal))
+                            artikliKorpa.Add(y);
+            }
+
+            lista.Add(artikliKorpa);
+
             ViewBag.ListaInteresaSelekcija = new List<SelectListItem>() ;
             for (int i = 0; i < db.Interes.ToList().Count; i++)
                 ViewBag.ListaInteresaSelekcija.Add(

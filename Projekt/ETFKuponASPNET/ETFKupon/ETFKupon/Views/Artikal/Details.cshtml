@@ -3,64 +3,90 @@
 @{
     ViewBag.Title = "Details";
 }
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+        var map = null;
 
+        function LoadMap() {
+            map = new Microsoft.Maps.Map('#myMap', {
+                credentials: "Apl8k1Y15q747oBfe_EgaWF6RU3RyAbR7wrMmyGCO9RnEVz-LkCAlzX2iePlnryi"
+            });
+            map.setView({
+                mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+                center: new Microsoft.Maps.Location(@ViewBag.Latitude, @ViewBag.Longitude),
+                zoom: 15
+            });
+            var pin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(@ViewBag.Latitude, @ViewBag.Longitude));
+            map.entities.push(pin);
+        }
+</script>
+<script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?callback=LoadMap" async defer></script>
 <h2>Kupi</h2>
 
 <div>
     <h4>Artikal</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Naziv)
-        </dt>
+    <div id="myMap" style="float:right; position:relative; width:600px; height:600px;"></div>
+    <div style="float:left">
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Naziv)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Naziv)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Naziv)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Kolicina)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Kolicina)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Kolicina)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Kolicina)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Cijena)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.Cijena)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Cijena)
-        </dd>
+            <dd>
+                @Html.DisplayFor(model => model.Cijena)
+            </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.idKupon)
-        </dt>
+            <dt>
+                @Html.DisplayNameFor(model => model.idKupon)
+            </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.idKupon)
-        </dd>
-    </dl>
-    <form method="POST">
-        @Html.Label("", Convert.ToString((string)ViewBag.postotakSnizenja))
-        <input class="form-control" name="kolicinaArtikala" id="kolicinaArtikala" type="text" placeholder="Unesite zeljenu kolicinu" />
-        @Html.Label("", Convert.ToString((string)ViewBag.isplata))
-        @using (Html.BeginForm("Details", "Artikal", FormMethod.Post))
+            <dd>
+                @Html.DisplayFor(model => model.idKupon)
+            </dd>
+        </dl>
+        <form method="POST">
+
+
+            @Html.Label("", Convert.ToString((string)ViewBag.postotakSnizenja))
+            <input class="form-control" name="kolicinaArtikala" id="kolicinaArtikala" type="text" placeholder="Unesite zeljenu kolicinu" />
+            @Html.Label("", Convert.ToString((string)ViewBag.isplata))
+            @using (Html.BeginForm("Details", "Artikal", FormMethod.Post))
         {
             <br />
             <button type="submit">Obracunaj cijenu!</button>
-        }
-        @Html.Label("", Convert.ToString((string)ViewBag.novac))
-    </form>
-    @using (Html.BeginForm("Kupovina", "Artikal", FormMethod.Post))
+    }
+            @Html.Label("", Convert.ToString((string)ViewBag.novac))
+        </form>
+
+
+        @using (Html.BeginForm("Kupovina", "Artikal", FormMethod.Post))
     {
         <br />
+
         <button type="submit">Kupi artikal!</button>
-        
-    }
+
+}
+        <p>
+            @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+            @Html.ActionLink("Back to List", "Index", "KupacBaza")
+        </p>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index", "KupacBaza")
-</p>
+
