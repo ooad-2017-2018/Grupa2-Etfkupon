@@ -1,0 +1,26 @@
+﻿Dokumentacija: 
+
+Projekat etf kupon trenutno ima postavljenu azure bazu sa erd dijagramom na gitu, uwp i asp.net aplikacije povezane preko te iste baze, 
+kao i eksterni uređaj / web servis u formi bing mapi gdje se prikazuje lokacija određenih prodavnica.
+
+Ono što je bilo predviđeno za implementaciju je u velikoj većini dostupno za korištenje u prvoj verziji aplikacije. 
+UWP aplikacija je funkcionalna kao i web aplikacija u ASP.NET. Jedina stavka koja je ostala neimplementirana je ankete na kraju mjeseca. 
+Preobimna je bila da se uradi u ovom vremenskom periodu, tako da smo tu funkcionalnost eventualno ostavili za budući razvoj ako se
+neko odluči za taj korak. 
+
+Ono što je najbitnije, obje aplikacije su potpuno funkcionalne, korektne, te rade ono što bi trebale da rade - obezbjeđuju sistem kupovine. 
+Naravno, ono što nedostaje je siguran način autorizacije kartica kao i provjere bankovnog stanja, te kako u ovom projektu nemamo direktno
+saradnju sa bankama, to smo ostavili na dosta primitivnom nivou ali smo pokazali šta je poenta. 
+
+Također, ono što lično mislimo da smo trebali uraditi a nismo iz opravdanih razloga je MD5 hashiranje passworda za bazu. Bilo je na planu
+da se uradi, međutim u dev fazi ovog projekta kao i ovoj alpha verziji, nismo htjeli da radimo čisto radi konzistentnosti naših podataka, 
+da znamo sa čime radimo te kako utičemo na neke podatke različitim akcijama u aplikaciji. 
+
+Što se tiče ruta web aplikacije, sve su urađene po nekom 'pseudo'-REST principu odnosno, ispoštovani su neki rest principi, ali ne svi: 
+npr ako želimo artikal sa id-om 2, nećemo pisati Artikal/2 nego Artikal/Details/2
+
+Što se tiče web servisa odnosno eksternog uređaja kao što je ranije spomenuto koristimo bing mape za prikaz lokacije prodavnice, što 
+se čuva u bazi kao latitude i longitude. Koristimo bing a ne google mape radi googleovog policy-a (počinju se plaćati). 
+
+Što se tiče refaktoringa, on će biti odrađen kroz par dana, te će biti primijenjeno 6 patterna kao što je predviđeno postavkom projekta. 
+
