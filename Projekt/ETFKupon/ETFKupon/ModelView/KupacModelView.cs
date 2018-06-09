@@ -41,13 +41,13 @@ namespace ETFKupon.ModelView
             Tuple<int, string> vEmail;
             Tuple<int, string> vPasswordPotvrda;
 
-            vAdresa = vKupac.ValidirajAdresuKupca(Kupac.Adresa);
-            vIme = vKupac.ValidirajImeKupca(Kupac.Ime);
-            vPrezime = vKupac.ValidirajPrezimeKupca(Kupac.Prezime);
-            vUsername = vKupac.ValidirajUsernameKupca(Kupac.Username);
-            vPassword = vKupac.ValidirajPasswordKupca(Kupac.Password);
-            vEmail = vKupac.ValidirajEmailKupca(Kupac.Email);
-            vPasswordPotvrda = vKupac.ValidirajPasswordPotvrduKupca(Kupac.Password, Kupac.PasswordPotvrda);
+            vAdresa = vKupac.ValidirajAdresuKorisnika(Kupac.Adresa);
+            vIme = vKupac.ValidirajImeKorisnika(Kupac.Ime);
+            vPrezime = vKupac.ValidirajPrezimeKorisnika(Kupac.Prezime);
+            vUsername = vKupac.ValidirajUsernameKorisnika(Kupac.Username);
+            vPassword = vKupac.ValidirajPasswordKorisnika(Kupac.Password);
+            vEmail = vKupac.ValidirajEmailKorisnika(Kupac.Email);
+            vPasswordPotvrda = vKupac.ValidirajPasswordPotvrduKorisnika(Kupac.Password, Kupac.PasswordPotvrda);
             int suma = vAdresa.Item1 + vIme.Item1 + vPrezime.Item1 + vPassword.Item1 + vEmail.Item1 + vUsername.Item1 + vPasswordPotvrda.Item1;
             if (suma == 0)
             {

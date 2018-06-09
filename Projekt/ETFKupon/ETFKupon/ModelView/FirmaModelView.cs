@@ -42,14 +42,14 @@ namespace ETFKupon.ModelView
             Tuple<int, string> vPasswordPotvrda;
 
             
-            vUsername = vKupac.ValidirajUsernameKupca(firma.Username);
-            vPassword = vKupac.ValidirajPasswordKupca(firma.Password);
-            vEmail = vKupac.ValidirajEmailKupca(firma.Email);
-            vNaziv = vKupac.ValidirajNazivFirme(firma.Naziv);
-            vPasswordPotvrda = vKupac.ValidirajPasswordPotvrduFirme(firma.Password, firma.PasswordPotvrda);
+            vUsername = vKupac.ValidirajUsernameKorisnika(firma.Username);
+            vPassword = vKupac.ValidirajPasswordKorisnika(firma.Password);
+            vEmail = vKupac.ValidirajEmailKorisnika(firma.Email);
+            vNaziv = vKupac.ValidirajImeKorisnika(firma.Naziv);
+            vPasswordPotvrda = vKupac.ValidirajPasswordPotvrduKorisnika(firma.Password, firma.PasswordPotvrda);
 
-            int suma = vUsername.Item1 + vPassword.Item1 + vEmail.Item1 + vEmail.Item1 + vPasswordPotvrda.Item1;
-            if (suma == 0)
+            int brojGreski = vUsername.Item1 + vPassword.Item1 + vEmail.Item1 + vEmail.Item1 + vPasswordPotvrda.Item1;
+            if (brojGreski == 0)
             {
                 FirmaBaza firmicaHehe = new FirmaBaza(firma.Naziv, firma.Username, firma.Password, firma.Email, firma.StanjeRacuna);
                 userTableObj.InsertAsync(firmicaHehe);

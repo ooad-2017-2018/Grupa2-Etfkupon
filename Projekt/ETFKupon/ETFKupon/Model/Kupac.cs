@@ -81,12 +81,12 @@ namespace ETFKupon.Model
             Tuple<int, string> vPassword;
             Tuple<int, string> vEmail;
 
-            vAdresa = vKupac.ValidirajAdresuKupca(this.Adresa);
-            vIme = vKupac.ValidirajImeKupca(this.Ime);
-            vPrezime = vKupac.ValidirajPrezimeKupca(this.Prezime);
-            vUsername = vKupac.ValidirajUsernameKupca(this.Username);
-            vPassword = vKupac.ValidirajPasswordKupca(this.Password);
-            vEmail = vKupac.ValidirajEmailKupca(this.Email);
+            vAdresa = vKupac.ValidirajAdresuKorisnika(this.Adresa);
+            vIme = vKupac.ValidirajImeKorisnika(this.Ime);
+            vPrezime = vKupac.ValidirajPrezimeKorisnika(this.Prezime);
+            vUsername = vKupac.ValidirajUsernameKorisnika(this.Username);
+            vPassword = vKupac.ValidirajPasswordKorisnika(this.Password);
+            vEmail = vKupac.ValidirajEmailKorisnika(this.Email);
             
             string error = null;
             switch (propertyName)
@@ -126,14 +126,14 @@ namespace ETFKupon.Model
                 Tuple<int, string> vPassword;
                 Tuple<int, string> vEmail;
 
-                vAdresa = vKupac.ValidirajAdresuKupca(this.Adresa);
-                vIme = vKupac.ValidirajImeKupca(this.Ime);
-                vPrezime = vKupac.ValidirajPrezimeKupca(this.Prezime);
-                vUsername = vKupac.ValidirajUsernameKupca(this.Username);
-                vPassword = vKupac.ValidirajPasswordKupca(this.Password);
-                vEmail = vKupac.ValidirajEmailKupca(this.Email);
-                int suma = vAdresa.Item1 + vIme.Item1 + vPrezime.Item1 + vPassword.Item1 + vEmail.Item1;
-                return suma == 0;
+                vAdresa = vKupac.ValidirajAdresuKorisnika(this.Adresa);
+                vIme = vKupac.ValidirajImeKorisnika(this.Ime);
+                vPrezime = vKupac.ValidirajPrezimeKorisnika(this.Prezime);
+                vUsername = vKupac.ValidirajUsernameKorisnika(this.Username);
+                vPassword = vKupac.ValidirajPasswordKorisnika(this.Password);
+                vEmail = vKupac.ValidirajEmailKorisnika(this.Email);
+                int brojGresaka = vAdresa.Item1 + vIme.Item1 + vPrezime.Item1 + vPassword.Item1 + vEmail.Item1;
+                return brojGresaka == 0;
             }
         }
 

@@ -30607,24 +30607,26 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Adnan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Adnan\\Desktop\\Cetvrti semestar\\OOAD Projekt\\Projekt\\ETFKupon\\ETFKupon\\ETFKupon.csproj",
+      "projectUniqueName": "D:\\ETFkupon\\Projekt\\ETFKupon\\ETFKupon\\ETFKupon.csproj",
       "projectName": "ETFKupon",
-      "projectPath": "C:\\Users\\Adnan\\Desktop\\Cetvrti semestar\\OOAD Projekt\\Projekt\\ETFKupon\\ETFKupon\\ETFKupon.csproj",
-      "packagesPath": "C:\\Users\\Adnan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Adnan\\Desktop\\Cetvrti semestar\\OOAD Projekt\\Projekt\\ETFKupon\\ETFKupon\\obj\\",
+      "projectPath": "D:\\ETFkupon\\Projekt\\ETFKupon\\ETFKupon\\ETFKupon.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "D:\\ETFkupon\\Projekt\\ETFKupon\\ETFKupon\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\"
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\"
       ],
       "configFilePaths": [
-        "C:\\Users\\Adnan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
@@ -30777,37 +30779,22 @@
       "code": "NU1605",
       "level": "Warning",
       "warningLevel": 1,
-      "message": "Detected package downgrade: Microsoft.Win32.Primitives from 4.3.0 to 4.0.1. Reference the package directly from the project to select a different version. \r\n ETFKupon -> Microsoft.NETCore.UniversalWindowsPlatform 6.1.4 -> System.Net.Requests 4.0.11 -> System.Net.Primitives 4.0.11 -> runtime.win.System.Net.Primitives 4.3.0 -> Microsoft.Win32.Primitives (>= 4.3.0) \r\n ETFKupon -> Microsoft.NETCore.UniversalWindowsPlatform 6.1.4 -> Microsoft.Win32.Primitives (>= 4.0.1)",
-      "libraryId": "Microsoft.Win32.Primitives",
-      "targetGraphs": [
-        "UAP,Version=v10.0.10586/win10-arm",
-        "UAP,Version=v10.0.10586/win10-arm-aot",
-        "UAP,Version=v10.0.10586/win10-x64",
-        "UAP,Version=v10.0.10586/win10-x64-aot",
-        "UAP,Version=v10.0.10586/win10-x86",
-        "UAP,Version=v10.0.10586/win10-x86-aot"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Detected package downgrade: Microsoft.Win32.Primitives from 4.3.0 to 4.0.1. Reference the package directly from the project to select a different version. \r\n ETFKupon -> Microsoft.NETCore.UniversalWindowsPlatform 6.1.4 -> System.Net.Sockets 4.1.0 -> System.Net.Primitives 4.0.11 -> runtime.win.System.Net.Primitives 4.3.0 -> Microsoft.Win32.Primitives (>= 4.3.0) \r\n ETFKupon -> Microsoft.NETCore.UniversalWindowsPlatform 6.1.4 -> Microsoft.Win32.Primitives (>= 4.0.1)",
-      "libraryId": "Microsoft.Win32.Primitives",
-      "targetGraphs": [
-        "UAP,Version=v10.0.10586/win10-arm",
-        "UAP,Version=v10.0.10586/win10-arm-aot",
-        "UAP,Version=v10.0.10586/win10-x64",
-        "UAP,Version=v10.0.10586/win10-x64-aot",
-        "UAP,Version=v10.0.10586/win10-x86",
-        "UAP,Version=v10.0.10586/win10-x86-aot"
-      ]
-    },
-    {
-      "code": "NU1605",
-      "level": "Warning",
-      "warningLevel": 1,
       "message": "Detected package downgrade: Microsoft.Win32.Primitives from 4.3.0 to 4.0.1. Reference the package directly from the project to select a different version. \r\n ETFKupon -> Microsoft.NETCore.UniversalWindowsPlatform 6.1.4 -> System.Net.WebSockets.Client 4.0.2 -> System.Net.Primitives 4.0.11 -> runtime.win.System.Net.Primitives 4.3.0 -> Microsoft.Win32.Primitives (>= 4.3.0) \r\n ETFKupon -> Microsoft.NETCore.UniversalWindowsPlatform 6.1.4 -> Microsoft.Win32.Primitives (>= 4.0.1)",
+      "libraryId": "Microsoft.Win32.Primitives",
+      "targetGraphs": [
+        "UAP,Version=v10.0.10586/win10-arm",
+        "UAP,Version=v10.0.10586/win10-arm-aot",
+        "UAP,Version=v10.0.10586/win10-x64",
+        "UAP,Version=v10.0.10586/win10-x64-aot",
+        "UAP,Version=v10.0.10586/win10-x86",
+        "UAP,Version=v10.0.10586/win10-x86-aot"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Microsoft.Win32.Primitives from 4.3.0 to 4.0.1. Reference the package directly from the project to select a different version. \r\n ETFKupon -> Microsoft.NETCore.UniversalWindowsPlatform 6.1.4 -> System.Net.Requests 4.0.11 -> System.Net.Primitives 4.0.11 -> runtime.win.System.Net.Primitives 4.3.0 -> Microsoft.Win32.Primitives (>= 4.3.0) \r\n ETFKupon -> Microsoft.NETCore.UniversalWindowsPlatform 6.1.4 -> Microsoft.Win32.Primitives (>= 4.0.1)",
       "libraryId": "Microsoft.Win32.Primitives",
       "targetGraphs": [
         "UAP,Version=v10.0.10586/win10-arm",
@@ -30853,6 +30840,21 @@
       "level": "Warning",
       "warningLevel": 1,
       "message": "Detected package downgrade: Microsoft.Win32.Primitives from 4.3.0 to 4.0.1. Reference the package directly from the project to select a different version. \r\n ETFKupon -> Microsoft.NETCore.UniversalWindowsPlatform 6.1.4 -> System.ServiceModel.Primitives 4.1.1 -> System.Net.Primitives 4.0.11 -> runtime.win.System.Net.Primitives 4.3.0 -> Microsoft.Win32.Primitives (>= 4.3.0) \r\n ETFKupon -> Microsoft.NETCore.UniversalWindowsPlatform 6.1.4 -> Microsoft.Win32.Primitives (>= 4.0.1)",
+      "libraryId": "Microsoft.Win32.Primitives",
+      "targetGraphs": [
+        "UAP,Version=v10.0.10586/win10-arm",
+        "UAP,Version=v10.0.10586/win10-arm-aot",
+        "UAP,Version=v10.0.10586/win10-x64",
+        "UAP,Version=v10.0.10586/win10-x64-aot",
+        "UAP,Version=v10.0.10586/win10-x86",
+        "UAP,Version=v10.0.10586/win10-x86-aot"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Detected package downgrade: Microsoft.Win32.Primitives from 4.3.0 to 4.0.1. Reference the package directly from the project to select a different version. \r\n ETFKupon -> Microsoft.NETCore.UniversalWindowsPlatform 6.1.4 -> System.Net.Sockets 4.1.0 -> System.Net.Primitives 4.0.11 -> runtime.win.System.Net.Primitives 4.3.0 -> Microsoft.Win32.Primitives (>= 4.3.0) \r\n ETFKupon -> Microsoft.NETCore.UniversalWindowsPlatform 6.1.4 -> Microsoft.Win32.Primitives (>= 4.0.1)",
       "libraryId": "Microsoft.Win32.Primitives",
       "targetGraphs": [
         "UAP,Version=v10.0.10586/win10-arm",
