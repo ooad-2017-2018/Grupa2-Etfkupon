@@ -178,17 +178,26 @@ namespace ETFKupon.Controllers
                 artikal.idFirma = firmaBaza.id;
                 Kupon k = new Kupon();
                 string selvalue = Request["Lista kupona"];
-                artikal.idKupon = selvalue; 
+                artikal.idKupon = selvalue;
+                selvalue = Request["Lista interesa"];
+
+                
 
                 db.Artikal.Add(artikal);
                 db.SaveChanges();
                 String lastArtikalId = artikal.id;
 
+                ArtikalInteres ai = new ArtikalInteres();
+                ai.idArtikla = lastArtikalId;
+                ai.idInteresa = selvalue;
+                db.ArtikalInteres.Add(ai);
+                db.SaveChanges();
+
             }
             catch (Exception e) {
                 throw e;
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "FirmaBaza");
         }
 
         public ActionResult Kupovina()
@@ -211,9 +220,14 @@ namespace ETFKupon.Controllers
                             {
                                 if (k.Kolicina - 1 == 0)
                                 {
-                                    db.Kupon.Remove(k);
-                                    db.SaveChanges();
-                                    artikal.idKupon = null;
+                                    //db.Kupon.Remove(k);
+                                    k.Kolicina--;
+                                    List<Artikal> la = db.Artikal.Where(x => x.idKupon.Equals(k.id)).ToList();
+                                    for (int iii = 0; iii < la.Count; iii++)
+                                        la[iii].idKupon = null;
+
+                                    //db.SaveChanges();
+                                    //artikal.idKupon = null;
                                 }
                                 else
                                 {
@@ -226,8 +240,10 @@ namespace ETFKupon.Controllers
                             artikal.Kolicina -= int.Parse(Session["Kolicina"].ToString());
                             if (artikal.Kolicina - 1 <= 0)
                             {
-                                db.Artikal.Remove(artikal);
-                                db.SaveChanges();
+                                //ArtikalInteres ai = db.ArtikalInteres.Where(x => x.idArtikla.Equals(artikal.id)) as ArtikalInteres;
+                                //db.Artikal.Remove(artikal);
+                                //db.ArtikalInteres.Remove(ai);
+                                //db.SaveChanges();
                             }
                             else
                             {
@@ -238,6 +254,14 @@ namespace ETFKupon.Controllers
                             Korpa korpa = new Korpa();
                             korpa.idKupac = kupac.id;
                             korpa.idArtikal = artikal.id;
+                            korpa.datum = DateTime.Now.ToString();
+                            korpa.cijena = double.Parse(Session["Cijena"].ToString());
+                            korpa.kolicina = double.Parse(Session["Kolicina"].ToString());
+                            
+                            FirmaBaza firma = db.FirmaBaza.Find(artikal.idFirma);
+                            firma.StanjeRacuna += korpa.cijena;
+                            db.Entry(firma).State = EntityState.Modified;
+
                             db.Korpa.Add(korpa);
                             db.SaveChanges();
 
@@ -250,7 +274,7 @@ namespace ETFKupon.Controllers
             {
                 throw e;
             }
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", "KupacBaza");
         }
     }
 }

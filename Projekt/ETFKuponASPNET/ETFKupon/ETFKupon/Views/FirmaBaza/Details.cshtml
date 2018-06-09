@@ -5,7 +5,24 @@
 }
 
 <h2>Details</h2>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+        var map = null;
 
+        function LoadMap() {
+            map = new Microsoft.Maps.Map('#myMap', {
+                credentials: "Apl8k1Y15q747oBfe_EgaWF6RU3RyAbR7wrMmyGCO9RnEVz-LkCAlzX2iePlnryi"
+            });
+            map.setView({
+                mapTypeId: Microsoft.Maps.MapTypeId.aerial,
+                center: new Microsoft.Maps.Location(@Model.Latitude, @Model.Longitude),
+                zoom: 15
+            });
+            var pin = new Microsoft.Maps.Pushpin(new Microsoft.Maps.Location(@Model.Latitude, @Model.Longitude));
+            map.entities.push(pin);
+        }
+</script>
+<script type="text/javascript" src="https://www.bing.com/api/maps/mapcontrol?callback=LoadMap" async defer></script>
 <div>
     <h4>FirmaBaza</h4>
     <hr />
@@ -19,22 +36,6 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.Username)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Username)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Password)
-        </dd>
-
-        <dt>
             @Html.DisplayNameFor(model => model.Email)
         </dt>
 
@@ -42,17 +43,9 @@
             @Html.DisplayFor(model => model.Email)
         </dd>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.StanjeRacuna)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.StanjeRacuna)
-        </dd>
-
     </dl>
 </div>
+<div id="myMap" style="position:relative; width:600px; height:600px;"></div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index", "KupacBaza")
 </p>

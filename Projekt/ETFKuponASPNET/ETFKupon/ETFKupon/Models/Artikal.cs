@@ -17,7 +17,6 @@ namespace ETFKupon.Models
         [Required(ErrorMessage = "Naziv je neophodan!")]
         public string Naziv { get; set; }
         [Required(ErrorMessage = "Kolicina je neophodna!")]
-        [Range(1, 10000, ErrorMessage = "Kolicina mora biti između 1 i 10000!")]
         public double Kolicina { get; set; }
         [Required(ErrorMessage = "Cijena je neophodna")]
         public double Cijena { get; set; }

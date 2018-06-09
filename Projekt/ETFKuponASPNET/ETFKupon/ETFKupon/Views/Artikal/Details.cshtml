@@ -65,12 +65,12 @@
 
 
             @Html.Label("", Convert.ToString((string)ViewBag.postotakSnizenja))
-            <input class="form-control" name="kolicinaArtikala" id="kolicinaArtikala" type="text" placeholder="Unesite zeljenu kolicinu" />
+            <input class="form-control" name="kolicinaArtikala" id="kolicinaArtikala" type="text" placeholder="Unesite željenu količinu" />
             @Html.Label("", Convert.ToString((string)ViewBag.isplata))
             @using (Html.BeginForm("Details", "Artikal", FormMethod.Post))
         {
             <br />
-            <button type="submit">Obracunaj cijenu!</button>
+            <button type="submit">Obračunaj cijenu!</button>
     }
             @Html.Label("", Convert.ToString((string)ViewBag.novac))
         </form>

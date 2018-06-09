@@ -51,7 +51,8 @@ namespace ETFKupon.Controllers
             }
 
             lista.Add(artikliKorpa);
-
+            lista.Add(korpaKupca);
+            lista.Add(db.FirmaBaza.ToList());
             ViewBag.ListaInteresaSelekcija = new List<SelectListItem>() ;
             for (int i = 0; i < db.Interes.ToList().Count; i++)
                 ViewBag.ListaInteresaSelekcija.Add(
@@ -64,21 +65,33 @@ namespace ETFKupon.Controllers
             return View(lista);
         }
 
-        // GET: KupacBaza/Details/5
-        public ActionResult Details(string id)
+        // GET E NIJE GET: KupacBaza/Details/5
+        [HttpPost]
+        public ActionResult Details(string pretragaArtikala)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            KupacBaza kupacBaza = db.KupacBaza.Find(id);
-            if (kupacBaza == null)
-            {
-                return HttpNotFound();
-            }
-            return View(kupacBaza);
+            List<object> lista = new List<object>();
+            List<Artikal> listaArtikala = new List<Artikal>();
+            listaArtikala = db.Artikal.ToList();
+            List<Artikal> vracamArtikal = new List<Artikal>();
+            foreach (Artikal item in listaArtikala)
+                if (item.Naziv.Contains(pretragaArtikala))
+                    vracamArtikal.Add(item);
+            lista.Add(vracamArtikal);
+            return View(lista);
         }
 
+        [HttpPost]
+        public ActionResult Pretraga(string pretragaArtikala)
+        {
+            List<object> lista = new List<object>();
+            List<Artikal> listaArtikala = new List<Artikal>();
+            listaArtikala = db.Artikal.ToList();
+            List<Artikal> vracamArtikal = new List<Artikal>();
+            foreach (Artikal item in listaArtikala)
+                if (item.Naziv.Contains(pretragaArtikala))
+                    vracamArtikal.Add(item);
+            return View(lista);
+        }
         // GET: KupacBaza/Create
         public ActionResult Create()
         {

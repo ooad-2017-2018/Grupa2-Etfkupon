@@ -18,6 +18,10 @@ namespace ETFKupon.Models
         [Required(ErrorMessage = "Id artikla je neophodan!")]
         public string idArtikal { get; set; }
 
+        public double cijena { get; set; }
+        public double kolicina { get; set; }
+        public string datum { get; set; }
+
         // veze
         //public virtual ICollection<KupacBaza> KupacKorpa { get; set; }
         

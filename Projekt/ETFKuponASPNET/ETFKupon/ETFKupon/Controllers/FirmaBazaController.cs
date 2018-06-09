@@ -31,19 +31,20 @@ namespace ETFKupon.Controllers
 
             List<object> lista = new List<object>();
             lista.Add(artikliFime); 
-            lista.Add(kuponiFime); 
-            
+            lista.Add(kuponiFime);
+
             List<Interes> interesiLista = new List<Interes>();
             interesiLista = db.Interes.ToList();
             ViewBag.ListaInteresaSelekcija = new List<SelectListItem>();
+
             for (int i = 0; i < interesiLista.Count; i++)
                 ViewBag.ListaInteresaSelekcija.Add(
                     new SelectListItem()
                     {
-                        Value = i.ToString(),
+                        Value = interesiLista[i].id,
                         Text = interesiLista[i].Naziv
                     });
-
+            
             List<Artikal> artikliLista = new List<Artikal>();
             artikliLista = artikliFime;
             ViewBag.ListaArtikalaSelekcija = new List<SelectListItem>();

@@ -17,7 +17,14 @@ namespace ETFKupon.Controllers
         // GET: ArtikalInteres
         public ActionResult Index()
         {
-            return View(db.ArtikalInteres.ToList());
+            List<object> lista = new List<object>();
+            List<Artikal> listaArtikala = new List<Artikal>();
+            listaArtikala = db.Artikal.ToList();
+            List<Artikal> vracamArtikal = new List<Artikal>();
+            foreach (Artikal item in listaArtikala)
+                if (item.Naziv.Contains(Session["Pretraga"].ToString()))
+                    vracamArtikal.Add(item);
+            return View(lista);
         }
 
         // GET: ArtikalInteres/Details/5

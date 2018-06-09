@@ -5,6 +5,8 @@
     List<ETFKupon.Models.Interes> listaInteresa = Model.ToList()[0] as List<ETFKupon.Models.Interes>;
     List<ETFKupon.Models.Artikal> listaArtikala = Model.ToList()[1] as List<ETFKupon.Models.Artikal>;
     List<ETFKupon.Models.Artikal> artikliKorpa = Model.ToList()[2] as List<ETFKupon.Models.Artikal>;
+    List<ETFKupon.Models.Korpa> korpaKupca = Model.ToList()[3] as List<ETFKupon.Models.Korpa>;
+    List<ETFKupon.Models.FirmaBaza> firme = Model.ToList()[4] as List<ETFKupon.Models.FirmaBaza>;
 }
 
 <div class="jumbotron">
@@ -12,12 +14,16 @@
         <font size="6">Dobrodošao korisniče @Session["User"].ToString()</font>
     </div>
     <div style="text-align:center">
-        <input style="height:34px" type="text" placeholder="Pretraga artikala" name="pretragaArtikala">
-        <button class="btn btn-default" type="submit">Traži</button>
-        <input type="button" class="btn btn-default" value="Edituj profil" onclick="window.location.href='@Url.Action("Edit", "KupacBaza",new { id= @Session["UserId"]})';"/>
-        <input type="button" class="btn btn-default" value="Obriši profil" onclick="window.location.href='@Url.Action("Delete", "KupacBaza", new { id=@Session["UserId"] })';"/>
-        
-        <input type="button" class="btn btn-primary btn-lg" value="Odjavi se" onclick="window.location.href='@Url.Action("Index", "Home")';"/>
+
+        @using (Html.BeginForm("Details", "KupacBaza", FormMethod.Post))
+    {
+        <input style="height:34px" name="pretragaArtikala" id="pretragaArtikala" type="text" placeholder="Unesite naziv artikla" />
+        <button class="btn btn-default">Traži</button>
+}
+        <input type="button" class="btn btn-default" value="Edituj profil" onclick="window.location.href='@Url.Action("Edit", "KupacBaza",new { id= @Session["UserId"]})';" />
+        <input type="button" class="btn btn-default" value="Obriši profil" onclick="window.location.href='@Url.Action("Delete", "KupacBaza", new { id=@Session["UserId"] })';" />
+
+        <input type="button" class="btn btn-primary btn-lg" value="Odjavi se" onclick="window.location.href='@Url.Action("Index", "Home")';" />
     </div>
 </div>
 
@@ -32,15 +38,25 @@
 <div>
     @foreach (var item in listaArtikala)
     {
-        <li>@item.Naziv @item.Kolicina @item.Cijena</li>
+        if (item.Kolicina > 0)
+        {
+        <li>Naziv: @item.Naziv, Cijena: @item.Cijena KM</li>
         @Html.ActionLink("Kupi", "Details", new { controller = "Artikal", id = item.id })
+        }
     }
 </div>
 <h2>Korpa</h2>
 <div>
-    @foreach (var item in artikliKorpa)
+    @foreach (var korpa in korpaKupca)
     {
-        <li>@item.Naziv @item.Kolicina @item.Cijena</li>
+    foreach (var item in artikliKorpa)
+    {
+        if (korpa.idArtikal.Equals(item.id))
+        {
+            <li>Naziv kupljenog artikla: @item.Naziv, Kolicina: @korpa.kolicina Cijena: @korpa.cijena Datum kupovine: @korpa.datum</li>
+                break;
+        }
+    }
     }
 </div>
 
@@ -52,6 +68,15 @@
         <h2>Dodavanje interesa: </h2>
         @Html.DropDownList("Lista interesa", ViewBag.ListaInteresaSelekcija as List<SelectListItem>, "Odaberi interes:")
         <button type="submit">Dodaj interes!</button>
+    }
+</div>
+
+<h2>Lista svih firmi</h2>
+<div>
+    @foreach (var item in firme)
+    {
+            <li>Naziv firme: @item.Naziv</li>
+            @Html.ActionLink("Detalji", "Details", new { controller = "FirmaBaza", id = item.id })
     }
 </div>
 

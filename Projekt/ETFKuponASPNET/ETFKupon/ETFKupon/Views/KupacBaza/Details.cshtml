@@ -1,82 +1,18 @@
-﻿@model ETFKupon.Models.KupacBaza
+﻿@model IEnumerable<object>
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Artikli pretraga";
+    List<ETFKupon.Models.Artikal> listaArtikala = Model.ToList()[0] as List<ETFKupon.Models.Artikal>;
 }
 
-<h2>Details</h2>
 
+<h2>Lista Artikala</h2>
 <div>
-    <h4>KupacBaza</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Ime)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Ime)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Prezime)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Prezime)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Username)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Username)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Password)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Password)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Email)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Email)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Adresa)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Adresa)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.BrojKartice)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.BrojKartice)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.StanjeRacuna)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.StanjeRacuna)
-        </dd>
-
-    </dl>
+    @foreach (var item in listaArtikala)
+    {
+        if (item.Kolicina > 0)
+        {
+            <li>Naziv: @item.Naziv, Cijena: @item.Cijena KM</li>
+        }
+    }
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
