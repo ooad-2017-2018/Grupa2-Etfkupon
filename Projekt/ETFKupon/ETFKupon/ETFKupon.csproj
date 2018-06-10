@@ -116,6 +116,8 @@
     <Compile Include="Model\Kupac.cs" />
     <Compile Include="Model\Kupon.cs" />
     <Compile Include="Model\proba.cs" />
+    <Compile Include="Iobserver.cs" />
+    <Compile Include="obavijest.cs" />
     <Compile Include="Validacija.cs" />
     <Compile Include="View\AzuriranjeProfila.xaml.cs">
       <DependentUpon>AzuriranjeProfila.xaml</DependentUpon>

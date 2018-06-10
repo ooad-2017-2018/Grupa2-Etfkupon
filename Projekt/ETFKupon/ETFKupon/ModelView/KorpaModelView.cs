@@ -31,7 +31,7 @@ namespace ETFKupon.ModelView
         public KorpaModelView()
         {
             korpa = new Korpa();
-            MainPage.etfKupon.ListaKupaca.Find(x => x.Username == MainPage.TrenutniKupac.Username).MojaKorpa = korpa;
+            EtfKupon.getInstance().dajListuKupaca().Find(x => x.Username == MainPage.TrenutniKupac.Username).MojaKorpa = korpa;
             artikal = new Artikal();
             NavigationService = new NavigationService();
             Dodaj = new RelayCommand(dodaj);
@@ -40,12 +40,12 @@ namespace ETFKupon.ModelView
        
         public void dodaj(object parametar)
         {
-           MainPage.etfKupon.ListaKupaca.Find(x => x.Username == MainPage.TrenutniKupac.Username).MojaKorpa.ListaArtikala.Add(Artikal);
+            EtfKupon.getInstance().dajListuKupaca().Find(x => x.Username == MainPage.TrenutniKupac.Username).MojaKorpa.ListaArtikala.Add(Artikal);
         }
 
         public void odbaci(object parametar)
         {
-            MainPage.etfKupon.ListaKupaca.Find(x => x.Username == MainPage.TrenutniKupac.Username).MojaKorpa.ListaArtikala.Remove(artikal);
+            EtfKupon.getInstance().dajListuKupaca().Find(x => x.Username == MainPage.TrenutniKupac.Username).MojaKorpa.ListaArtikala.Remove(artikal);
             //NavigationService.Navigate(typeof(PocetnaKupca), new PocetnaKupca(this));
         }
 

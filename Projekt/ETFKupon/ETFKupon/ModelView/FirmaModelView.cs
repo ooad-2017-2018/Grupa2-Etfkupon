@@ -53,7 +53,7 @@ namespace ETFKupon.ModelView
             {
                 FirmaBaza firmicaHehe = new FirmaBaza(firma.Naziv, firma.Username, firma.Password, firma.Email, firma.StanjeRacuna);
                 userTableObj.InsertAsync(firmicaHehe);
-                MainPage.etfKupon.ListaFirmi.Add(firma);
+                EtfKupon.getInstance().dajListuFirmi().Add(firma);
                 NavigationService.Navigate(typeof(MainPage), new MainPage(this));
                 return;
             }

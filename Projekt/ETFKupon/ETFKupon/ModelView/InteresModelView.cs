@@ -38,7 +38,7 @@ namespace ETFKupon.ModelView
 
         public void odbaci(object parametar)
         {
-            MainPage.etfKupon.ListaKupaca.Find(x => x.Username == MainPage.TrenutniKupac.Username).ListaInteresa.Remove(interes);
+            EtfKupon.getInstance().dajListuKupaca().Find(x => x.Username == MainPage.TrenutniKupac.Username).ListaInteresa.Remove(interes);
             NavigationService.Navigate(typeof(PocetnaKupca), new PocetnaKupca(this));
         }
 

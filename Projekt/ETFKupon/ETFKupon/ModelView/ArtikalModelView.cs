@@ -21,14 +21,14 @@ namespace ETFKupon.ModelView
         public void dodaj(object parametar)
         {
             Artikal pomocniArtikal = new Artikal();
-            MainPage.etfKupon.ListaFirmi.Find(x=> x.Username==MainPage.TrenutnaFirma.Username).ListaArtikala.Add(pomocniArtikal);
+            EtfKupon.getInstance().dajListuFirmi().Find(x=> x.Username==MainPage.TrenutnaFirma.Username).ListaArtikala.Add(pomocniArtikal);
 
             //CloseAction();
         }
         public void odbaci(object parametar)
         {
             Artikal pomocniArtikal = new Artikal();
-            MainPage.etfKupon.ListaFirmi.Find(x => x.Username == MainPage.TrenutnaFirma.Username).ListaArtikala.Remove(pomocniArtikal);
+            EtfKupon.getInstance().dajListuFirmi().Find(x => x.Username == MainPage.TrenutnaFirma.Username).ListaArtikala.Remove(pomocniArtikal);
 
             //CloseAction();
         }

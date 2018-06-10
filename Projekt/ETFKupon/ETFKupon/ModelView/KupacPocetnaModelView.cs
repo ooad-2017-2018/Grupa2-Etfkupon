@@ -31,20 +31,20 @@ namespace ETFKupon.ModelView
         
         public void azuriraj(object parametar)
         {
-            int i = MainPage.etfKupon.ListaKupaca.FindIndex(x => x.Username == MainPage.TrenutniKupac.Username);
+            int i = EtfKupon.getInstance().dajListuKupaca().FindIndex(x => x.Username == MainPage.TrenutniKupac.Username);
             if (novi.Ime != null)
-                MainPage.etfKupon.ListaKupaca.ElementAt(i).Ime = novi.Ime;
+                EtfKupon.getInstance().dajNtogKupca(i).Ime = novi.Ime;
             if(novi.Prezime != null)
-                MainPage.etfKupon.ListaKupaca.ElementAt(i).Prezime = novi.Prezime;
+                EtfKupon.getInstance().dajNtogKupca(i).Prezime = novi.Prezime;
             if (novi.Username != null)
-                MainPage.etfKupon.ListaKupaca.ElementAt(i).Username = novi.Username;
+                EtfKupon.getInstance().dajNtogKupca(i).Username = novi.Username;
             //TODO kako password zamijeniti 
             /*if (novi.Password != null)
                 MainPage.etfKupon.ListaKupaca.ElementAt(i).Password = novi.Password*/
             if (novi.Email != null)
-                MainPage.etfKupon.ListaKupaca.ElementAt(i).Email = novi.Email;
+                EtfKupon.getInstance().dajNtogKupca(i).Email = novi.Email;
             if (novi.BrojKartice != null)
-                MainPage.etfKupon.ListaKupaca.ElementAt(i).BrojKartice = novi.BrojKartice;
+                EtfKupon.getInstance().dajNtogKupca(i).BrojKartice = novi.BrojKartice;
             //TODO slika
 
             NavigationService.Navigate(typeof(PocetnaKupca), new PocetnaKupca(this));
@@ -52,7 +52,7 @@ namespace ETFKupon.ModelView
 
         public void odbaci(object parametar)
         {
-            MainPage.etfKupon.ListaKupaca.Remove(Novi);
+            EtfKupon.getInstance().izbrisiKupca(Novi);
             MainPage.TrenutniKupac = null;
             NavigationService.Navigate(typeof(MainPage), new MainPage(this));
         }

@@ -25,7 +25,7 @@ namespace ETFKupon
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public static EtfKupon etfKupon = new EtfKupon();
+        //public static EtfKupon etfKupon=EtfKupon.getInstance();
         private KupacModelView kupacModelView;
         private FirmaModelView firmaModelView;
 
@@ -66,10 +66,10 @@ namespace ETFKupon
 
         private void buttonPrijava_Click(object sender, RoutedEventArgs e)
         {
-            TrenutniKupac = etfKupon.ListaKupaca.Find(x => x.Username == textBoxUsername.Text);
+            TrenutniKupac = EtfKupon.getInstance().dajListuKupaca().Find(x => x.Username == textBoxUsername.Text);
             if (TrenutniKupac == null)
             {
-                TrenutnaFirma = etfKupon.ListaFirmi.Find(x => x.Username == textBoxUsername.Text);
+                TrenutnaFirma = EtfKupon.getInstance().dajListuFirmi().Find(x => x.Username == textBoxUsername.Text);
                 if (TrenutnaFirma != null)
                 {
                     if (TrenutnaFirma.Password == textBoxPassword.Text)

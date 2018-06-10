@@ -9,6 +9,11 @@ namespace ETFKupon.Model
 {
     public class Firma: INotifyPropertyChanged
     {
+
+        public delegate void Callback(string s);
+        public event Callback Notify;
+
+
         //public static int id = -1;
         public string id { get; set;  }
         public string Naziv { get; set; }

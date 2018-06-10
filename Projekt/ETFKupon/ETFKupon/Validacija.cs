@@ -1,4 +1,5 @@
 ﻿using System;
+using ETFKupon.Model;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,9 +16,9 @@ namespace ETFKupon
         private bool jeLiDuplikat(string varijabla ,string izbor)
         {
             bool postojiKupac = false, postojiFirma = false;
-            for (int i = 0; i < MainPage.etfKupon.ListaFirmi.Count; i++)
+            for (int i = 0; i < EtfKupon.getInstance().dajListuFirmi().Count; i++)
             {
-                if ((MainPage.etfKupon.ListaKupaca.ElementAt(i).Email == varijabla && izbor.Equals("Email")) || (MainPage.etfKupon.ListaKupaca.ElementAt(i).Username == varijabla && izbor.Equals("Username")))
+                if ((EtfKupon.getInstance().dajNtuFirmu(i).Email == varijabla && izbor.Equals("Email")) || (EtfKupon.getInstance().dajNtuFirmu(i).Username == varijabla && izbor.Equals("Username")))
                 {
                     postojiFirma = true;
                     break;
@@ -25,9 +26,9 @@ namespace ETFKupon
             }
             if (postojiFirma == false)
             {
-                for (int i = 0; i < MainPage.etfKupon.ListaKupaca.Count; i++)
+                for (int i = 0; i < EtfKupon.getInstance().dajListuKupaca().Count; i++)
                 {
-                    if ((MainPage.etfKupon.ListaKupaca.ElementAt(i).Email == varijabla && izbor.Equals("Email")) || (MainPage.etfKupon.ListaKupaca.ElementAt(i).Username == varijabla && izbor.Equals("Username")))
+                    if ((EtfKupon.getInstance().dajNtogKupca(i).Email == varijabla && izbor.Equals("Email")) || (EtfKupon.getInstance().dajNtogKupca(i).Username == varijabla && izbor.Equals("Username")))
                     {
                         postojiKupac = true;
                         break;

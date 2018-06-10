@@ -52,7 +52,7 @@ namespace ETFKupon.ModelView
             if (suma == 0)
             {
                 KupacBaza x = new KupacBaza(Kupac.Ime, Kupac.Prezime, Kupac.Username, Kupac.Password, Kupac.Email, Kupac.Adresa, Kupac.BrojKartice, Kupac.StanjeRacuna);
-                MainPage.etfKupon.ListaKupaca.Add(Kupac);
+                EtfKupon.getInstance().dodajKupca(Kupac);
                 userTableObj.InsertAsync(x);
                 NavigationService.Navigate(typeof(MainPage), new MainPage(this));
                 return;

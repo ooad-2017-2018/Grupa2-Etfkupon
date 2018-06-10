@@ -29,7 +29,7 @@ namespace ETFKupon.ModelView
         public void odbaci(object parametar)
         {
             Kupon k = new Kupon();
-            MainPage.etfKupon.ListaFirmi.Find(x => x.Username == MainPage.TrenutnaFirma.Username).ListaKupona.Remove(k);
+            EtfKupon.getInstance().dajListuFirmi().Find(x => x.Username == MainPage.TrenutnaFirma.Username).ListaKupona.Remove(k);
 
             //CloseAction();
         }
