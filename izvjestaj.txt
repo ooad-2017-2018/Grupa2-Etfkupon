@@ -1,7 +1,13 @@
 ﻿Dokumentacija: 
 
-Projekat etf kupon trenutno ima postavljenu azure bazu sa erd dijagramom na gitu, uwp i asp.net aplikacije povezane preko te iste baze, 
+Projekat etf kupon trenutno ima postavljenu azure bazu (etfkuponserver.database.windows.net)
+sa erd dijagramom na githubu (https://github.com/ooad-2017-2018/Grupa2-Etfkupon), 
+uwp i asp.net aplikacije povezane preko te iste baze koje se nalaze na tom linku
+u folderu Projekt, 
 kao i eksterni uređaj / web servis u formi bing mapi gdje se prikazuje lokacija određenih prodavnica.
+Prikaz mape možete pronaći u ASP.NET projektu, Views/Artikal/Details. Ideja
+iza prikazivanja mape je bila da kupac ako želi može da vidi lokaciju neke 
+firme na mapi. 
 
 Ono što je bilo predviđeno za implementaciju je u velikoj većini dostupno za korištenje u prvoj verziji aplikacije. 
 UWP aplikacija je funkcionalna kao i web aplikacija u ASP.NET. Jedina stavka koja je ostala neimplementirana je ankete na kraju mjeseca. 
@@ -22,5 +28,90 @@ npr ako želimo artikal sa id-om 2, nećemo pisati Artikal/2 nego Artikal/Detail
 Što se tiče web servisa odnosno eksternog uređaja kao što je ranije spomenuto koristimo bing mape za prikaz lokacije prodavnice, što 
 se čuva u bazi kao latitude i longitude. Koristimo bing a ne google mape radi googleovog policy-a (počinju se plaćati). 
 
-Što se tiče refaktoringa, on će biti odrađen kroz par dana, te će biti primijenjeno 6 patterna kao što je predviđeno postavkom projekta. 
+Struktura ASP.NET projekta: 
+MVC Pattern, tako da sve sto je napisano je logika: View izgled, Model klasa, Controller implementacija
+Home/Index : Login/Registracija, landing page
+FirmaBaza/Index : Pocetna stranica firme
+KupacBaza/Index : Pocetna stranica kupca
+sto se tiče izmjena u bazi one se mogu raditi preko
+Artikal/Create
+ArtikalInteres/Create
+FirmaBaza/Create
+Interes/Create
+InteresKupca/Create
+Korpa/Create
+Kupon/Create
+KupacBaza/Create
+
+Logika iza svake ove rute je da, firma dodaje artikal, svakom artiklu se dodjeljuje
+interes u tabeli ArtikalInteres, koja je povezana sa tabelom Interes koja je globalni
+set interesa. Što se tiče kupca, kupac dodaje svoje interese (vezane za njegov profil)
+preko tabele InteresKupca, te mu se ispisuju artikli od njegovog interesa, ali također
+može pronaći listu svih firmi i informacije o njoj, kao i pretražiti artikle po nazivu. 
+Kada se odluči na kupovinu artikla, sve se spašava u tabelu kupon (sve informacije
+o toj transakciji) tako da kod eventualne reklamacije i sl. postoji kompletan uvid u podatke. 
+Što se tiče firmi, firma također dodaje i kupone za određene artikle, to se radi u 
+modelu kupon, te firma naravno može dodati kupon samo za svoje artikle. 
+
+Što se tiče UWP aplikacije: 
+UWP aplikacija je urađena po MVVM patternu tako da sva logika objašnjena ovdje je po analogiji 
+MVVM (Model View View Model)
+EtfKupon - Glavna komponenta uwp aplikacije, tu se čuvaju svi podaci, ko je trenutno prijavljen i sl. 
+Firma, Kupac - Analogno MVC patternu, komponente koje kupcu/firmi omogućuju sve funkcionalnosti, urađeno
+po MVVM principu tako da su svi podaci bindani na forme i čim dođe do promjene
+obavještava se odgovarajuća klasa. 
+Sve ostale klase su urađene istom analogijom sukladno sa MVVM patternom. 
+
+REFAKTORING UWP: 
+Replace a magic number with a named constant (Zamijeniti ‘magicne’ brojeve sa imenovanom
+konstantom):
+	U klasi validacija.cs umjesto konstanti uvedene su varijable sa jasnim imenima.
+
+
+Convert a multi-use variable to multiple single-use variables (Konvertovati višestruko korištenu
+varijablu u višestruke –pojedinacno korištene varijable)
+
+	U klasi Validacija.cs, tacnije metodama ValidirajUsernameKorisnika i ValidirajEmailKorisnika, varijabla postoji se pretvara u varijablu 
+postojiKupac i postojiFirma
+
+
+Kreacijski patterni:
+Singleton pattern design
+
+U UWP aplikaciji kreirali smo Singleton pattern design u nasoj kontenjerskoj klasi EtfKupon, koja cuva listu kupaca
+i listu firmi. 
+
+
+Strukturalni patterni:
+Facade pattern
+
+U UWP aplikaciji kreirali smo Facade Pattern u kontenjerskoj klasi EtfKupon, gdje smo je podijelili
+na 2 podsistema: Podsistem kupaca i Podsistem firmi.
+
+
+
+Observer pattern
+
+Dodan observer pattern za javljanje Firmi ukoliko mu je neki korisnik kupio neki artikal.
+Poruka koja se ispisuje je: "Kupljen Vam je artikal  *ime artikla* od korisnika *username kupca*."
+Zamijeniti skup izraza sa rutinom, obicno da se izbjegne dupliciranje u kodu.
+	
+	Umjesto odvojenog poziva validacije Kupca i Firme, sve se odvija iz iste skupine metoda.
+
+Combine similar routines by parameterizing them (Kombinovati slicne rutine parametarizirajuci
+ih)
+	Gore navedene metode ValidirajUsernameKorisnika i ValidirajEmailKorisnika imale su slicnu pretragu duplikata.
+Sada imamo dodatnu odvojenu rutinu jeLiDuplikat koja provjerava da li gledamo duplikat Emaila ili Username
+
+Rename a variable with a clearer or more informative name (Preimenovati varijablu sa više
+informativnim imenom)
+	u klasi Kupac.cs i Firma.cs, varijabla suma preimenovana u brojGresaka. U fajlu ArtikalModelView.cs, varijabla k je preimenovana
+u ime pomocniArtikal
+
+Extract a routine (Izdvojiti rutinu)
+
+Umjesto pisanja return new Tuple<int,string> (prviParametar, drugiParametar), napisana je funkcija
+	napraviTuple(prviParametar, drugiParametar) koja upravo to radi. 
+
+
 
